@@ -1,0 +1,74 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  		3.1 header-1
+/*----------------------------------------*/
+
+
+.header-3 {
+    @media #{$lg,$md,$sm,$xs} {
+        padding: 15px 0;
+    }
+
+    .header {
+        &__main {
+            .main-menu-2 {
+                ul {
+                    li {
+                        position: relative;
+                        margin-right: 20px;
+                        padding-right: 30px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                            padding-right: 0;
+
+                            &::before {
+                                display: none;
+                            }
+                        }
+
+                        &::before {
+                            content: "/";
+                            top: 27px;
+                            right: 0;
+                            position: absolute;
+                            color: var(--rr-common-white);
+
+                        }
+
+                        >a {
+                            font-size: 14px;
+                            padding: 36px 0;
+                            text-transform: uppercase;
+                            font-weight: var(--rr-fw-sbold);
+                            color: rgba(255, 255, 255, 1);
+                            font-family: var(--rr-ff-heading);
+                        }
+                        &.has-dropdown>a::after {
+                            font-weight: 500;
+                        }
+
+                        .submenu {
+                            li {
+                                margin-right: 0;
+                                padding-right: 0;
+
+                                &::before {
+                                    display: none;
+                                }
+
+                                a {
+                                    padding: 0 25px;
+                                    text-transform: capitalize;
+                                    font-weight: var(--rr-fw-medium);
+                                    color: var(--rr-heading-primary);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

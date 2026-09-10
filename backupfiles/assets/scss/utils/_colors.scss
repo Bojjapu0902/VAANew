@@ -1,0 +1,35 @@
+$colors: (
+  common: (
+    "white": #FFFFFF,
+    "black": #000000,
+    "placeholder": #4A5764,
+  ),
+  body: (
+    "primary": #fff,
+  ),
+  theme: (
+    "primary": #222222,
+    "primary-2": #ECFF70,
+  ),
+  heading: (
+    "primary": #222222,
+    "secondary": #222020,
+  ),
+  text: (
+    "body":  rgba(34, 34, 34, 0.6),
+    "primary": #151515,
+    "primary-2": #121212,
+  ),
+  shadow: (
+      "primary": 0px 30px 60px 0px rgba(0, 15, 32, 0.10),
+  ),
+  background: (
+      "primary": #E70820,
+      "hero-2-bg": #222222,
+      "section-3-bg": #121212,
+      "body-bg": #F6F0E9,
+  ),
+  border: (
+    "primary": 1px solid rgba(5, 5, 19, 0.14),
+  )
+);

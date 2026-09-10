@@ -1,0 +1,130 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.1 brand
+/*----------------------------------------*/
+.h1-brand {
+  .section {
+    &__title-wrapper-title {
+      margin-left: 40px;
+
+      @media #{$xl,$lg,$md,$sm,$xs} {
+          margin-left: 0;
+        }
+    }
+  }
+
+  &__area {
+    & .swiper {
+      & .swiper-wrapper {
+        & .swiper-slide {
+          width: auto !important;
+        }
+      }
+    }
+  }
+
+  .section {
+    &__title-wrapper-title {
+      br {
+        @media #{$xl} {
+          display: none;
+        }
+      }
+
+      @media #{$lg} {
+        font-size: 46px;
+      }
+    }
+  }
+
+  &__content {
+    h2 {
+      font-size: 172px;
+      line-height: 106%;
+      text-transform: uppercase;
+      color: var(--rr-heading-primary);
+      font-family: var(--rr-ff-heading);
+      font-weight: var(--rr-fw-medium);
+
+      @media #{$lg} {
+        font-size: 102px;
+      }
+
+      @media #{$md} {
+        font-size: 80px;
+      }
+
+      @media #{$sm} {
+        font-size: 70px;
+      }
+
+      @media #{$xs} {
+        font-size: 40px;
+      }
+    }
+
+    &-thumb {
+      img {
+        max-width: 100%;
+
+        @media #{$lg, $md} {
+          width: 100%;
+          height: 300px;
+        }
+
+        @media #{$md,$sm,$xs} {
+          width: 100%;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+
+//   brand slider padding
+.brand-slider-padding {
+  padding: 60px 0px;
+
+  @media #{$md,$sm,$xs} {
+    padding: 30px 0px;
+  }
+
+  @media #{$xs} {
+    padding: 20px 0px;
+  }
+}
+
+.h1-brand__content-video {
+  width: 670px;
+  height: 377px;
+
+  @media #{$lg} {
+    width: 500px;
+    height: 270px;
+  }
+
+  @media #{$md} {
+    width: 550px;
+    height: 300px;
+  }
+
+  @media #{$sm} {
+    width: 450px;
+    height: 200px;
+  }
+
+  @media #{$xs} {
+    width: 250px;
+    height: 150px;
+  }
+
+  #myVideo1,
+  #myVideo2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}

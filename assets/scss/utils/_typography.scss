@@ -1,0 +1,123 @@
+
+// font url
+$font-url: '@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap)';
+// font family
+$font-family: (
+    ff: (
+        "heading": "'BDO Grotesk', sans-serif",
+        "heading1": "'Beatrice Trial', sans-serif",
+        "body": "'Inter', sans-serif",
+        "fontawesome": '"Font Awesome 6 Pro"',
+    )
+);
+
+
+
+//BeatriceTRIAL//
+@font-face {
+    font-family: "Beatrice Trial";
+    src: url('../fonts/BeatriceTRIAL-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Beatrice Trial";
+    src: url('../fonts/BeatriceTRIAL-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Beatrice Trial";
+    src: url('../fonts/BeatriceTRIAL-Semibold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Beatrice Trial";
+    src: url('../fonts/BeatriceTRIAL-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Beatrice Trial";
+    src: url('../fonts/BeatriceTRIAL-Extrabold.ttf');
+    font-weight: 800;
+}
+
+//BDO Grotesk//
+@font-face {
+    font-family: "BDO Grotesk";
+    src: url('../fonts/BDOGrotesk-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "BDO Grotesk";
+    src: url('../fonts/BDOGrotesk-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "BDO Grotesk";
+    src: url('../fonts/BDOGrotesk-Light.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "BDO Grotesk";
+    src: url('../fonts/BDOGrotesk-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "BDO Grotesk";
+    src: url('../fonts/BDOGrotesk-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+
+
+
+
+
+// font weight
+$font-scale: (
+    fw: (
+        "normal": normal,
+        "thin": 100,
+        "elight": 200,
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "sbold": 600,
+        "bold": 700,
+        "ebold": 800,
+        "black": 900,
+    )
+);
+
+// font size
+$font-size: (
+    fs: (
+        "body": 16px,
+        "body2": 24px,
+        "p": 15px,
+        "h1": 172px,
+        "h2": 54px,
+        "h3": 30px,
+        "h4": 24px,
+        "h5": 20px,
+        "h6": 18px,
+    ),
+    lh: (
+    "body": 26px,
+    "body2": 44px,
+    "p": 24px,
+    "h1": 170px,
+    "h2": 64px,
+    "h3": 40px,
+    "h4": 34px,
+    "h5": 30px,
+    "h6": 28px,
+    )
+);

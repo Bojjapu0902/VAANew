@@ -1,0 +1,286 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/* 8.1 404
+/*----------------------------------------*/
+
+
+
+
+
+
+.whitespace {
+    width: 100%;
+    height: 112vh;
+    overflow: hidden;
+
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        height: 0;
+    }
+}
+
+
+
+// brand-2
+.brand-2 {
+    .section {
+        &__main-title-wrapper {
+            border-top: 1px solid #E1E1E1;
+            padding-top: 44px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            width: 340px;
+            height: 150px;
+            cursor: pointer;
+            justify-content: center;
+            border: 1px solid rgb(245, 245, 245);
+            background-color: rgb(245, 245, 245);
+            transition: all 0.3s ease-in-out;
+
+            @media #{$lg} {
+                width: 250px;
+                height: 100px;
+            }
+
+            @media #{$md,$sm,$xxs} {
+                width: 220px;
+                height: 97px;
+            }
+
+            &:hover {
+                background: #000;
+                color: #fff;
+
+                & img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+            & img {
+                width: fit-content;
+                height: auto;
+                object-fit: cover;
+                transition: filter 0.3s ease;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear;
+    }
+
+    .swiper-slide {
+        width: auto;
+    }
+
+    .brand-slider-2 {
+        &__active-1 {
+            margin-bottom: 14px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        @media #{$md,$sm,$xs} {
+            display: block;
+            margin-top: 5px;
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1;
+            position: relative;
+            display: inline-block;
+            font-family: var(--rr-ff-body);
+            color: var(--rr-heading-secondary);
+
+            &::before {
+                content: "";
+                background: #000;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            }
+
+            &:hover {
+                svg {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// brand-3
+.our-clients {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        @media #{$xxl} {
+            gap: 20px;
+        }
+
+        @media #{$lg,$md} {
+            gap: 15px;
+        }
+
+        @media #{$sm,$xs} {
+            gap: 15px;
+        }
+
+        &-space {
+            margin-bottom: 29px;
+
+            @media #{$xl,$lg,$sm,$xs} {
+                margin-bottom: 15px;
+            }
+
+            @media #{$md} {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 377.5px;
+        height: 150px;
+        border: 1px solid rgba(18, 18, 18, 0.12);
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+
+        @media #{$xxl} {
+            width: 326.5px;
+        }
+
+        @media #{$xl} {
+            width: 270.5px;
+            height: 110px;
+        }
+
+        @media #{$lg} {
+            width: 229.5px;
+            height: 110px;
+            flex-wrap: nowrap;
+
+        }
+
+        @media #{$md} {
+            width: 173.5px;
+            height: 100px;
+        }
+
+        @media #{$sm} {
+            width: 265.5px;
+            height: 120px;
+        }
+
+        @media #{$xs} {
+            width: 291.5px;
+            height: 120px;
+        }
+
+        &:hover {
+            & svg [opacity="0.2"] {
+                opacity: 1;
+            }
+
+            border: 1px solid var(--rr-theme-primary);
+        }
+    }
+
+    &__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 377.5px;
+        height: 153px;
+
+        @media #{$xxl} {
+            width: 331.5px;
+        }
+
+        @media #{$xl} {
+            width: 270.5px;
+            height: 110px;
+        }
+
+        @media #{$lg} {
+            width: 229.5px;
+        }
+
+        @media #{$md} {
+            width: 174.5px;
+            height: 148px;
+        }
+
+        @media #{$sm} {
+            width: 267.5px;
+            height: 122px;
+        }
+
+        a {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 34px;
+            position: relative;
+            color: var(--rr-theme-primary);
+            font-family: var(--rr-ff-heading1);
+
+            @media #{$md} {
+                font-size: 18px;
+            }
+
+            i {
+                font-size: 18px;
+                margin-left: 20px;
+            }
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 1px;
+                bottom: -4px;
+                left: 0;
+                position: absolute;
+                transition: all 0.3s ease-in-out;
+                background-color: var(--rr-theme-primary);
+            }
+
+            &:hover {
+                opacity: 0.7;
+
+                &::before {
+                    width: 0;
+                }
+            }
+        }
+    }
+}

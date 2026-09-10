@@ -1,0 +1,123 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.2 header-2
+/*----------------------------------------*/
+
+
+.header-2 {
+    padding: 0 35px;
+
+    @media #{$lg,$md,$sm} {
+        padding: 15px 35px;
+    }
+    @media #{$xs} {
+        padding: 15px;
+    }
+
+    .header {
+        &__main {
+            .main-menu-2 {
+                ul {
+                    >li {
+                        margin-inline-end: 0;
+
+                        &>a {
+                            font-size: 15px;
+                            margin: 20px 0;
+                            padding: 11px 14.2px;
+                            border-radius: 30px;
+                            text-transform: capitalize;
+                            font-family: var(--rr-ff-body);
+                            font-weight: var(--rr-fw-medium);
+                            color: var(--rr-heading-primary);
+                            border: 1px solid rgb(34 34 34 / 14%);
+                        }
+
+                        &.has-dropdown>a {
+                            padding-right: 22px !important;
+
+                            &::after {
+                                top: 39%;
+                                right: 8px;
+                                font-weight: 500;
+                            }
+                        }
+
+                        .submenu {
+                            li {
+                                a {
+                                    padding: 0 25px;
+                                    padding-inline-start: 30px;
+                                    padding-bottom: 9px;
+                                    border: none;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__action {
+            gap: 6px;
+        }
+
+        &__language {
+            .nice-select {
+                &::after {
+                    right: 14px;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 1;
+                    padding: 6.5px 25px;
+                    border-radius: 200px;
+                    font-family: var(--rr-ff-body);
+                    color: var(--rr-heading-primary);
+                    border: 1px solid rgba(34, 34, 34, 0.14);
+                }
+            }
+        }
+
+        &__search {
+            #popup-search-box {
+                border: 1px solid rgba(34, 34, 34, 0.14);
+                padding: 6.7px 20px;
+                line-height: 1;
+                border-radius: 200px;
+            }
+        }
+
+        &__hamburger {
+            .sidebar {
+                &__toggle {
+                    width: inherit;
+                    height: inherit;
+
+                    .bar-icon {
+                        width: inherit;
+                        height: inherit;
+                        padding: 12px 16px;
+                        border-radius: 200px;
+                        border: 1px solid rgba(34, 34, 34, 0.14);
+
+                        span {
+                            width: 26px;
+                            height: 1px;
+                            margin-bottom: 6px;
+                            background: rgba(34, 34, 34, 0.7);
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

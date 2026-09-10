@@ -1,0 +1,179 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 sectiontitle
+/*----------------------------------------*/
+// Section subtitle 1
+.section {
+    &__title-wrapper {
+        &-sub-title {
+            font-family: var(--rr-ff-heading);
+            font-weight: var(--rr-fw-medium);
+            color: var(--rr-heading-primary);
+            font-style: normal;
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        &-title {
+            font-family: var(--rr-ff-heading);
+            font-weight: var(--rr-fw-medium);
+            color: var(--rr-heading-primary);
+            font-style: normal;
+            font-size: 54px;
+            line-height: 64px;
+
+            @media #{$xxl,$xl} {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @media #{$lg,$md} {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            @media #{$sm} {
+                font-size: 33px;
+                line-height: 45px;
+            }
+
+            @media #{$xs} {
+                font-size: 28px;
+                line-height: 38px;
+            }
+
+            @media #{$xl,$lg,$md,$sm,$xs} {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        &-2 {
+            .section {
+                &__title-wrapper {
+                    &-sub-title {
+                        text-transform: uppercase;
+                        font-family: var(--rr-ff-body);
+                        color: var(--rr-heading-secondary);
+                    }
+
+                    &-title {
+                        font-family: var(--rr-ff-body);
+                        color: var(--rr-heading-secondary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.section-3 {
+    &__title-wrapper {
+        &-title {
+            font-size: 140px;
+            line-height: 140px;
+            font-weight: 400;
+            margin-bottom: 0;
+            letter-spacing: -0.04em;
+            color: var(--rr-text-primary-2);
+            font-family: var(--rr-ff-heading1);
+
+            @media #{$lg} {
+                font-size: 110px;
+                line-height: 110px;
+            }
+
+            @media #{$md} {
+                font-size: 90px;
+                line-height: 90px;
+            }
+
+            @media #{$sm} {
+                font-size: 75px;
+                line-height: 80px;
+            }
+
+            @media #{$xs} {
+                font-size: 41px;
+                line-height: 50px;
+            }
+
+            span {
+                margin-left: 570px;
+
+                @media #{$xl} {
+                    margin-left: 520px;
+                }
+                @media #{$lg} {
+                    margin-left: 270px;
+                }
+
+                @media #{$md} {
+                    margin-left: 200px;
+                }
+
+                @media #{$sm} {
+                    margin-left: 100px;
+                }
+
+                @media #{$xs} {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+.section-4 {
+    &__title-wrapper {
+        .section-title {
+            &__subtitle {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 14px;
+                display: inline-block;
+                padding: 10px 14.8px;
+                border-radius: 200px;
+                color: var(--rr-text-primary-2);
+                font-family: var(--rr-ff-heading1);
+                border: 1px solid rgb(18 18 18 / 14%);
+            }
+
+            &__title {
+                font-weight: 400;
+                font-size: 70px;
+                line-height: 74px;
+                letter-spacing: -0.02em;
+                color: var(--rr-text-primary-2);
+                font-family: var(--rr-ff-heading1);
+
+                @media #{$md} {
+                    font-size: 55px;
+                    line-height: 65px;
+                }
+
+                @media #{$sm} {
+                    font-size: 45px;
+                    line-height: 55px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                @media #{$xs} {
+                    font-size: 35px;
+                    line-height: 45px;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

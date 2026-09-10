@@ -1,0 +1,71 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/* 8.1 404
+/*----------------------------------------*/
+
+
+
+// error-page style 
+
+.error-page {
+    &-space {
+        padding-top: 115px;
+        padding-bottom: 174px;
+
+        @media #{$md} {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+
+        @media #{$sm,$xs} {
+            padding-top: 90px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__dec {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        padding-bottom: 30px;
+        color: rgba(34, 34, 34, 0.6);
+        font-family: var(--rr-ff-heading);
+
+        & br {
+            @media #{$sm,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 350px;
+        line-height: 1;
+        text-transform: capitalize;
+        color: var(--rr-heading-primary);
+        font-family: var(--rr-ff-heading);
+
+        @media #{$sm} {
+            font-size: 260px;
+        }
+
+        @media #{$xs} {
+            font-size: 148px;
+        }
+    }
+
+    &__not-found {
+        font-size: 44px;
+        line-height: 44px;
+        padding: 0px 0px 25px 0px;
+        color: var(--rr-heading-primary);
+        font-family: var(--rr-ff-heading);
+        font-weight: var(--rr-fw-medium);
+
+        @media #{$xs} {
+            font-size: 27px;
+        }
+    }
+}

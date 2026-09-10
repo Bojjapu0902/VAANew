@@ -1,0 +1,277 @@
+@use "../../utils" as *;
+
+
+.award-section-3 {
+    .section-3 {
+        &__title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    .award-section {
+        &__shape {
+            margin-right: 75px;
+        }
+
+        &__wrap {
+            margin-right: 108px;
+
+            @media #{$lg,$md,$sm,$xs} {
+                margin-right: 0;
+            }
+
+            @media #{$md,$sm,$xs} {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__item {
+            position: relative;
+            padding: 39.5px 0;
+            border-bottom: 1px solid rgba(18, 18, 18, 0.6);
+
+            &:first-of-type {
+                border-top: 1px solid rgba(18, 18, 18, 0.6);
+            }
+
+            &.item-5 {
+                .rr-hover-reveal-bg {
+                    height: 305px;
+                }
+            }
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 0;
+                bottom: 0;
+                z-index: -1;
+                position: absolute;
+                transition: all 0.3s ease-in-out;
+                background-color: var(--rr-text-primary-2);
+            }
+
+            &:hover {
+                &::before {
+                    top: 0;
+                    bottom: auto;
+                    height: 100%;
+                }
+
+                .award-section {
+                    &__title {
+                        margin-left: 30px;
+                        color: var(--rr-common-white);
+                    }
+
+                    &__date {
+                        color: var(--rr-common-white);
+
+                        @media #{$xs} {
+                            margin-left: 30px;
+                        }
+                    }
+
+                    &__cat {
+                        color: var(--rr-common-white);
+
+                        @media #{$xs} {
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+
+            &.item-1 {
+                padding-right: 175px;
+
+                @media #{$sm} {
+                    padding-right: 49px;
+                }
+
+                @media #{$xs} {
+                    padding-right: 0px;
+                }
+            }
+
+            &.item-2 {
+                padding-right: 95px;
+
+                @media #{$sm} {
+                    padding-right: 30px;
+                }
+
+                @media #{$xs} {
+                    padding-right: 0px;
+                }
+            }
+
+            &.item-3 {
+                padding-right: 171px;
+
+                @media #{$sm} {
+                    padding-right: 45px;
+                }
+
+                @media #{$xs} {
+                    padding-right: 0px;
+                }
+            }
+
+            &.item-4 {
+                padding-right: 159px;
+
+                @media #{$sm} {
+                    padding-right: 33px;
+                }
+
+                @media #{$xs} {
+                    padding-right: 0px;
+                }
+            }
+
+            &.item-5 {
+                padding-right: 176px;
+
+                @media #{$sm} {
+                    padding-right: 50px;
+                }
+
+                @media #{$xs} {
+                    padding-right: 0px;
+                }
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media #{$xs} {
+                display: block;
+            }
+        }
+
+        &__date,
+        &__cat {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+            color: rgba(18, 18, 18, 0.6);
+            font-family: var(--rr-ff-heading1);
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+        }
+
+        &__date {
+            margin-right: 16px;
+            padding-right: 16px;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 15px;
+                top: 0;
+                right: 0;
+                position: absolute;
+                transform: rotate(10deg);
+                background-color: rgba(18, 18, 18, 0.6);
+            }
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            color: rgba(18, 18, 18, 0.6);
+            font-family: var(--rr-ff-heading1);
+
+            @media #{$xs} {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__received {
+            max-width: 400px;
+            text-align: center;
+            padding: 80px 30px;
+            padding-bottom: 30px;
+            margin: 0 0 0 auto;
+            background-color: var(--rr-text-primary-2);
+
+            @media #{$md,$sm,$xs} {
+                margin: 0 auto;
+            }
+        }
+
+        &__number {
+            font-weight: 500;
+            font-size: 96px;
+            line-height: 1;
+            margin-top: 52px;
+            margin-bottom: 11px;
+            letter-spacing: -0.04em;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading1);
+        }
+
+        &__dec {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading1);
+        }
+
+        &__btn {
+            .rr-btn-2 {
+                width: 100%;
+                font-weight: 400;
+                font-size: 18px;
+                border-radius: 0;
+                margin-top: 56px;
+                padding: 23.5px 34.3px;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+
+
+
+.rr-hover-reveal-item {
+    .rr-hover-reveal-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 174px;
+        height: 259px;
+        opacity: 0;
+        margin: -150px 0 0 -150px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 99;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    &:hover {
+        .rr-hover-reveal-bg {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

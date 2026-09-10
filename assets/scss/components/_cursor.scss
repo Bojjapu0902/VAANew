@@ -1,0 +1,148 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+.cb-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    contain: layout style size;
+    pointer-events: none;
+    will-change: transform;
+    -webkit-transition: opacity 0.3s, color 0.4s;
+    -o-transition: opacity 0.3s, color 0.4s;
+    -moz-transition: opacity 0.3s, color 0.4s;
+    transition: opacity 0.3s, color 0.4s;
+}
+
+.cb-cursor-text {
+    position: absolute;
+    top: -28px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(10deg);
+    opacity: 0;
+    color: black;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    letter-spacing: -0.01em;
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+    transition: opacity 0.4s, -webkit-transform 0.3s;
+    -o-transition: opacity 0.4s, -o-transform 0.3s;
+    -moz-transition: opacity 0.4s, transform 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.4s, transform 0.3s;
+    transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+}
+
+@media (max-width: 767px) {
+    .cb-cursor-text {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.cb-cursor.-text .cb-cursor-text {
+    opacity: 1;
+    transform: scale(1);
+    background-color: var(--rr-theme-primary-2);
+
+    .btn {
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-family: var(--rr-ff-body);
+            color: var(--rr-heading-secondary);
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            i {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+// --------------------------2
+
+.cb-cursor.-big .cb-cursor-text {
+    width: 180px;
+    height: 180px;
+    opacity: 1;
+    transform: scale(1);
+    background-color: var(--rr-text-primary-2);
+
+    @media (max-width: 767px) {
+        width: 130px;
+        height: 130px;
+    }
+
+    .btn2 {
+        span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: start;
+            transform: translateY(30px);
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--rr-common-white);
+            font-family: var(--rr-ff-heading1);
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+                transform: translateY(20px);
+            }
+        }
+
+        .arrow {
+            position: relative;
+            display: inline-block;
+            transform: translateY(-30px);
+
+            i {
+                width: 34px;
+                height: 34px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 500px;
+                transform: rotate(-45deg);
+                color: var(--rr-text-primary-2);
+                background-color: var(--rr-common-white);
+            }
+
+            &::before {
+                content: "";
+                width: 1px;
+                height: 100px;
+                top: 0px;
+                bottom: 0px;
+                position: absolute;
+                transform: rotate(-45deg) translateY(-15px);
+                background-color: var(--rr-common-white);
+
+                @media (max-width: 767px) {
+                    height: 80px;
+                    transform: rotate(-45deg) translateY(-5px);
+                }
+            }
+        }
+    }
+}
