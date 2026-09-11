@@ -1,0 +1,233 @@
+/* transform */
+@font-face {
+  font-family: "Beatrice Trial";
+  src: url("../fonts/BeatriceTRIAL-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Beatrice Trial";
+  src: url("../fonts/BeatriceTRIAL-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Beatrice Trial";
+  src: url("../fonts/BeatriceTRIAL-Semibold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Beatrice Trial";
+  src: url("../fonts/BeatriceTRIAL-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Beatrice Trial";
+  src: url("../fonts/BeatriceTRIAL-Extrabold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url("../fonts/BDOGrotesk-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url("../fonts/BDOGrotesk-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url("../fonts/BDOGrotesk-Light.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url("../fonts/BDOGrotesk-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url("../fonts/BDOGrotesk-ExtraBold.ttf");
+  font-weight: 800;
+}
+:root {
+  /**
+  @font family declaration
+  */
+  --rr-ff-heading: 'BDO Grotesk', sans-serif;
+  --rr-ff-heading1: 'Beatrice Trial', sans-serif;
+  --rr-ff-body: 'Inter', sans-serif;
+  --rr-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --rr-common-white: #FFFFFF;
+  --rr-common-black: #000000;
+  --rr-common-placeholder: #4A5764;
+  --rr-body-primary: #fff;
+  --rr-theme-primary: #222222;
+  --rr-theme-primary-2: #ECFF70;
+  --rr-heading-primary: #222222;
+  --rr-heading-secondary: #222020;
+  --rr-text-body: rgba(34, 34, 34, 0.6);
+  --rr-text-primary: #151515;
+  --rr-text-primary-2: #121212;
+  --rr-shadow-primary: 0px 30px 60px 0px rgba(0, 15, 32, 0.1);
+  --rr-background-primary: #E70820;
+  --rr-background-hero-2-bg: #222222;
+  --rr-background-section-3-bg: #121212;
+  --rr-background-body-bg: #F6F0E9;
+  --rr-border-primary: 1px solid rgba(5, 5, 19, 0.14);
+  /**
+  @font weight declaration
+  */
+  --rr-fw-normal: normal;
+  --rr-fw-thin: 100;
+  --rr-fw-elight: 200;
+  --rr-fw-light: 300;
+  --rr-fw-regular: 400;
+  --rr-fw-medium: 500;
+  --rr-fw-sbold: 600;
+  --rr-fw-bold: 700;
+  --rr-fw-ebold: 800;
+  --rr-fw-black: 900;
+  /**
+  @font size declaration
+  */
+  --rr-fs-body: 16px;
+  --rr-fs-body2: 24px;
+  --rr-fs-p: 15px;
+  --rr-fs-h1: 172px;
+  --rr-fs-h2: 54px;
+  --rr-fs-h3: 30px;
+  --rr-fs-h4: 24px;
+  --rr-fs-h5: 20px;
+  --rr-fs-h6: 18px;
+  --rr-lh-body: 26px;
+  --rr-lh-body2: 44px;
+  --rr-lh-p: 24px;
+  --rr-lh-h1: 170px;
+  --rr-lh-h2: 64px;
+  --rr-lh-h3: 40px;
+  --rr-lh-h4: 34px;
+  --rr-lh-h5: 30px;
+  --rr-lh-h6: 28px;
+}
+
+/*----------------------------------------*/
+/*  8.1 brand
+/*----------------------------------------*/
+.h1-brand .section__title-wrapper-title {
+  margin-left: 40px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .h1-brand .section__title-wrapper-title {
+    margin-left: 0;
+  }
+}
+.h1-brand__area .swiper .swiper-wrapper .swiper-slide {
+  width: auto !important;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .h1-brand .section__title-wrapper-title br {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .h1-brand .section__title-wrapper-title {
+    font-size: 46px;
+  }
+}
+.h1-brand__content h2 {
+  font-size: 172px;
+  line-height: 106%;
+  text-transform: uppercase;
+  color: var(--rr-heading-primary);
+  font-family: var(--rr-ff-heading);
+  font-weight: var(--rr-fw-medium);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .h1-brand__content h2 {
+    font-size: 102px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .h1-brand__content h2 {
+    font-size: 80px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .h1-brand__content h2 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 575px) {
+  .h1-brand__content h2 {
+    font-size: 40px;
+  }
+}
+.h1-brand__content-thumb img {
+  max-width: 100%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 992px) {
+  .h1-brand__content-thumb img {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .h1-brand__content-thumb img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.brand-slider-padding {
+  padding: 60px 0px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .brand-slider-padding {
+    padding: 30px 0px;
+  }
+}
+@media (max-width: 575px) {
+  .brand-slider-padding {
+    padding: 20px 0px;
+  }
+}
+
+.h1-brand__content-video {
+  width: 670px;
+  height: 377px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .h1-brand__content-video {
+    width: 500px;
+    height: 270px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .h1-brand__content-video {
+    width: 550px;
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .h1-brand__content-video {
+    width: 450px;
+    height: 200px;
+  }
+}
+@media (max-width: 575px) {
+  .h1-brand__content-video {
+    width: 250px;
+    height: 150px;
+  }
+}
+.h1-brand__content-video #myVideo1,
+.h1-brand__content-video #myVideo2 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}/*# sourceMappingURL=index.css.map */

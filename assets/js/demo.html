@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSAP ZoomView — soft scroll zoom for any image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================ tokens */
+  :root{
+    --bg:#07080a;
+    --surface:#0e1014;
+    --surface-2:#14171d;
+    --line:rgba(255,255,255,.08);
+    --line-strong:rgba(255,255,255,.16);
+    --text:#f2f4f7;
+    --text-2:#a7adb8;
+    --text-3:#6d7481;
+    --accent:#7c9cff;
+    --accent-2:#5ee0c4;
+    --radius-sm:10px;
+    --radius:16px;
+    --radius-lg:24px;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --max:1180px;
+    --font:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:var(--font);font-size:16px;line-height:1.65;
+    font-weight:400;letter-spacing:-.005em;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;height:auto}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:24px}
+  section{padding-block:clamp(72px,9vw,128px)}
+
+  /* ============================================================ type */
+  h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.03em;font-weight:600}
+  h1{font-size:clamp(2.4rem,6vw,4.5rem);font-weight:700}
+  h2{font-size:clamp(1.7rem,3.6vw,2.6rem)}
+  h3{font-size:1.0625rem;letter-spacing:-.01em;font-weight:600}
+  p{margin:0}
+  .lede{font-size:clamp(1.0625rem,1.6vw,1.25rem);color:var(--text-2);max-width:60ch;line-height:1.7}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:20px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:currentColor;opacity:.5}
+  .muted{color:var(--text-3);font-size:.875rem}
+
+  /* ============================================================ header */
+  header.site{
+    position:fixed;inset:0 0 auto;z-index:60;
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    background:color-mix(in srgb,var(--bg) 72%,transparent);
+    border-bottom:1px solid var(--line);
+  }
+  header.site .bar{
+    max-width:var(--max);margin-inline:auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.02em}
+  .brand i{
+    width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    font-style:normal;font-size:13px;color:#07080a;font-weight:700;
+  }
+  .ver{font:500 .6875rem/1 var(--mono);color:var(--text-3);border:1px solid var(--line);
+    padding:5px 8px;border-radius:999px}
+
+  /* ============================================================ hero */
+  .hero{padding-top:clamp(140px,18vw,220px);position:relative}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(60% 50% at 18% 0%,rgba(124,156,255,.16),transparent 70%),
+      radial-gradient(50% 45% at 88% 12%,rgba(94,224,196,.10),transparent 70%);
+  }
+  .hero .grid{display:grid;gap:40px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+  .pill{
+    font:500 .8125rem/1 var(--font);color:var(--text-2);
+    border:1px solid var(--line);background:var(--surface);
+    padding:9px 14px;border-radius:999px;
+  }
+  .pill b{color:var(--text);font-weight:600}
+
+  /* ============================================================ figures */
+  figure{margin:0}
+  figcaption{
+    display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;
+    margin-top:14px;font-size:.8125rem;color:var(--text-3);
+  }
+  figcaption code{color:var(--text-2)}
+
+  .bleed{max-width:1440px;margin-inline:auto;padding-inline:24px}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+  .card{
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    background:var(--surface);transition:border-color .45s var(--ease),transform .45s var(--ease);
+  }
+  .card:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+  .card .body{padding:18px 20px 22px}
+  .card .body p{color:var(--text-3);font-size:.875rem;margin-top:6px}
+
+  /* radius travels onto the auto-generated mask */
+  .rounded{border-radius:var(--radius-lg)}
+
+  /* ============================================================ code */
+  pre{
+    margin:0;background:var(--surface);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 22px;overflow-x:auto;
+    font:400 .8125rem/1.75 var(--mono);color:#cfd6e4;
+  }
+  pre b{color:var(--accent);font-weight:500}
+  pre i{color:var(--text-3);font-style:normal}
+  pre em{color:var(--accent-2);font-style:normal}
+  code{font:500 .875em/1 var(--mono);background:var(--surface-2);
+    border:1px solid var(--line);border-radius:6px;padding:2px 6px}
+
+  /* grid items default to min-width:auto — which lets the wide code blocks and
+     the options table push the page wider than the viewport. Cap them. */
+  .stack,.two,.cards,.wrap,.bleed{min-width:0}
+  .stack>*,.two>*,.cards>*,.wrap>*,.stack>.stack>*{min-width:0;max-width:100%}
+  .stack{display:grid;gap:22px}
+  .two{display:grid;grid-template-columns:1fr;gap:44px}
+  @media (min-width:900px){.two{grid-template-columns:.85fr 1.15fr;align-items:start}}
+
+  /* ============================================================ table */
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}
+  table{width:100%;border-collapse:collapse;font-size:.875rem;min-width:620px}
+  th,td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);font-weight:600}
+  tr:last-child td{border-bottom:0}
+  td:first-child{font:500 .8125rem/1.6 var(--mono);color:var(--accent);white-space:nowrap}
+  td:nth-child(2){font:400 .8125rem/1.6 var(--mono);color:var(--text-2);white-space:nowrap}
+  td:last-child{color:var(--text-2)}
+
+  /* ============================================================ panel */
+  .panel{
+    position:fixed;right:20px;bottom:20px;z-index:70;width:264px;
+    background:color-mix(in srgb,var(--surface) 88%,transparent);
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    border:1px solid var(--line-strong);border-radius:var(--radius);
+    padding:16px 18px 18px;box-shadow:0 18px 50px -12px rgba(0,0,0,.7);
+    transition:transform .5s var(--ease),opacity .3s linear;
+  }
+  .panel[data-collapsed="true"]{transform:translateY(calc(100% - 50px))}
+  .panel h3{display:flex;align-items:center;justify-content:space-between;cursor:pointer;
+    font-size:.8125rem;letter-spacing:.02em}
+  .panel h3 span{color:var(--text-3);font:500 .6875rem/1 var(--mono)}
+  .panel .field{margin-top:16px}
+  .panel label{display:flex;justify-content:space-between;gap:8px;
+    font-size:.75rem;color:var(--text-2);margin-bottom:7px}
+  .panel label b{color:var(--text);font:500 .75rem/1 var(--mono)}
+  .panel input[type=range]{width:100%;accent-color:var(--accent);height:18px}
+  .panel select{
+    width:100%;background:var(--surface-2);color:var(--text);
+    border:1px solid var(--line);border-radius:8px;padding:8px 10px;
+    font:400 .8125rem/1 var(--font);
+  }
+  .panel .hint{margin-top:14px;font-size:.6875rem;color:var(--text-3);line-height:1.5}
+  @media (max-width:640px){.panel{display:none}}
+
+  footer{border-top:1px solid var(--line);padding-block:40px;color:var(--text-3);font-size:.8125rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <div class="brand"><i>Z</i> ZoomView</div>
+    <div class="ver">gsap-zoomview v1.0.0</div>
+  </div>
+</header>
+
+<!-- ============================================================== HERO -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">GSAP ScrollTrigger plugin</span>
+      <h1>Soft zoom,<br>driven by a class.</h1>
+      <p class="lede" style="margin-top:22px">
+        Add <code>.zoom-view</code> to any image. It eases <b>out</b> to its natural
+        scale as it enters the viewport, rests while it's on screen, then eases
+        <b>back in</b> as it leaves — scrubbed to scroll position, so it reverses
+        perfectly and never fights the user.
+      </p>
+      <div class="pills">
+        <span class="pill"><b>1</b> class, zero markup changes</span>
+        <span class="pill">Auto-wrapped overflow mask</span>
+        <span class="pill">Per-element <b>data-*</b> overrides</span>
+        <span class="pill">Respects reduced motion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== FULL BLEED -->
+<section style="padding-top:0">
+  <div class="bleed">
+    <figure>
+      <img class="zoom-view rounded"
+           data-zoom-ratio="21/9"
+           src="https://picsum.photos/seed/zoomview-architecture/1800/780"
+           alt="Concrete architectural facade">
+      <figcaption>
+        <span>Default preset</span>
+        <code>&lt;img class="zoom-view" data-zoom-ratio="21/9"&gt;</code>
+        <span class="muted">scale 1.18 · hold 0.55 · power2.out / power2.in</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================== CARDS -->
+<section>
+  <div class="wrap stack">
+    <div>
+      <span class="eyebrow">Per-element tuning</span>
+      <h2>Three intensities, same class.</h2>
+      <p class="lede" style="margin-top:16px">
+        Every option has a <code>data-zoom-*</code> twin, so a gallery can breathe
+        differently from a hero without touching a line of JavaScript.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="zoom-view" data-zoom-ratio="4/3" data-zoom-scale="1.08">
+          <img src="https://picsum.photos/seed/zoomview-a/800/600" alt="Minimal interior" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Restrained</h3>
+          <p><code>data-zoom-scale="1.08"</code> — barely perceptible, ideal for dense grids and text-heavy pages.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="zoom-view" data-zoom-ratio="4/3" data-zoom-scale="1.18">
+          <img src="https://picsum.photos/seed/zoomview-b/800/600" alt="Stairwell detail" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Default</h3>
+          <p>The shipped preset. Enough movement to feel intentional, not enough to pull focus from the content.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="zoom-view" data-zoom-ratio="4/3" data-zoom-scale="1.34"
+             data-zoom-hold="0.9" data-zoom-scrub="0.8">
+          <img src="https://picsum.photos/seed/zoomview-c/800/600" alt="Glass and steel" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Editorial</h3>
+          <p><code>scale 1.34</code> with a longer plateau and <code>scrub="0.8"</code> smoothing — cinematic, for full-width features.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== WRAPPER PATTERN -->
+<section>
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Pattern 02</span>
+      <h2>Bring your own wrapper.</h2>
+      <p class="lede" style="margin-top:16px">
+        Put the class on the image and the plugin generates the mask for you —
+        inheriting its border radius. Put it on a wrapper you already style, and
+        that wrapper becomes the mask instead. Both paths are idempotent, so
+        re-running <code>ZoomView.init()</code> after a route change is safe.
+      </p>
+      <figcaption style="margin-top:20px">
+        <span class="muted">Shown right: <code>data-zoom-origin="50% 100%"</code> anchors the
+        zoom to the bottom edge, pushing the composition upward as it settles.</span>
+      </figcaption>
+    </div>
+    <figure>
+      <div class="zoom-view rounded" data-zoom-ratio="3/4"
+           data-zoom-scale="1.22" data-zoom-origin="50% 100%">
+        <img src="https://picsum.photos/seed/zoomview-portrait/900/1200" alt="Vertical facade study" loading="lazy">
+      </div>
+      <figcaption><code>&lt;div class="zoom-view"&gt;&lt;img&gt;&lt;/div&gt;</code></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================== ANY IMAGE -->
+<section>
+  <div class="wrap stack">
+    <div>
+      <span class="eyebrow">Source-agnostic</span>
+      <h2>Any image. Including the ones that aren't photos.</h2>
+      <p class="lede" style="margin-top:16px">
+        The plugin only ever touches <code>transform</code> on whatever sits inside the
+        mask — raster, SVG, data URI, <code>&lt;video&gt;</code>, <code>&lt;canvas&gt;</code>.
+        No dependency on the source or its intrinsic size.
+      </p>
+    </div>
+    <figure>
+      <img class="zoom-view rounded" data-zoom-ratio="16/9" data-zoom-scale="1.25"
+           alt="Generated gradient artwork"
+           src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23141a2e'/%3E%3Cstop offset='.5' stop-color='%237c9cff'/%3E%3Cstop offset='1' stop-color='%235ee0c4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23g)'/%3E%3Cg fill='none' stroke='rgba(255,255,255,.28)' stroke-width='1.5'%3E%3Ccircle cx='800' cy='450' r='120'/%3E%3Ccircle cx='800' cy='450' r='220'/%3E%3Ccircle cx='800' cy='450' r='320'/%3E%3Ccircle cx='800' cy='450' r='420'/%3E%3C/g%3E%3C/svg%3E">
+      <figcaption><span>Inline SVG data URI</span><code>data-zoom-scale="1.25"</code></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================== USAGE -->
+<section>
+  <div class="wrap stack" style="gap:36px">
+    <div>
+      <span class="eyebrow">Implementation</span>
+      <h2>Drop in, ship.</h2>
+    </div>
+
+    <div class="stack">
+      <div>
+        <h3 style="margin-bottom:12px">1 · Load GSAP, ScrollTrigger, then the plugin</h3>
+<pre>&lt;<b>script</b> src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"&gt;&lt;/<b>script</b>&gt;
+&lt;<b>script</b> src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"&gt;&lt;/<b>script</b>&gt;
+&lt;<b>script</b> src="gsap-zoomview.js"&gt;&lt;/<b>script</b>&gt;
+
+<i>&lt;!-- that's it. Every .zoom-view is wired on DOMContentLoaded. --&gt;</i></pre>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:12px">2 · Add the class</h3>
+<pre><i>&lt;!-- plugin creates the overflow mask and inherits the radius --&gt;</i>
+&lt;<b>img</b> <em>class</em>="zoom-view" src="hero.jpg" alt=""&gt;
+
+<i>&lt;!-- or mask it yourself --&gt;</i>
+&lt;<b>div</b> <em>class</em>="zoom-view" <em>data-zoom-ratio</em>="16/9"&gt;
+  &lt;<b>img</b> src="hero.jpg" alt=""&gt;
+&lt;/<b>div</b>&gt;</pre>
+      </div>
+
+      <div>
+        <h3 style="margin-bottom:12px">3 · Tune globally or per element</h3>
+<pre><i>// before init — becomes the baseline for every instance</i>
+<b>ZoomView</b>.config({ scale: <em>1.14</em>, hold: <em>0.7</em>, easeIn: <em>'power3.out'</em> });
+
+<i>// SPA / Next.js: re-run after the route's images mount, then clean up</i>
+<b>ZoomView</b>.init();
+<b>ZoomView</b>.observe();              <i>// auto-wire images injected later</i>
+<b>ZoomView</b>.refresh();              <i>// after layout shifts</i>
+<b>ZoomView</b>.destroy();              <i>// on unmount — unwraps and kills triggers</i>
+
+<i>// single element, explicit options (data-* still wins)</i>
+<b>ZoomView</b>.create(document.querySelector(<em>'#feature'</em>), { scale: <em>1.3</em> });</pre>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:14px">Options</h3>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Attribute</th><th>Default</th><th>What it controls</th></tr></thead>
+          <tbody>
+            <tr><td>data-zoom-scale</td><td>1.18</td><td>Scale while the image sits outside the viewport — the "zoomed in" end of the range.</td></tr>
+            <tr><td>data-zoom-rest</td><td>1</td><td>Scale at rest, once the image is centred. Set above 1 if you want it to never fully relax.</td></tr>
+            <tr><td>data-zoom-hold</td><td>0.55</td><td>Length of the plateau at rest scale, relative to one ramp. <code>0</code> removes the pause entirely.</td></tr>
+            <tr><td>data-zoom-ease-in</td><td>power2.out</td><td>Ease applied while entering — decelerating reads as "settling".</td></tr>
+            <tr><td>data-zoom-ease-out</td><td>power2.in</td><td>Ease applied while leaving — accelerating reads as "pulling away".</td></tr>
+            <tr><td>data-zoom-scrub</td><td>true</td><td><code>true</code> locks scale to scroll position; a number (e.g. <code>0.8</code>) adds that many seconds of catch-up smoothing.</td></tr>
+            <tr><td>data-zoom-start</td><td>top bottom</td><td>ScrollTrigger start — where the ramp begins.</td></tr>
+            <tr><td>data-zoom-end</td><td>bottom top</td><td>ScrollTrigger end — where the ramp finishes.</td></tr>
+            <tr><td>data-zoom-origin</td><td>50% 50%</td><td><code>transform-origin</code> of the zoom. Anchor to an edge to bias the crop.</td></tr>
+            <tr><td>data-zoom-ratio</td><td>—</td><td><code>16/9</code> sets the mask's aspect ratio; <code>fill</code> makes it fill a height you control; omit for the image's natural ratio.</td></tr>
+            <tr><td>data-zoom-wrap</td><td>true</td><td>Set <code>false</code> to skip auto-wrapping and scale the element in place.</td></tr>
+            <tr><td>data-zoom-markers</td><td>false</td><td>ScrollTrigger debug markers for this element.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:12px">Notes worth knowing</h3>
+      <p class="lede" style="font-size:1rem">
+        Because the range runs <code>top bottom</code> → <code>bottom top</code>, an image
+        taller than the viewport gets a longer ramp automatically — no per-element math.
+        Under <code>prefers-reduced-motion: reduce</code> the timeline is never built and
+        GSAP reverts every inline transform, so the markup is left clean rather than
+        frozen mid-zoom. Only <code>transform</code> animates, so each instance stays on
+        the compositor; <code>will-change</code> is set on init and cleared on destroy.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== CLOSING IMAGE -->
+<section style="padding-top:0">
+  <div class="bleed">
+    <img class="zoom-view rounded" data-zoom-ratio="21/9" data-zoom-scale="1.2"
+         data-zoom-ease-in="power3.out"
+         src="https://picsum.photos/seed/zoomview-closing/1800/780"
+         alt="Wide architectural landscape" loading="lazy">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>gsap-zoomview · MIT · requires GSAP 3 + ScrollTrigger</span>
+    <span>Scroll up and down — the scrub reverses exactly.</span>
+  </div>
+</footer>
+
+<!-- ============================================================== LIVE PANEL -->
+<aside class="panel" id="panel" data-collapsed="false">
+  <h3 id="panelToggle">Live tuning <span id="panelState">hide</span></h3>
+
+  <div class="field">
+    <label>Zoom scale <b id="vScale">1.18</b></label>
+    <input type="range" id="rScale" min="1" max="1.6" step="0.01" value="1.18">
+  </div>
+
+  <div class="field">
+    <label>Rest plateau <b id="vHold">0.55</b></label>
+    <input type="range" id="rHold" min="0" max="2" step="0.05" value="0.55">
+  </div>
+
+  <div class="field">
+    <label>Scrub smoothing <b id="vScrub">locked</b></label>
+    <input type="range" id="rScrub" min="0" max="2" step="0.1" value="0">
+  </div>
+
+  <div class="field">
+    <label>Entry ease</label>
+    <select id="sEase">
+      <option value="power2.out">power2.out — default</option>
+      <option value="none">none — linear</option>
+      <option value="power1.out">power1.out — gentle</option>
+      <option value="power3.out">power3.out — snappier settle</option>
+      <option value="expo.out">expo.out — dramatic settle</option>
+      <option value="sine.inOut">sine.inOut — even</option>
+    </select>
+  </div>
+
+  <p class="hint">Changes re-initialise every instance. Elements with their own
+    <code>data-zoom-*</code> keep overriding these.</p>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="gsap-zoomview.js"></script>
+<script>
+  /* ---------- live tuning panel (demo-only; not part of the plugin) ------- */
+  (function () {
+    var panel = document.getElementById('panel');
+    var toggle = document.getElementById('panelToggle');
+    var state = document.getElementById('panelState');
+
+    toggle.addEventListener('click', function () {
+      var collapsed = panel.getAttribute('data-collapsed') === 'true';
+      panel.setAttribute('data-collapsed', String(!collapsed));
+      state.textContent = collapsed ? 'hide' : 'show';
+    });
+
+    var rScale = document.getElementById('rScale');
+    var rHold  = document.getElementById('rHold');
+    var rScrub = document.getElementById('rScrub');
+    var sEase  = document.getElementById('sEase');
+
+    var vScale = document.getElementById('vScale');
+    var vHold  = document.getElementById('vHold');
+    var vScrub = document.getElementById('vScrub');
+
+    var queued = null;
+
+    function apply() {
+      vScale.textContent = (+rScale.value).toFixed(2);
+      vHold.textContent  = (+rHold.value).toFixed(2);
+      vScrub.textContent = (+rScrub.value) === 0 ? 'locked' : (+rScrub.value).toFixed(1) + 's';
+
+      clearTimeout(queued);
+      queued = setTimeout(function () {
+        ZoomView.destroy();
+        ZoomView.config({
+          scale:  +rScale.value,
+          hold:   +rHold.value,
+          scrub:  (+rScrub.value) === 0 ? true : +rScrub.value,
+          easeIn: sEase.value
+        });
+        ZoomView.init();
+        ZoomView.refresh();
+      }, 120);
+    }
+
+    [rScale, rHold, rScrub].forEach(function (el) { el.addEventListener('input', apply); });
+    sEase.addEventListener('change', apply);
+  })();
+</script>
+</body>
+</html>

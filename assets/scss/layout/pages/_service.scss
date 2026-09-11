@@ -131,6 +131,167 @@
 
 
 
+// services-list (numbered rows: number / title+points / thumb)
+.services-list {
+    &__wrapper {
+        border-top: 1px solid rgba(18, 18, 18, 0.14);
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 40px;
+        padding: 56px 0;
+        border-bottom: 1px solid rgba(18, 18, 18, 0.14);
+
+        @media #{$lg} {
+            column-gap: 24px;
+            padding: 44px 0;
+        }
+
+        @media #{$md,$sm,$xs} {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            row-gap: 18px;
+            padding: 34px 0;
+        }
+    }
+
+    &__number {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: start;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1;
+        color: rgba(18, 18, 18, 0.6);
+        font-family: var(--rr-ff-heading1);
+
+        @media #{$md,$sm,$xs} {
+            grid-column: auto;
+            grid-row: auto;
+            font-size: 18px;
+        }
+    }
+
+    &__title {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        margin: 0 0 20px;
+        font-size: 32px;
+        line-height: 1.15;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        font-family: var(--rr-ff-heading);
+        color: var(--rr-heading-primary);
+
+        a {
+            color: inherit;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: rgba(34, 34, 34, 0.7);
+            }
+        }
+
+        @media #{$lg} {
+            font-size: 26px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            grid-column: auto;
+            grid-row: auto;
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__points {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-family: var(--rr-ff-body);
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--rr-text-body);
+        }
+
+        @media #{$md,$sm,$xs} {
+            grid-column: auto;
+            grid-row: auto;
+
+            li {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+        }
+    }
+
+    &__thumb {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        align-self: center;
+        width: 390px;
+        height: 265px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--rr-shadow-primary);
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media #{$md,$sm,$xs} {
+            grid-column: auto;
+            grid-row: auto;
+            width: 100%;
+            max-width: 390px;
+        }
+    }
+}
+
+
+
+// services-inner (crossfade brand showcase)
+.services-inner {
+    &__thumb {
+        position: relative;
+        width: 100%;
+        height: 560px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--rr-shadow-primary);
+
+        @media #{$md} {
+            height: 420px;
+        }
+
+        @media #{$sm,$xs} {
+            height: 320px;
+        }
+    }
+}
+
+
+
 // h-2 service-area start
 .h2-service {
     &__item {

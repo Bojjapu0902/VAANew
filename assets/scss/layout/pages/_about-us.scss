@@ -257,10 +257,12 @@
 
                 @media #{$lg} {
                     padding-top: 59px;
+                    padding-left: 20px;
                 }
 
                 @media #{$md,$sm} {
                     padding-top: 62px;
+                    
                 }
 
                 @media #{$xs} {

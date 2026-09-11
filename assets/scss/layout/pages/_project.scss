@@ -80,7 +80,7 @@
     &__wrapper {
         &-thumb {
             img {
-                width: 100%;
+                width: 100% !important;
                 height: 100%;
                 object-fit: cover;
             }
@@ -279,7 +279,7 @@
 
     &__thumb {
         img {
-            width: 100%;
+            width: 100% !important;
             height: 100%;
             cursor: none;
             object-fit: cover;
@@ -375,11 +375,11 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
-        width: 100%;
+        width: 100% !important;
         height: auto;
 
         img {
-            width: 100%;
+            width: 100% !important;
             height: 100%;
             cursor: none;
             object-fit: cover;
@@ -426,7 +426,7 @@
                         width: inherit;
 
                         @media #{$md,$sm,$xs} {
-                            width: 100%;
+                            width: 100% !important;
                         }
                     }
                 }
@@ -476,7 +476,7 @@
                         width: inherit;
 
                         @media #{$md,$sm,$xs} {
-                            width: 100%;
+                            width: 100% !important;
                         }
                     }
                 }
@@ -571,7 +571,7 @@
         }
 
         a {
-            width: 100%;
+            width: 100% !important;
             font-weight: 400;
             font-size: 40px;
             line-height: 14px;
@@ -596,7 +596,7 @@
 
             &::before {
                 content: "";
-                width: 100%;
+                width: 100% !important;
                 height: 1px;
                 bottom: -23px;
                 left: 0;
