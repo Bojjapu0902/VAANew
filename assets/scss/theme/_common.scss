@@ -201,7 +201,7 @@ section {
 }
 
 .brand-border {
-	border: 1px solid #e1e2e4;
+	border: 1px solid var(--vaa-line);
 }
 
 .br-20 {
@@ -225,12 +225,12 @@ section {
 }
 
 .border-tp {
-	border: solid #E1E2E4;
+	border: solid var(--vaa-line);
 	border-width: 1px 0px 0px 0px;
 }
 
 .border-bt {
-	border: solid #E1E2E4;
+	border: solid var(--vaa-line);
 	border-width: 1px 0px 1px 0px;
 }
 

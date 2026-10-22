@@ -14,11 +14,15 @@
     /**
     @color declaration
     */
-    @each $color, $shades in $colors {
-        @each $shade, $value in $shades {
-            --rr-#{$color}-#{$shade}: #{$value};
-        }
+    @each $name, $value in $palette {
+        --vaa-#{$name}: #{$value};
     }
+    @each $name, $value in $palette-rgb {
+        --vaa-#{$name}-rgb: #{$value};
+    }
+
+    // default theme ("light"); [data-theme="dark"] is in theme/_themes.scss
+    @include theme-roles(light);
 
     /**
     @font weight declaration

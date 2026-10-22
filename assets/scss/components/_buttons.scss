@@ -18,7 +18,7 @@
   font-weight: var(--rr-fw-medium);
   color: var(--rr-common-white);
   font-family: var(--rr-ff-heading);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(var(--vaa-paper-rgb), 0.14);
 
   &::before {
     width: 100%;
@@ -137,7 +137,7 @@
     line-height: 1;
     color: var(--rr-common-white);
     background-color: transparent;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(var(--vaa-paper-rgb), 0.2);
     border-radius: 30px;
     text-transform: capitalize;
     transition: all 0.3s;
@@ -190,7 +190,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(var(--vaa-paper-rgb), 0.2);
 
     @media #{$lg} {
       width: 50px;
@@ -220,7 +220,7 @@
 
   >*:nth-child(2) {
     transform: scale3d(1, 1, 1);
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(var(--vaa-paper-rgb), 0.2);
   }
 
   >*:nth-child(3) {
@@ -238,7 +238,7 @@
 
     >*:nth-child(2) {
       transform: scale3d(1, 1, 1);
-      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border: 1.5px solid rgba(var(--vaa-paper-rgb), 0.2);
     }
 
     >*:nth-child(3) {
@@ -261,7 +261,7 @@
     line-height: 1;
     color: var(--rr-heading-primary);
     background-color: transparent;
-    border: 1.5px solid rgba(34, 34, 34, 0.1);
+    border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
     border-radius: 30px;
     text-transform: capitalize;
     transition: all 0.3s;
@@ -314,7 +314,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 1.5px solid rgba(34, 34, 34, 0.1);
+    border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
 
     @media #{$lg} {
       width: 50px;
@@ -346,7 +346,7 @@
   >*:nth-child(2) {
     // Main Button
     transform: scale3d(1, 1, 1);
-    border: 1.5px solid rgba(34, 34, 34, 0.1);
+    border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
   }
 
   >*:nth-child(3) {
@@ -367,7 +367,7 @@
     >*:nth-child(2) {
       // Main Button (Border Fixed)
       transform: scale3d(1, 1, 1);
-      border: 1.5px solid rgba(34, 34, 34, 0.1);
+      border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
       background-color: var(--rr-heading-primary); // Fix applied
       color: var(--rr-common-white); // Text color same as Main Button
     }
@@ -396,7 +396,7 @@
     line-height: 1;
     color: var(--rr-heading-primary);
     background-color: transparent;
-    border: 1.5px solid rgba(34, 34, 34, 0.1);
+    border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
     border-radius: 30px;
     text-transform: capitalize;
     transition: all 0.3s;
@@ -449,7 +449,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 1.5px solid rgba(34, 34, 34, 0.1);
+    border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
 
     @media #{$lg} {
       width: 50px;
@@ -479,18 +479,18 @@
 
   >*:nth-child(2) {
     transform: scale3d(1, 1, 1);
-    background-color: #ECFF70;
-    color: black;
-    border: 1.5px solid #ECFF70;
+    background-color: var(--rr-theme-primary-2);
+    color: var(--rr-common-black);
+    border: 1.5px solid var(--rr-theme-primary-2);
   }
 
   >*:nth-child(3) {
     transform: scale3d(1, 1, 1);
     margin-inline-start: 0;
     opacity: 1;
-    background-color: #ECFF70;
-    color: black;
-    border-color: #ECFF70;
+    background-color: var(--rr-theme-primary-2);
+    color: var(--rr-common-black);
+    border-color: var(--rr-theme-primary-2);
   }
 
   &:hover {
@@ -499,14 +499,14 @@
       margin-inline-end: 0;
       opacity: 1;
       background-color: transparent;
-      border: 1.5px solid #ECFF70;
-      color: #ECFF70;
+      border: 1.5px solid var(--rr-theme-primary-2);
+      color: var(--rr-theme-primary-2);
     }
 
     >*:nth-child(2) {
       background-color: transparent;
-      color: #ECFF70;
-      border: 1.5px solid #ECFF70;
+      color: var(--rr-theme-primary-2);
+      border: 1.5px solid var(--rr-theme-primary-2);
     }
 
     >*:nth-child(3) {
@@ -539,7 +539,7 @@
     line-height: 1.4;
     letter-spacing: -0.01em;
     color: var(--rr-heading-primary);
-    border: 1px solid #D9D9D9;
+    border: 1px solid var(--vaa-line);
     z-index: 1;
 
     &:hover {
@@ -551,7 +551,7 @@
       }
 
       svg [stroke="white"] {
-        stroke: #151515;
+        stroke: var(--rr-text-primary);
       }
     }
 
@@ -594,7 +594,7 @@
       color: var(--rr-heading-primary);
 
       svg [fill="white"] {
-        fill: #151515;
+        fill: var(--rr-text-primary);
       }
     }
 

@@ -1,0 +1,425 @@
+{
+  "$comment": "VAA services index. The service lists on index.html and services.html, and every services-details.html?id=<id> page, are rendered from this file - add, reorder or retitle a service here and all three follow. 'image' is the hover image on the home page; 'thumb' is the 4:3 card on services.html; 'heroImage' and 'faqImage' fill the details page. Copy under 'detail' is starter copy written per service - replace it with final wording.",
+  "services": [
+    {
+      "id": "branding-identity",
+      "number": "01",
+      "title": "Branding & Identity",
+      "points": ["Logo Design", "Brand Guidelines", "Visual Identity Systems", "Brand Collaterals"],
+      "image": "assets/imgs/images/services-branding-identity.jpg",
+      "thumb": "https://images.unsplash.com/photo-1636247498840-693054bb4bcc?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Modern brand identity mockup",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-branding-identity.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1636247498840-693054bb4bcc?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Brands People", "line2": "Remember." },
+        "heroBottom": { "highlight": "Bold", "rest": "Ideas", "line2": "Powerful Results." },
+        "featuresIntro": "A brand is more than a logo. We build identities that look consistent on a hoarding, a brochure and a phone screen, and that say the same thing about your business wherever people meet it.",
+        "features": [
+          { "title": "Logo & Mark Design", "text": "Distinct marks that stay sharp from a site board to a social avatar." },
+          { "title": "Brand Guidelines", "text": "A clear rulebook for colour, type and tone so every team stays on brand." },
+          { "title": "Visual Identity Systems", "text": "Colour palettes, typography, patterns and imagery that work as one system." },
+          { "title": "Brand Collaterals", "text": "Stationery, brochures, presentations and signage built from the identity." }
+        ],
+        "problemsIntro": "Most brands lose trust through small inconsistencies. Here is what we fix when we take on an identity project.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Discovery workshop and brand audit.", "Competitor and market positioning review.", "Concept routes presented with rationale.", "Refinement rounds before final delivery."] },
+          { "title": "Consistency Across Channels", "items": ["One identity for print, outdoor and digital.", "Ready-to-use logo and colour files.", "Templates for everyday communication.", "Guidelines your vendors can follow."] },
+          { "title": "Standing Out in a Crowded Market", "items": ["A positioning that separates you from lookalikes.", "A tone of voice that sounds like you.", "Memorable visual cues across touchpoints.", "A system that can grow with new projects."] }
+        ],
+        "faqIntro": "Planning a new identity or a refresh? These are the questions we hear most.",
+        "faqs": [
+          { "q": "What is included in a branding project?", "a": "Typically a brand audit, logo and identity design, colour and typography, and a guidelines document. Collaterals can be added based on your needs." },
+          { "q": "How long does a branding project take?", "a": "It depends on scope and how quickly feedback comes in. We share a timeline with milestones once we have your brief." },
+          { "q": "Can you refresh an existing brand instead of starting over?", "a": "Yes. We can modernise what you already have while keeping the recognition you have built." },
+          { "q": "Do we own the final files?", "a": "Yes. Final artwork and source files are handed over once the project is complete and paid for." }
+        ]
+      }
+    },
+    {
+      "id": "uiux-website-design",
+      "number": "02",
+      "title": "UI/UX & Website Design",
+      "points": ["Wireframing & Prototyping", "User Interface Design", "Website Development", "Usability Testing"],
+      "image": "assets/imgs/images/services-uiux-website.jpg",
+      "thumb": "https://images.unsplash.com/photo-1634084462412-b54873c0a56d?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Modern website UI on screen",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-uiux-website.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1634084462412-b54873c0a56d?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Websites That", "line2": "Work Harder." },
+        "heroBottom": { "highlight": "Clear", "rest": "Journeys", "line2": "Better Enquiries." },
+        "featuresIntro": "Your website is often the first meeting a buyer has with your brand. We design interfaces that are easy to use, fast to load and built to turn visitors into enquiries.",
+        "features": [
+          { "title": "Wireframing & Prototyping", "text": "Structure and flow agreed on early, before a single pixel is polished." },
+          { "title": "User Interface Design", "text": "Clean, on-brand screens designed for desktop, tablet and mobile." },
+          { "title": "Website Development", "text": "Responsive, fast-loading sites built to be easy for you to update." },
+          { "title": "Usability Testing", "text": "Real feedback on real flows so friction is fixed before launch." }
+        ],
+        "problemsIntro": "A good-looking site that confuses visitors still loses business. These are the problems we design around.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Stakeholder interviews and goal setting.", "Sitemaps and low-fidelity wireframes.", "Clickable prototypes for early sign-off.", "Design-to-development handover."] },
+          { "title": "Usability & Accessibility", "items": ["Clear navigation and page hierarchy.", "Readable type and sensible contrast.", "Touch-friendly layouts on mobile.", "Forms that are quick to complete."] },
+          { "title": "Performance & Search Readiness", "items": ["Optimised images and lean code.", "Clean structure for search engines.", "Enquiry forms and click-to-call placement.", "Analytics set up from day one."] }
+        ],
+        "faqIntro": "Thinking about a new website or an app interface? Start here.",
+        "faqs": [
+          { "q": "How long does it take to build a website?", "a": "A simple brochure site can move quickly, while larger sites with custom features take longer. We confirm the schedule after scoping." },
+          { "q": "Will the website work on mobile?", "a": "Yes. Every site we build is designed mobile-first and tested across common screen sizes." },
+          { "q": "Can we update the content ourselves?", "a": "Yes. We build with easy editing in mind and walk your team through it at handover." },
+          { "q": "Do you offer support after launch?", "a": "We can provide ongoing maintenance and updates on request." }
+        ]
+      }
+    },
+    {
+      "id": "digital-marketing",
+      "number": "03",
+      "title": "Digital Marketing",
+      "points": ["SEO & SEM", "Email Marketing", "Marketing Automation", "Analytics & Reporting"],
+      "image": "assets/imgs/images/services-digital-marketing.jpg",
+      "thumb": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Marketing analytics dashboard",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-digital-marketing.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Be Found.", "line2": "Be Chosen." },
+        "heroBottom": { "highlight": "Smart", "rest": "Reach", "line2": "Measurable Growth." },
+        "featuresIntro": "We connect your brand with the people searching for it. Our digital marketing blends search, email and automation with clear reporting, so you always know what is working.",
+        "features": [
+          { "title": "SEO & SEM", "text": "Organic and paid search that puts you in front of ready-to-act buyers." },
+          { "title": "Email Marketing", "text": "Campaigns and newsletters that keep leads warm and customers informed." },
+          { "title": "Marketing Automation", "text": "Follow-ups and nurture flows that run without manual effort." },
+          { "title": "Analytics & Reporting", "text": "Plain-language reports tied to enquiries, not just clicks." }
+        ],
+        "problemsIntro": "Spending on digital without a plan leaks budget. These are the gaps we close.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Audience and keyword research.", "Channel plan matched to your goals.", "Landing pages built for the campaign.", "Monthly review and optimisation."] },
+          { "title": "Lead Quality", "items": ["Targeting that favours serious buyers.", "Forms and call tracking for every channel.", "Retargeting for visitors who did not enquire.", "Lead follow-up workflows."] },
+          { "title": "Data & Analytics", "items": ["Dashboards with the numbers that matter.", "Source-level tracking of enquiries.", "Clear cost-per-lead visibility.", "Insights that shape the next campaign."] }
+        ],
+        "faqIntro": "Common questions before starting a digital marketing programme.",
+        "faqs": [
+          { "q": "How long does SEO take to show results?", "a": "SEO is a gradual channel. Early movement is often visible within a few months, but timing depends on competition and your site's starting point." },
+          { "q": "Do you run paid and organic together?", "a": "Yes. We usually combine them: paid for faster reach, organic for lasting visibility." },
+          { "q": "How do we measure success?", "a": "We agree the goals up front, such as enquiries, site visits or site-visit bookings, and report against them every month." },
+          { "q": "Is there a minimum contract period?", "a": "We discuss engagement terms during scoping and recommend a period that suits the channel." }
+        ]
+      }
+    },
+    {
+      "id": "social-media",
+      "number": "04",
+      "title": "Social Media",
+      "points": ["Content Calendar", "Community Management", "Influencer Collaborations", "Platform Strategy"],
+      "image": "assets/imgs/images/services-social-media.jpg",
+      "thumb": "https://images.unsplash.com/photo-1724862936518-ae7fcfc052c1?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Phone screen showing social media apps",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-social-media.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1724862936518-ae7fcfc052c1?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Show Up.", "line2": "Stay Social." },
+        "heroBottom": { "highlight": "Real", "rest": "Conversations", "line2": "Lasting Audiences." },
+        "featuresIntro": "Social media rewards brands that show up consistently with something worth watching. We plan, create and manage your presence so your audience grows and stays engaged.",
+        "features": [
+          { "title": "Content Calendar", "text": "A planned month of posts, stories and reels built around your launches." },
+          { "title": "Community Management", "text": "Timely replies and moderation that keep your page welcoming." },
+          { "title": "Influencer Collaborations", "text": "Creators matched to your audience and brief, from outreach to delivery." },
+          { "title": "Platform Strategy", "text": "The right mix of formats for Instagram, Facebook, LinkedIn and YouTube." }
+        ],
+        "problemsIntro": "Irregular posting and generic content make pages go quiet. Here is how we keep yours active.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Audience and competitor review.", "Monthly themes and content pillars.", "Approval workflow before publishing.", "Regular performance check-ins."] },
+          { "title": "Engagement & Community", "items": ["Prompt responses to comments and messages.", "Formats that invite interaction.", "Seasonal and festival campaigns.", "Handling of enquiries from social."] },
+          { "title": "Reach & Growth", "items": ["Hashtag and posting-time planning.", "Collaboration posts with partners.", "Boosted posts for key announcements.", "Insights on what to post more of."] }
+        ],
+        "faqIntro": "Here is what clients usually ask before handing over their social channels.",
+        "faqs": [
+          { "q": "How often should we post on social media?", "a": "It varies by platform and goal. We recommend a steady, sustainable schedule rather than bursts, and set it in the content calendar." },
+          { "q": "Do you create the content too?", "a": "Yes. Design, copy, short videos and reels can all be handled in-house." },
+          { "q": "Can you manage replies and messages?", "a": "Yes. Community management is part of the service when you want it." },
+          { "q": "Do you work with influencers?", "a": "We can shortlist and coordinate creators whose audience fits your brand." }
+        ]
+      }
+    },
+    {
+      "id": "creative-design",
+      "number": "05",
+      "title": "Creative Design",
+      "points": ["Concept Development", "Graphic Design", "Illustration", "Design Direction"],
+      "image": "assets/imgs/images/services-creative-design.jpg",
+      "thumb": "https://images.unsplash.com/photo-1786325492103-537cc777707c?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Modern photography studio setup",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-creative-design.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1786325492103-537cc777707c?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Ideas Worth", "line2": "Looking At." },
+        "heroBottom": { "highlight": "Sharp", "rest": "Concepts", "line2": "Striking Visuals." },
+        "featuresIntro": "Good design stops the scroll and makes the message land. Our creative team turns a brief into concepts and finished artwork that look polished everywhere they appear.",
+        "features": [
+          { "title": "Concept Development", "text": "Big ideas explored on paper before we move to production." },
+          { "title": "Graphic Design", "text": "Posters, creatives, presentations and layouts finished to a high standard." },
+          { "title": "Illustration", "text": "Custom illustrations and graphics that give your brand a distinct look." },
+          { "title": "Design Direction", "text": "A consistent art direction guiding every piece we make for you." }
+        ],
+        "problemsIntro": "Creative work fails when it is generic or inconsistent. We aim for work that is clear, memorable and on-brand.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Brief review and mood boards.", "Multiple concept routes.", "Feedback rounds with clear versions.", "Print-ready and web-ready exports."] },
+          { "title": "Clarity of Message", "items": ["One idea per creative.", "Headlines and visuals that work together.", "Layouts that read at a glance.", "Calls to action that are easy to spot."] },
+          { "title": "Brand Consistency", "items": ["Layouts that follow your guidelines.", "Reusable templates for repeat needs.", "A shared library of approved assets.", "Review of all outgoing artwork."] }
+        ],
+        "faqIntro": "A few things clients ask before starting a creative project.",
+        "faqs": [
+          { "q": "What do you need from us to start?", "a": "A short brief, your brand assets and any references you like. We can help shape the brief if you are not sure." },
+          { "q": "How many revisions are included?", "a": "We agree the number of revision rounds up front so the process stays clear for both sides." },
+          { "q": "Can you design to our existing brand guidelines?", "a": "Yes. We work within your guidelines or help you build them." },
+          { "q": "What file formats will we receive?", "a": "Print-ready PDFs, web-optimised images and editable source files where agreed." }
+        ]
+      }
+    },
+    {
+      "id": "advertising-campaigns",
+      "number": "06",
+      "title": "Advertising Campaigns",
+      "points": ["Campaign Strategy", "Media Planning", "Creative Execution", "Performance Tracking"],
+      "image": "assets/imgs/images/services-advertising-campaigns.jpg",
+      "thumb": "https://images.unsplash.com/photo-1635873432087-50eba4c4392d?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Illuminated advertising billboard at night",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-advertising-campaigns.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1635873432087-50eba4c4392d?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Campaigns That", "line2": "Get Noticed." },
+        "heroBottom": { "highlight": "Big", "rest": "Reach", "line2": "Right Audience." },
+        "featuresIntro": "From a project launch to a festive offer, we plan campaigns end to end: the idea, the media, the creative and the follow-through, all working to one clear objective.",
+        "features": [
+          { "title": "Campaign Strategy", "text": "A clear objective, audience and message before any spend begins." },
+          { "title": "Media Planning", "text": "The right mix of outdoor, print, digital and on-ground channels." },
+          { "title": "Creative Execution", "text": "Campaign creatives and copy adapted across every format." },
+          { "title": "Performance Tracking", "text": "Regular checks on response so the plan can be adjusted in flight." }
+        ],
+        "problemsIntro": "Scattered advertising wastes budget. A joined-up campaign keeps every rupee pulling in the same direction.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Objective and audience definition.", "Channel and budget planning.", "Creative development and approval.", "Launch, monitoring and wrap-up report."] },
+          { "title": "Launch Campaigns", "items": ["Teaser to reveal sequencing.", "Coordinated hoardings, print and digital.", "Landing pages and enquiry tracking.", "Event and site-visit tie-ins."] },
+          { "title": "Budget & Accountability", "items": ["Transparent media plans.", "Vendor coordination handled for you.", "Mid-campaign adjustments.", "A closing summary of what worked."] }
+        ],
+        "faqIntro": "Planning a campaign? Here are the usual questions.",
+        "faqs": [
+          { "q": "How do you decide which media to use?", "a": "We start from your audience and goal, then choose the channels that reach them most efficiently within your budget." },
+          { "q": "Can you handle both creative and media buying?", "a": "Yes. We can manage the whole campaign or support just the parts you need." },
+          { "q": "How long should a campaign run?", "a": "It depends on the objective. We recommend a flight plan during strategy and review it as results come in." },
+          { "q": "Will we get a report at the end?", "a": "Yes. We share a summary of delivery and response once the campaign wraps." }
+        ]
+      }
+    },
+    {
+      "id": "video-photography",
+      "number": "07",
+      "title": "Video & Photography",
+      "points": ["Product Photography", "Corporate Videos", "Video Editing", "Studio Production"],
+      "image": "assets/imgs/images/services-video-photography.jpg",
+      "thumb": "https://images.unsplash.com/photo-1612548403247-aa2873e9422d?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Professional cinema camera",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-video-photography.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1612548403247-aa2873e9422d?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Stories Told", "line2": "In Frames." },
+        "heroBottom": { "highlight": "Crisp", "rest": "Visuals", "line2": "Moving Stories." },
+        "featuresIntro": "Strong visuals build trust faster than words. We shoot and edit photography and video that shows your projects, products and people at their best.",
+        "features": [
+          { "title": "Product Photography", "text": "Clean, detailed images for catalogues, listings and campaigns." },
+          { "title": "Corporate Videos", "text": "Brand films, project walkthroughs and company profiles." },
+          { "title": "Video Editing", "text": "Cuts, colour, sound and motion graphics for every platform." },
+          { "title": "Studio Production", "text": "Controlled studio shoots with lighting, sets and styling handled." }
+        ],
+        "problemsIntro": "Poor visuals make good work look ordinary. We plan each shoot so the footage is usable across channels.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Shot lists and storyboards.", "Location scouting and scheduling.", "On-site direction and lighting.", "Post-production and review."] },
+          { "title": "Property & Project Visuals", "items": ["Walkthrough videos and drone-style views where permitted.", "Interior and exterior photography.", "Construction progress documentation.", "Launch-ready highlight reels."] },
+          { "title": "Multi-Platform Delivery", "items": ["Landscape and vertical cuts.", "Short edits for social media.", "Web-optimised file sizes.", "Organised archive of raw assets."] }
+        ],
+        "faqIntro": "Before you book a shoot, here is what clients usually want to know.",
+        "faqs": [
+          { "q": "How far in advance should we book a shoot?", "a": "As early as you can. Booking ahead helps us plan crew, equipment and locations properly." },
+          { "q": "Do you provide scripts and storyboards?", "a": "Yes. We can write the script and plan the shots, or work from your own brief." },
+          { "q": "Who owns the footage?", "a": "Final edited deliverables are yours. Rights to raw footage are agreed in the project terms." },
+          { "q": "Can you edit footage we already have?", "a": "Yes. We can edit and repurpose existing photos and videos." }
+        ]
+      }
+    },
+    {
+      "id": "content-creation",
+      "number": "08",
+      "title": "Content Creation",
+      "points": ["Copywriting", "Blog & Articles", "Scriptwriting", "Content Strategy"],
+      "image": "assets/imgs/images/services-content-creation.jpg",
+      "thumb": "https://images.unsplash.com/photo-1617899615427-8ec249947f67?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Camera screen and keyboard on desk",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-content-creation.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1617899615427-8ec249947f67?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Words That", "line2": "Move People." },
+        "heroBottom": { "highlight": "Clear", "rest": "Messages", "line2": "Stronger Connections." },
+        "featuresIntro": "Content gives your brand something worth sharing. We write and plan copy that explains what you do, builds credibility and nudges readers toward getting in touch.",
+        "features": [
+          { "title": "Copywriting", "text": "Headlines, ad copy, taglines and web copy with a consistent voice." },
+          { "title": "Blog & Articles", "text": "Useful, search-friendly articles that answer what buyers are asking." },
+          { "title": "Scriptwriting", "text": "Scripts for brand films, explainers and short-form video." },
+          { "title": "Content Strategy", "text": "A plan that ties topics, formats and channels to your goals." }
+        ],
+        "problemsIntro": "Content that is vague or irregular does not build trust. We focus on clarity, usefulness and consistency.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Audience and topic research.", "Tone-of-voice definition.", "Drafting, editing and fact-checking.", "Review and approval workflow."] },
+          { "title": "Search & Discoverability", "items": ["Keyword-informed topics.", "Clear headings and structure.", "Internal linking suggestions.", "Meta titles and descriptions."] },
+          { "title": "Consistency at Scale", "items": ["Editorial calendar.", "Reusable content across channels.", "A shared style guide.", "Regular refresh of older content."] }
+        ],
+        "faqIntro": "Questions we often get about content work.",
+        "faqs": [
+          { "q": "Do you write in languages other than English?", "a": "Yes. Let us know the language and audience, and we will confirm how we can support it." },
+          { "q": "How do you learn our business?", "a": "Through a kickoff discussion, your existing material and conversations with your team." },
+          { "q": "Can you rewrite our existing website copy?", "a": "Yes. We can refresh the copy for clarity, tone and search." },
+          { "q": "How many revisions are included?", "a": "We agree revision rounds before we start so expectations are clear." }
+        ]
+      }
+    },
+    {
+      "id": "print-outdoor-advertising",
+      "number": "09",
+      "title": "Print & Outdoor Advertising",
+      "points": ["Billboards & Hoardings", "Brochures & Flyers", "Vehicle Branding", "Signage Design"],
+      "image": "assets/imgs/images/services-print-outdoor.jpg",
+      "thumb": "https://images.unsplash.com/photo-1695634281181-b2357af34c61?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Modern tri-fold brochure mockup",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-print-outdoor.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1695634281181-b2357af34c61?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Seen On Every", "line2": "Street Corner." },
+        "heroBottom": { "highlight": "Big", "rest": "Impact", "line2": "Local Presence." },
+        "featuresIntro": "Outdoor and print still do what screens cannot: put your name in front of the whole neighbourhood. We design, plan and produce materials that hold up in the real world.",
+        "features": [
+          { "title": "Billboards & Hoardings", "text": "High-visibility creatives and site planning for roadside and project-site boards." },
+          { "title": "Brochures & Flyers", "text": "Printed pieces with strong layouts and finishes that feel premium." },
+          { "title": "Vehicle Branding", "text": "Wraps and graphics that turn fleets and promo vehicles into moving ads." },
+          { "title": "Signage Design", "text": "Wayfinding and shop-front signage that is legible and on-brand." }
+        ],
+        "problemsIntro": "Print and outdoor depend on getting size, placement and production right the first time.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Site and visibility assessment.", "Scaled mock-ups before printing.", "Material and finish recommendations.", "Installation coordination."] },
+          { "title": "Legibility & Impact", "items": ["Large, clear headlines.", "Colour contrast that works in daylight and at night.", "Minimal text for drive-by viewing.", "One strong call to action."] },
+          { "title": "Production & Quality", "items": ["Trusted printing and fabrication partners.", "Colour proofs before full runs.", "Quality checks on delivery.", "On-time installation support."] }
+        ],
+        "faqIntro": "Planning hoardings, brochures or signage? Start with these.",
+        "faqs": [
+          { "q": "Do you arrange hoarding sites and permissions?", "a": "We can help identify sites and coordinate with vendors. Permissions depend on the location and local rules." },
+          { "q": "Can you produce brochures in small quantities?", "a": "Yes. We recommend quantities based on how you will use them." },
+          { "q": "Do you handle installation?", "a": "We coordinate installation through our production partners." },
+          { "q": "Will we see a proof before printing?", "a": "Yes. We share proofs for approval before any full print run." }
+        ]
+      }
+    },
+    {
+      "id": "marketing-strategy",
+      "number": "10",
+      "title": "Marketing Strategy",
+      "points": ["Market Research", "Competitive Analysis", "Brand Positioning", "Go-to-Market Planning"],
+      "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=1200&fit=crop&q=85",
+      "thumb": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Team discussing strategy at a whiteboard",
+      "detail": {
+        "heroImage": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=1000&fit=crop&q=85",
+        "faqImage": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Plan First.", "line2": "Then Win." },
+        "heroBottom": { "highlight": "Informed", "rest": "Decisions", "line2": "Confident Launches." },
+        "featuresIntro": "Before spending on creatives and media, it pays to know your market. We research, position and plan so every campaign that follows has a clear purpose.",
+        "features": [
+          { "title": "Market Research", "text": "Understanding buyers, demand and local market conditions." },
+          { "title": "Competitive Analysis", "text": "A clear read on what competitors say, offer and where they are weak." },
+          { "title": "Brand Positioning", "text": "A distinct place in buyers' minds that is easy to explain and defend." },
+          { "title": "Go-to-Market Planning", "text": "Phased plans for launches covering audience, message, channels and timing." }
+        ],
+        "problemsIntro": "Launching without a plan often means guessing. A strategy removes guesswork and aligns your team.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Stakeholder discussions.", "Desk and field research.", "Audience personas and journeys.", "Strategy presentation and roadmap."] },
+          { "title": "Positioning & Messaging", "items": ["Core promise and proof points.", "Message hierarchy for each audience.", "Tone and naming guidance.", "Alignment across sales and marketing."] },
+          { "title": "Launch Planning", "items": ["Pre-launch, launch and post-launch phases.", "Channel and budget recommendations.", "Milestones and responsibilities.", "Metrics to track success."] }
+        ],
+        "faqIntro": "Common questions about strategy work.",
+        "faqs": [
+          { "q": "Do we need a strategy before running ads?", "a": "It helps a lot. A short strategy phase makes the creative and media work that follows more focused." },
+          { "q": "What do we receive at the end?", "a": "A strategy document with insights, positioning and a phased roadmap you can act on." },
+          { "q": "Can you execute the strategy too?", "a": "Yes. We can carry the plan through into creative, media and digital delivery." },
+          { "q": "How long does a strategy engagement take?", "a": "It depends on scope. We confirm the schedule after understanding your market and goals." }
+        ]
+      }
+    },
+    {
+      "id": "events-promotions",
+      "number": "11",
+      "title": "Events & Promotions",
+      "points": ["Event Planning", "Promotional Campaigns", "Booth & Stall Design", "On-ground Activation"],
+      "image": "assets/imgs/images/services-events-promotions.jpg",
+      "thumb": "https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Elegantly lit event with floral centerpieces",
+      "detail": {
+        "heroImage": "assets/imgs/images/services-events-promotions.jpg",
+        "faqImage": "https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Moments That", "line2": "Create Buzz." },
+        "heroBottom": { "highlight": "Live", "rest": "Experiences", "line2": "Lasting Impressions." },
+        "featuresIntro": "Events let people meet your brand in person. We plan, design and run launches, expos and promotions that are smooth on the day and memorable afterward.",
+        "features": [
+          { "title": "Event Planning", "text": "Concept, schedule, vendors and logistics managed from start to finish." },
+          { "title": "Promotional Campaigns", "text": "Offers and activations built around festivals, launches and milestones." },
+          { "title": "Booth & Stall Design", "text": "Expo stalls and display designs that draw footfall." },
+          { "title": "On-ground Activation", "text": "Trained teams and engagement ideas that convert visitors into leads." }
+        ],
+        "problemsIntro": "A good event is invisible to the guest: everything just works. This is how we keep it that way.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Objective and audience brief.", "Run-of-show and vendor schedule.", "Rehearsal and on-site checks.", "Post-event lead and feedback summary."] },
+          { "title": "Site Launches & Expos", "items": ["Entrance, stage and branding layout.", "Visitor registration and lead capture.", "Sales desk and presentation set-up.", "Hospitality and guest flow."] },
+          { "title": "Promotions That Convert", "items": ["Offers tied to a clear call to action.", "Promotion across digital and outdoor channels.", "Staff briefed on the message.", "Response tracked during and after."] }
+        ],
+        "faqIntro": "Planning an event or promotion? These are the usual questions.",
+        "faqs": [
+          { "q": "How early should we start planning an event?", "a": "The earlier the better. Venues, vendors and creatives all need lead time." },
+          { "q": "Do you handle vendors and permissions?", "a": "We coordinate vendors and guide you on the permissions typically needed for your event." },
+          { "q": "Can you design the stall as well as run it?", "a": "Yes. We handle stall design, fabrication coordination and staffing." },
+          { "q": "How do you measure an event's success?", "a": "Against goals set up front, such as attendance, leads captured and follow-up enquiries." }
+        ]
+      }
+    },
+    {
+      "id": "performance-marketing",
+      "number": "12",
+      "title": "Performance Marketing",
+      "points": ["PPC Advertising", "Conversion Optimization", "ROI Tracking", "A/B Testing"],
+      "image": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?w=1200&h=1200&fit=crop&q=85",
+      "thumb": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?w=780&h=530&fit=crop&q=85",
+      "thumbAlt": "Conversion analytics dashboard on screen",
+      "detail": {
+        "heroImage": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?w=1600&h=1000&fit=crop&q=85",
+        "faqImage": "https://images.unsplash.com/photo-1686061592689-312bbfb5c055?w=780&h=530&fit=crop&q=85",
+        "heroTop": { "highlight": "Every Rupee", "line2": "Accounted For." },
+        "heroBottom": { "highlight": "Tested", "rest": "Campaigns", "line2": "Trackable Returns." },
+        "featuresIntro": "Performance marketing ties spend to outcomes. We run paid campaigns, test relentlessly and report on cost per lead so you can see what each rupee is delivering.",
+        "features": [
+          { "title": "PPC Advertising", "text": "Search, display and social ads built around buyer intent." },
+          { "title": "Conversion Optimization", "text": "Landing pages and forms tuned to turn more clicks into enquiries." },
+          { "title": "ROI Tracking", "text": "Tracking from first click to enquiry so spend is judged on results." },
+          { "title": "A/B Testing", "text": "Controlled tests of creatives, headlines and offers to find what works." }
+        ],
+        "problemsIntro": "Without tracking and testing, paid campaigns drift. These are the controls we put in place.",
+        "problems": [
+          { "title": "Methods & Techniques", "items": ["Account and tracking set-up.", "Audience and keyword structure.", "Weekly bid and budget reviews.", "Regular creative refreshes."] },
+          { "title": "Lead Quality & Cost", "items": ["Negative keywords and audience exclusions.", "Call and form tracking.", "Cost-per-lead monitoring.", "Feedback loop with your sales team."] },
+          { "title": "Testing & Optimisation", "items": ["One variable tested at a time.", "Clear win and loss criteria.", "Learnings rolled into the next round.", "Documented changes and results."] }
+        ],
+        "faqIntro": "What clients ask before starting a performance programme.",
+        "faqs": [
+          { "q": "How soon will we see results?", "a": "Paid campaigns can generate traffic quickly, but performance improves as data builds and we optimise. We set realistic expectations during planning." },
+          { "q": "Who controls the ad budget?", "a": "You do. Ad spend is paid to the platforms directly and we manage how it is used." },
+          { "q": "Do you guarantee leads?", "a": "No agency can guarantee outcomes in a live auction. We commit to transparent tracking and continuous improvement." },
+          { "q": "Which platforms do you run ads on?", "a": "Typically Google and Meta, with other platforms added where they fit your audience." }
+        ]
+      }
+    }
+  ]
+}

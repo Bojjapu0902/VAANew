@@ -15,7 +15,7 @@
             font-weight: var(--rr-fw-regular);
             font-size: 16px;
             line-height: 26px;
-            color: rgba(34, 32, 32, 0.8);
+            color: rgba(var(--vaa-fg-rgb), 0.8);
 
             @media #{$sm,$xs} {
                 font-size: 15px;
@@ -71,7 +71,7 @@
         }
 
         span {
-            background-color: #ECFF70;
+            background-color: var(--rr-theme-primary-2);
             border-radius: 20px;
 
             @media #{$sm} {
@@ -116,7 +116,7 @@
             font-weight: var(--rr-fw-medium);
             font-size: 16px;
             line-height: 1;
-            color: #222020;
+            color: var(--rr-heading-primary);
         }
     }
 
@@ -181,8 +181,8 @@
             padding: 61px 50px 52px 20px;
             height: auto;
             object-fit: cover;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #F2F2F2 100%);
-            border: 1px solid rgba(34, 34, 34, 0.12);
+            background: linear-gradient(180deg, rgba(var(--vaa-paper-rgb), 0) 0%, var(--vaa-paper-alt) 100%);
+            border: 1px solid rgba(var(--vaa-fg-rgb), 0.12);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -252,7 +252,7 @@
                 font-weight: var(--rr-fw-medium);
                 font-size: 18px;
                 line-height: 26px;
-                color: rgba(34, 34, 34, 0.7);
+                color: rgba(var(--vaa-fg-rgb), 0.7);
                 padding-top: 137px;
 
                 @media #{$lg} {
@@ -278,7 +278,7 @@
             position: absolute;
             width: 102px;
             height: 102px;
-            background: #ECFF70;
+            background: var(--rr-theme-primary-2);
             z-index: 1;
             bottom: 191px;
             right: 103px;
@@ -355,15 +355,15 @@
             font-size: 16px;
             line-height: 14px;
             text-align: center;
-            color: #121212;
-            border: 1px solid rgba(18, 18, 18, 0.14);
+            color: var(--rr-text-primary-2);
+            border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
             border-radius: 100px;
             padding: 13px 18px 12px 19px;
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                background: #121212;
-                color: #fff;
+                background: var(--rr-text-primary-2);
+                color: var(--rr-common-white);
             }
         }
     }
@@ -421,7 +421,7 @@
             line-height: 30px;
             margin-top: 42px;
             margin-bottom: 55px;
-            color: rgba(18, 18, 18, 0.6);
+            color: rgba(var(--vaa-fg-rgb), 0.6);
             font-family: var(--rr-ff-body);
             font-weight: var(--rr-fw-regular);
 
@@ -447,7 +447,7 @@
             padding: 4px;
             padding-right: 21px;
             color: var(--rr-text-primary-2);
-            border: 1px solid rgb(18 18 18 / 14%);
+            border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
             span {
                 width: 40px;
@@ -469,7 +469,7 @@
 
     &__counter-item {
         padding: 35px 35px 29px 40px;
-        border: 1px solid #D9D9D9;
+        border: 1px solid var(--vaa-line);
         position: relative;
         overflow: hidden;
         position: relative;
@@ -492,7 +492,7 @@
             font-weight: var(--rr-fw-medium);
             font-size: 16px;
             line-height: 24px;
-            color: #121212;
+            color: var(--rr-text-primary-2);
             padding-bottom: 69px;
 
             @media #{$md} {
@@ -512,7 +512,7 @@
             font-size: 134px;
             line-height: 1;
             text-transform: uppercase;
-            color: #121212;
+            color: var(--rr-text-primary-2);
 
             @media #{$xl} {
                 font-size: 100px;
@@ -533,7 +533,7 @@
                 font-size: 134px;
                 line-height: 1;
                 text-transform: uppercase;
-                color: #121212;
+                color: var(--rr-text-primary-2);
                 margin-left: 0;
 
                 @media #{$xl} {
@@ -620,7 +620,7 @@
         max-width: 456px;
         display: inline-block;
         padding: 50px 50px 72px 40px;
-        border: 1px solid rgb(225, 226, 228);
+        border: 1px solid var(--vaa-line);
 
         @media #{$xs} {
             padding: 30px 20px;
@@ -663,7 +663,7 @@
         font-size: 14px;
         align-items: center;
         justify-content: center;
-        border: 1px solid #E1E2E4;
+        border: 1px solid var(--vaa-line);
         transition: all 0.3s ease-in-out;
         color: var(--rr-text-primary-2);
 
@@ -693,7 +693,7 @@
             border-radius: 0;
             margin: 0 !important;
             position: relative;
-            background-color: #E1E2E4;
+            background-color: var(--vaa-line);
 
             @media #{$xxl} {
                 width: 455px;
@@ -726,7 +726,7 @@
                 top: 0;
                 right: 0;
                 position: absolute;
-                background-color: #222222;
+                background-color: var(--rr-heading-primary);
                 opacity: 0;
                 visibility: hidden;
                 transition: all 0.5s ease-in-out;
@@ -846,7 +846,7 @@
                 position: absolute;
                 border-radius: 500px;
                 background-color: rgba(0, 0, 0, 0.1);
-                border: 1px solid rgba(0, 0, 0, 0.14);
+                border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
                 animation: zooming 1.3S infinite alternate;
 
                 @media #{$md} {
@@ -871,7 +871,7 @@
 
 .team-section {
     &__top {
-        border-bottom: 1px solid #E1E2E4;
+        border-bottom: 1px solid var(--vaa-line);
 
         .section {
             &__title-wrapper-title {
@@ -942,7 +942,7 @@
         line-height: 38px;
         margin-top: 60px;
         margin-bottom: 90px;
-        color: rgba(34, 34, 34, 0.6);
+        color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
 
         @media #{$xl,$lg} {

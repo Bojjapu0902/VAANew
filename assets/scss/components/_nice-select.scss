@@ -34,7 +34,7 @@
 	white-space: nowrap;
 	width: auto;
     &:hover{
-        border-color: #dbdbdb;
+        border-color: var(--vaa-line);
     }
     &:active,
     &.open,
@@ -69,7 +69,7 @@
         }
     }
     &.disabled{
-        border-color: #ededed;
+        border-color: var(--vaa-line);
         color: #999;
         pointer-events: none;
         &::after{
@@ -139,7 +139,7 @@
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
         &:hover {
-            background-color: #f6f7f9;
+            background-color: var(--vaa-paper-alt);
         }
         &.selected{
             font-weight: bold;

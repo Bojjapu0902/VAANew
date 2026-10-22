@@ -42,7 +42,7 @@
                             padding: 36px 0;
                             text-transform: uppercase;
                             font-weight: var(--rr-fw-sbold);
-                            color: rgba(255, 255, 255, 1);
+                            color: rgb(var(--vaa-paper-rgb));
                             font-family: var(--rr-ff-heading);
                         }
                         &.has-dropdown>a::after {

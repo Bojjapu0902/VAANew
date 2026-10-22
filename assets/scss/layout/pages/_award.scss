@@ -31,10 +31,10 @@
         &__item {
             position: relative;
             padding: 39.5px 0;
-            border-bottom: 1px solid rgba(18, 18, 18, 0.6);
+            border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.6);
 
             &:first-of-type {
-                border-top: 1px solid rgba(18, 18, 18, 0.6);
+                border-top: 1px solid rgba(var(--vaa-fg-rgb), 0.6);
             }
 
             &.item-5 {
@@ -161,7 +161,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 1;
-            color: rgba(18, 18, 18, 0.6);
+            color: rgba(var(--vaa-fg-rgb), 0.6);
             font-family: var(--rr-ff-heading1);
         }
 
@@ -183,7 +183,7 @@
                 right: 0;
                 position: absolute;
                 transform: rotate(10deg);
-                background-color: rgba(18, 18, 18, 0.6);
+                background-color: rgba(var(--vaa-fg-rgb), 0.6);
             }
         }
 
@@ -192,7 +192,7 @@
             font-size: 22px;
             line-height: 1;
             letter-spacing: -0.02em;
-            color: rgba(18, 18, 18, 0.6);
+            color: rgba(var(--vaa-fg-rgb), 0.6);
             font-family: var(--rr-ff-heading1);
 
             @media #{$xs} {

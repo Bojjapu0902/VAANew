@@ -9,10 +9,10 @@
 	.swiper-pagination-bullet {
 		width: 10px;
 		height: 10px;
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: rgba(var(--vaa-paper-rgb), 0.2);
 
 		@include light {
-			background-color: rgba(6, 6, 6, 0.20);
+			background-color: rgba(var(--vaa-fg-rgb), 0.20);
 		}
 
 		opacity: 1;
@@ -21,19 +21,19 @@
 		margin: 0 8px;
 
 		&.swiper-pagination-bullet-active {
-			background-color: rgba(255, 255, 255, 1);
+			background-color: rgb(var(--vaa-paper-rgb));
 
 			@include light {
-				background-color: rgba(6, 6, 6, 1);
+				background-color: rgb(var(--vaa-fg-rgb));
 			}
 		}
 	}
 	&.is-white {
 		.swiper-pagination-bullet {
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: rgba(var(--vaa-paper-rgb), 0.2);
 	
 			&.swiper-pagination-bullet-active {
-				background-color: rgba(255, 255, 255, 1);
+				background-color: rgb(var(--vaa-paper-rgb));
 			}
 		}
 	}

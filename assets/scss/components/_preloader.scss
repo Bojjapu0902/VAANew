@@ -24,7 +24,7 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	background-color: #121212;
+	background-color: var(--rr-text-primary-2);
 	z-index: 999;
 }
 .sk-three-bounce {
@@ -32,7 +32,7 @@
 	width: 100%;
 	height: 100%;
 	text-align: center;
-	background-color: #121212;
+	background-color: var(--rr-text-primary-2);
 }
 .sk-three-bounce .sk-child {
 	position: relative;
@@ -40,7 +40,7 @@
 	transform: translateY(-50%);
 	width: 20px;
 	height: 20px;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(var(--vaa-paper-rgb), 0.7);
 	border-radius: 100%;
 	display: inline-block;
 	-webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;

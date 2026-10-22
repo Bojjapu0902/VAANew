@@ -1,35 +1,304 @@
+@use 'sass:map';
+
+// ---------------------------------------------------------------------------
+// VAA colour system
+//
+//   1. $palette  - the original brand colours. Constant, never change per theme.
+//   2. $themes   - role tokens (paper, foreground, accent, lines...). Every
+//                  theme gives each role a value; components only read roles.
+//   3. $islands  - optional per-theme overrides for "fixed surfaces" (see
+//                  theme/_themes.scss): areas that keep a dark band / accent
+//                  background in every theme.
+//   4. $colors   - legacy --rr-* names, aliased onto the roles so the existing
+//                  stylesheet follows the active theme untouched.
+//
+// To add a theme: add a map to $themes (copy a similar one), and an entry to
+// THEMES in assets/js/components/theme-switcher.js. Nothing else.
+// ---------------------------------------------------------------------------
+
+// 1. Brand palette --------------------------------------------------------
+$palette: (
+  "lime": #ECFF70,
+  "lime-deep": #D5EF28,
+  "ink": #222222,
+  "ink-deep": #121212,
+  "black": #000000,
+  "white": #FFFFFF,
+  "cream": #F6F0E9,
+  "sand": #D5C8B9,
+  "grey": #F5F5F5,
+  "red": #E70820,
+  "brown": #453030,
+  "slate": #4A5764,
+);
+
+// brand colours that are also needed as "r, g, b" for alpha use
+$palette-rgb: (
+  "brown": "69, 48, 48",
+);
+
+// 2. Theme roles ----------------------------------------------------------
+//   paper / paper-*   page surface and its variants
+//   fg / fg-*         text and "ink"; fg-rgb lets rules write rgba(var(--vaa-fg-rgb), .6)
+//   accent(-deep)     the signature colour (lime in the original theme). Always light
+//                     enough to carry dark text.
+//   line              hairline borders
+//   *-filter          image filters for artwork that is dark-on-transparent
+$themes: (
+  // Ink & Lime - white pages, charcoal type, lime accent (the original look)
+  light: (
+    "label": "Ink & Lime",
+    "paper": #FFFFFF,
+    "paper-rgb": "255, 255, 255",
+    "paper-alt": #F5F5F5,
+    "paper-tint": #F1F5EB,
+    "paper-sand": #F6F0E9,
+    "fg": #222222,
+    "fg-rgb": "34, 34, 34",
+    "fg-secondary": #222020,
+    "fg-strong": #121212,
+    "fg-black": #000000,
+    "line": #E1E2E4,
+    "placeholder": #4A5764,
+    "shadow": 0px 30px 60px 0px rgba(0, 15, 32, 0.1),
+    "accent": #ECFF70,
+    "accent-deep": #D5EF28,
+    "logo-filter": none,
+    "brand-filter": none,
+    "color-scheme": light,
+  ),
+  // Midnight Lime - charcoal pages, cream type, lime accent
+  dark: (
+    "label": "Midnight Lime",
+    "paper": #141414,
+    "paper-rgb": "20, 20, 20",
+    "paper-alt": #1E1E1E,
+    "paper-tint": #1B1D18,
+    "paper-sand": #1B1916,
+    "fg": #F6F0E9,
+    "fg-rgb": "246, 240, 233",
+    "fg-secondary": #F6F0E9,
+    "fg-strong": #FFFFFF,
+    "fg-black": #FFFFFF,
+    "line": rgba(246, 240, 233, 0.18),
+    "placeholder": #9AA6B2,
+    "shadow": 0px 30px 60px 0px rgba(0, 0, 0, 0.5),
+    "accent": #ECFF70,
+    "accent-deep": #D5EF28,
+    "logo-filter": (invert(1) brightness(0.96) sepia(0.12)),
+    "brand-filter": (invert(1) hue-rotate(180deg)),
+    "color-scheme": dark,
+  ),
+  // Sand & Ember - warm cream pages, brown type, peach accent
+  ember: (
+    "label": "Sand & Ember",
+    "paper": #FBF6EF,
+    "paper-rgb": "251, 246, 239",
+    "paper-alt": #F3EADF,
+    "paper-tint": #F6EBDD,
+    "paper-sand": #F6F0E9,
+    "fg": #453030,
+    "fg-rgb": "69, 48, 48",
+    "fg-secondary": #453030,
+    "fg-strong": #2B1D1D,
+    "fg-black": #1F1414,
+    "line": #E7D9C9,
+    "placeholder": #8A7468,
+    "shadow": 0px 30px 60px 0px rgba(69, 48, 48, 0.14),
+    "accent": #FFB48A,
+    "accent-deep": #F4936A,
+    "logo-filter": none,
+    "brand-filter": none,
+    "color-scheme": light,
+  ),
+  // Ocean Mist - cool white pages, navy type, sky accent
+  ocean: (
+    "label": "Ocean Mist",
+    "paper": #F5FAFC,
+    "paper-rgb": "245, 250, 252",
+    "paper-alt": #E9F2F6,
+    "paper-tint": #E4F0F5,
+    "paper-sand": #EEF5F8,
+    "fg": #0F2A3A,
+    "fg-rgb": "15, 42, 58",
+    "fg-secondary": #0F2A3A,
+    "fg-strong": #0A1E2B,
+    "fg-black": #06131C,
+    "line": #D3E3EA,
+    "placeholder": #5E7A8A,
+    "shadow": 0px 30px 60px 0px rgba(15, 42, 58, 0.12),
+    "accent": #9ADCFF,
+    "accent-deep": #6CC6F5,
+    "logo-filter": none,
+    "brand-filter": none,
+    "color-scheme": light,
+  ),
+  // Violet Dusk - deep violet pages, lavender-white type, lavender accent
+  dusk: (
+    "label": "Violet Dusk",
+    "paper": #130F22,
+    "paper-rgb": "19, 15, 34",
+    "paper-alt": #1D1733,
+    "paper-tint": #1A1530,
+    "paper-sand": #181330,
+    "fg": #EFEAFF,
+    "fg-rgb": "239, 234, 255",
+    "fg-secondary": #EFEAFF,
+    "fg-strong": #FFFFFF,
+    "fg-black": #FFFFFF,
+    "line": rgba(239, 234, 255, 0.18),
+    "placeholder": #A79FC4,
+    "shadow": 0px 30px 60px 0px rgba(0, 0, 0, 0.55),
+    "accent": #CDB4FF,
+    "accent-deep": #B392F5,
+    "logo-filter": (invert(1) brightness(0.97)),
+    "brand-filter": (invert(1) hue-rotate(180deg)),
+    "color-scheme": dark,
+  ),
+  // Forest Mint - deep green pages, mint-white type, mint accent
+  forest: (
+    "label": "Forest Mint",
+    "paper": #0C1612,
+    "paper-rgb": "12, 22, 18",
+    "paper-alt": #14221C,
+    "paper-tint": #121F19,
+    "paper-sand": #101B16,
+    "fg": #E7F5EC,
+    "fg-rgb": "231, 245, 236",
+    "fg-secondary": #E7F5EC,
+    "fg-strong": #FFFFFF,
+    "fg-black": #FFFFFF,
+    "line": rgba(231, 245, 236, 0.18),
+    "placeholder": #8FB09F,
+    "shadow": 0px 30px 60px 0px rgba(0, 0, 0, 0.55),
+    "accent": #9FFFCB,
+    "accent-deep": #6FE6A9,
+    "logo-filter": (invert(1) brightness(0.97)),
+    "brand-filter": (invert(1) hue-rotate(180deg)),
+    "color-scheme": dark,
+  ),
+);
+
+// 3. Fixed-surface overrides ---------------------------------------------
+// A fixed surface (charcoal band, accent hero) restores the *light* roles plus
+// its own theme's accent. A theme can tint those bands by listing roles here.
+$islands: (
+  ember: (
+    "paper": #FFF8F0,
+    "paper-rgb": "255, 248, 240",
+    "fg": #2E1F1F,
+    "fg-rgb": "46, 31, 31",
+    "fg-secondary": #2E1F1F,
+    "fg-strong": #231616,
+    "fg-black": #170E0E,
+  ),
+  ocean: (
+    "paper": #F5FAFC,
+    "paper-rgb": "245, 250, 252",
+    "fg": #0E2433,
+    "fg-rgb": "14, 36, 51",
+    "fg-secondary": #0E2433,
+    "fg-strong": #08192A,
+    "fg-black": #040E18,
+  ),
+  dusk: (
+    "paper": #F7F4FF,
+    "paper-rgb": "247, 244, 255",
+    "fg": #221A3D,
+    "fg-rgb": "34, 26, 61",
+    "fg-secondary": #221A3D,
+    "fg-strong": #17102B,
+    "fg-black": #0F0A1E,
+  ),
+  forest: (
+    "paper": #F2FBF6,
+    "paper-rgb": "242, 251, 246",
+    "fg": #17261F,
+    "fg-rgb": "23, 38, 31",
+    "fg-secondary": #17261F,
+    "fg-strong": #0E1A14,
+    "fg-black": #08110D,
+  ),
+);
+
+// 4. Legacy --rr-* aliases (values are var() references into the roles) -----
 $colors: (
   common: (
-    "white": #FFFFFF,
-    "black": #000000,
-    "placeholder": #4A5764,
+    "white": var(--vaa-paper),
+    "black": var(--vaa-fg-black),
+    "placeholder": var(--vaa-placeholder),
+    "selection": var(--vaa-accent),
+    "heading": var(--vaa-fg),
   ),
   body: (
-    "primary": #fff,
+    "primary": var(--vaa-paper),
   ),
   theme: (
-    "primary": #222222,
-    "primary-2": #ECFF70,
+    "primary": var(--vaa-fg),
+    "primary-2": var(--vaa-accent),
+    "primary2": var(--vaa-accent),
+    "2": var(--vaa-accent),
+    "3": var(--vaa-red),
+    "4": var(--vaa-sand),
+    "5": var(--vaa-fg),
   ),
   heading: (
-    "primary": #222222,
-    "secondary": #222020,
+    "primary": var(--vaa-fg),
+    "secondary": var(--vaa-fg-secondary),
   ),
   text: (
-    "body":  rgba(34, 34, 34, 0.6),
-    "primary": #151515,
-    "primary-2": #121212,
+    "body": rgba(var(--vaa-fg-rgb), 0.6),
+    "primary": var(--vaa-fg-strong),
+    "primary-2": var(--vaa-fg-strong),
+    "1": var(--vaa-fg),
+    "secondary": rgba(var(--vaa-fg-rgb), 0.6),
   ),
   shadow: (
-      "primary": 0px 30px 60px 0px rgba(0, 15, 32, 0.10),
+      "primary": var(--vaa-shadow),
   ),
   background: (
-      "primary": #E70820,
-      "hero-2-bg": #222222,
-      "section-3-bg": #121212,
-      "body-bg": #F6F0E9,
+      "primary": var(--vaa-red),
+      "hero-2-bg": var(--vaa-ink),
+      "section-3-bg": var(--vaa-fg-strong),
+      "body-bg": var(--vaa-paper-sand),
   ),
   border: (
-    "primary": 1px solid rgba(5, 5, 19, 0.14),
+    "primary": 1px solid rgba(var(--vaa-fg-rgb), 0.14),
   )
 );
+
+// Emits a role map as --vaa-* custom properties, plus the --rr-* aliases.
+// ("label" is metadata for the switcher, not a CSS value.)
+@mixin emit-roles($roles) {
+  @each $role, $value in $roles {
+    @if $role != "color-scheme" and $role != "label" {
+      --vaa-#{$role}: #{$value};
+    }
+  }
+  color-scheme: map.get($roles, "color-scheme");
+
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --rr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+
+// Whole theme, as used on :root
+@mixin theme-roles($name) {
+  @include emit-roles(map.get($themes, $name));
+}
+
+// The fixed-surface variant of a theme: light roles + this theme's accent,
+// plus any tint listed in $islands.
+@mixin island-roles($name) {
+  $own: map.get($themes, $name);
+  $roles: map.merge(map.get($themes, light), (
+    "accent": map.get($own, "accent"),
+    "accent-deep": map.get($own, "accent-deep"),
+  ));
+  @if map.has-key($islands, $name) {
+    $roles: map.merge($roles, map.get($islands, $name));
+  }
+  @include emit-roles($roles);
+}

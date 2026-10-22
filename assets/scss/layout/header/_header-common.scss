@@ -13,7 +13,7 @@
 	width: 100%;
 	-webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 	animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-	background: #F1F5EB;
+	background: var(--vaa-paper-tint);
 	box-shadow: 0px 10px 20px 0px rgba(0, 29, 8, 0.10);
 	border-top: 0;
 
@@ -68,7 +68,7 @@
 		position: absolute;
 
 		&__middle {
-			border: 1px solid rgba(0, 0, 0, 0.2);
+			border: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 			border-radius: 50px;
 			position: relative;
 			margin-right: 130px;
@@ -235,7 +235,7 @@
 
 // Header Baricon
 .sidebar__toggle {
-	background: rgba(255, 255, 255, 0.14);
+	background: rgba(var(--vaa-paper-rgb), 0.14);
 	width: 46px;
 	height: 46px;
 	border-radius: 50px;
@@ -408,7 +408,7 @@
 				border: none;
 
 				option {
-					background: #000;
+					background: var(--rr-common-black);
 					border: none;
 				}
 			}

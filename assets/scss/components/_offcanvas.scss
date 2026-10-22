@@ -67,7 +67,7 @@
     &__top{
         padding-bottom: 20px;
         margin-bottom: 35px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.079);
+        border-bottom: 1px solid rgba(var(--vaa-paper-rgb), 0.079);
         @media #{$xs} {
             padding-bottom: 15px;
             margin-bottom: 30px;
@@ -190,7 +190,7 @@
         position: fixed;
         height: 100%;
         width: 100%;
-        background: rgb(43, 43, 43);
+        background: rgb(var(--vaa-fg-rgb));
         z-index: 900;
         top: 0;
         opacity: 0;

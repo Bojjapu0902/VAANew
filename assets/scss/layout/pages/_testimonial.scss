@@ -13,7 +13,7 @@
         align-items: center;
         text-align: center;
         border-radius: 500px;
-        border: 1.5px solid rgb(34 32 32 / 10%);
+        border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.1);
 
         @media #{$xxl} {
             margin-left: -30px;
@@ -100,7 +100,7 @@
             transform: translate(0, -50%);
             transition: all 0.3s ease-in-out;
             color: var(--rr-heading-primary);
-            background: rgba(34, 34, 34, 0.12);
+            background: rgba(var(--vaa-fg-rgb), 0.12);
             z-index: 9;
             display: flex;
             align-items: center;
@@ -148,7 +148,7 @@
 
     &__wrapper {
         display: flex;
-        background: #F6F6F6;
+        background: var(--vaa-paper-alt);
         justify-content: space-between;
 
         @media #{ $md, $sm, $xs} {
@@ -231,7 +231,7 @@
         font-size: 26px;
         line-height: 54px;
         letter-spacing: -2%;
-        color: rgb(29, 29, 29);
+        color: rgb(var(--vaa-fg-rgb));
         margin-bottom: 50px;
         margin-top: 30px;
         text-transform: capitalize;
@@ -491,7 +491,7 @@
 
     &__content {
         max-width: 540px;
-        background: rgb(33, 33, 33);
+        background: rgb(var(--vaa-fg-rgb));
         padding: 60px 60px 10px 50px;
 
         @media #{$xxl} {
@@ -529,7 +529,7 @@
         text-transform: uppercase;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading1);
-        border: 1px solid rgba(255, 255, 255, 0.141);
+        border: 1px solid rgba(var(--vaa-paper-rgb), 0.141);
     }
 
     &__title {
@@ -687,7 +687,7 @@
         text-align: center;
         margin-top: 35px;
         margin-bottom: 22px;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(var(--vaa-paper-rgb), 0.7);
         font-family: var(--rr-ff-heading1);
 
         @media #{$xs} {
@@ -723,7 +723,7 @@
             font-size: 15px;
             line-height: 38px;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(var(--vaa-paper-rgb), 0.6);
             font-family: var(--rr-ff-heading1);
         }
     }
@@ -739,7 +739,7 @@
             right: 0;
             margin: 0 -100%;
             letter-spacing: -0.02em;
-            color: rgba(18, 18, 18, 0.1);
+            color: rgba(var(--vaa-fg-rgb), 0.1);
             font-family: var(--rr-ff-heading1);
 
             @media #{$xxl,$lg,$md,$sm} {
@@ -824,13 +824,13 @@
                 &__quote {
                     span {
                         svg [fill="white"] {
-                            fill: rgba(18, 18, 18);
+                            fill: rgb(var(--vaa-fg-rgb));
                         }
                     }
                 }
 
                 &__dec {
-                    color: rgba(18, 18, 18, 0.7);
+                    color: rgba(var(--vaa-fg-rgb), 0.7);
                 }
 
                 &__author {
@@ -839,7 +839,7 @@
                     }
 
                     &__position {
-                        color: rgba(18, 18, 18, 0.6);
+                        color: rgba(var(--vaa-fg-rgb), 0.6);
                     }
                 }
 

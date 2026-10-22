@@ -64,7 +64,7 @@
         line-height: 26px;
         margin-top: 38px;
         margin-bottom: 45px;
-        color: rgba(34, 34, 34, 0.6);
+        color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
 
         @media #{$sm,$xs} {
@@ -86,7 +86,7 @@
             font-family: var(--rr-ff-heading);
 
             &:hover {
-                color: rgba(34, 34, 34, 0.6);
+                color: rgba(var(--vaa-fg-rgb), 0.6);
             }
 
             i {

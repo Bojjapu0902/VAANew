@@ -10,7 +10,7 @@
   &__sidebar {
     &__widget {
       padding: 22px 29px 31px 29px;
-      background: #F5F5F5;
+      background: var(--vaa-paper-alt);
       margin-bottom: 30px;
 
       &:last-child {
@@ -30,9 +30,9 @@
       position: relative;
 
       input {
-        border: 1px solid rgba(34, 34, 34, 0.14);
+        border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
         padding: 15px 56px 15px 20px;
-        background: #F5F5F5;
+        background: var(--vaa-paper-alt);
 
         &::placeholder {
           font-style: normal;
@@ -76,7 +76,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          border-bottom: 1px solid rgba(34, 34, 34, 0.14);
+          border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
           &:hover {
             & span {
@@ -130,7 +130,7 @@
         align-items: center;
         gap: 16px;
         padding: 20px 0px;
-        border-bottom: 1px solid rgba(34, 34, 34, 0.14);
+        border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
         &:first-child {
           padding-top: 16px;
@@ -200,7 +200,7 @@
           transition: all 0.3s ease-in-out;
           font-weight: var(--rr-fw-medium);
           font-family: var(--rr-ff-heading);
-          border: 1px solid rgba(34, 34, 34, 0.14);
+          border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
           @media #{$xs} {
             font-size: 15px;

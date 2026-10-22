@@ -125,7 +125,7 @@
         padding-left: 30px;
         padding-top: 40px;
         padding-bottom: 39px;
-        border-bottom: 1px solid #E1E2E4;
+        border-bottom: 1px solid var(--vaa-line);
         transition: all 0.4s ease-in-out;
 
         @media #{$xxs} {
@@ -133,7 +133,7 @@
         }
 
         &:hover {
-            background: #000;
+            background: var(--rr-common-black);
             cursor: pointer;
 
             .date {
@@ -151,7 +151,7 @@
             }
 
             .number {
-                color: rgba(255, 255, 255, 0.7);
+                color: rgba(var(--vaa-paper-rgb), 0.7);
             }
 
             & img {
@@ -163,7 +163,7 @@
         }
 
         &:nth-child(1) {
-            border-top: 1px solid #E1E2E4;
+            border-top: 1px solid var(--vaa-line);
         }
 
         &-one {

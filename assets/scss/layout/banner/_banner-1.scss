@@ -23,7 +23,7 @@
         &-shape {
             width: 1px;
             height: 100%;
-            border-left: 1px solid rgb(255 255 255 / 16%);
+            border-left: 1px solid rgba(var(--vaa-paper-rgb), 0.16);
         }
     }
 
@@ -94,7 +94,7 @@
                 font-size: 18px;
                 line-height: 30px;
                 font-family: var(--rr-ff-heading);
-                color: rgba(255, 255, 255, 0.7);
+                color: rgba(var(--vaa-paper-rgb), 0.7);
 
                 @media #{$xs} {
                     font-size: 16px;
@@ -224,7 +224,7 @@
                 justify-content: center;
                 width: 160px;
                 height: 160px;
-                background: #333333;
+                background: var(--rr-heading-primary);
                 border-radius: 0px;
 
                 @media #{$lg,$sm} {

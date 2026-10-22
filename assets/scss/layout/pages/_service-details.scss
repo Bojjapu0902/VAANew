@@ -12,7 +12,7 @@
             ul {
                 li {
                     >a {
-                        color: rgb(34 34 34 / 70%);
+                        color: rgba(var(--vaa-fg-rgb), 0.7);
 
                     }
 
@@ -28,7 +28,7 @@
 
     .ruhe-btn-circle {
         color: var(--rr-heading-primary);
-        border: 1.5px solid rgb(34 34 34 / 20%);
+        border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.2);
 
         &:hover {
             color: var(--rr-common-white);
@@ -37,7 +37,7 @@
 
     .ruhe-btn-group>*:nth-child(2) {
         color: var(--rr-heading-primary);
-        border: 1.5px solid rgb(34 34 34 / 20%);
+        border: 1.5px solid rgba(var(--vaa-fg-rgb), 0.2);
 
         &:hover {
             color: var(--rr-common-white);
@@ -48,7 +48,7 @@
 
     .sidebar {
         &__toggle {
-            background: rgb(34 34 34 / 14%);
+            background: rgba(var(--vaa-fg-rgb), 0.14);
 
             .bar-icon {
                 span {
@@ -83,7 +83,7 @@
         font-size: 300px;
         line-height: 1;
         margin-bottom: 0;
-        color: rgb(13, 15, 15);
+        color: rgb(var(--vaa-fg-rgb));
         text-transform: uppercase;
         font-family: var(--rr-ff-heading);
 
@@ -331,7 +331,7 @@
                 bottom: -10px;
                 left: 0;
                 position: absolute;
-                background-color: #E1E1E1;
+                background-color: var(--vaa-line);
             }
 
             &::after {
@@ -415,14 +415,14 @@
             font-size: 16px;
             line-height: 26px;
             margin-top: 10px;
-            color: rgba(34, 34, 34, 0.5);
+            color: rgba(var(--vaa-fg-rgb), 0.5);
             font-family: var(--rr-ff-heading);
 
             a {
                 color: var(--rr-heading-primary);
 
                 &:hover {
-                    color: rgba(34, 34, 34, 0.6);
+                    color: rgba(var(--vaa-fg-rgb), 0.6);
                 }
             }
         }
@@ -442,7 +442,7 @@
             border: none;
             padding-bottom: 8px;
             background: transparent;
-            border-bottom: 1px solid #222222;
+            border-bottom: 1px solid var(--rr-heading-primary);
 
             @media #{$xs} {
                 width: 100%;
@@ -452,7 +452,7 @@
                 font-weight: 400;
                 font-size: 15px;
                 line-height: 26px;
-                color: rgba(34, 34, 34, 0.5);
+                color: rgba(var(--vaa-fg-rgb), 0.5);
                 font-family: var(--rr-ff-heading);
             }
         }
@@ -466,7 +466,7 @@
             font-family: var(--rr-ff-heading);
 
             &:hover {
-                color: rgba(34, 34, 34, 0.6);
+                color: rgba(var(--vaa-fg-rgb), 0.6);
             }
 
             @media #{$xs} {
@@ -488,7 +488,7 @@
             padding: 42px 40px;
             padding-bottom: 47px;
             margin-right: 43px;
-            background: rgb(245, 245, 245);
+            background: var(--vaa-paper-alt);
 
             @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
                 margin-right: 0;
@@ -509,9 +509,9 @@
                 position: relative;
                 align-items: center;
                 text-transform: capitalize;
-                color: rgba(34, 34, 34, 0.6);
+                color: rgba(var(--vaa-fg-rgb), 0.6);
                 font-family: var(--rr-ff-heading);
-                border-bottom: 1px solid rgb(34 34 34 / 14%);
+                border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
                 &:last-of-type {
                     border-bottom: 0;
@@ -529,7 +529,21 @@
                 }
 
                 &:hover {
-                    color: rgba(34, 34, 34, 1);
+                    color: rgb(var(--vaa-fg-rgb));
+
+                    svg [opacity="0.6"] {
+                        opacity: 1;
+                    }
+                }
+
+                a {
+                    flex: 1;
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                &.active {
+                    color: rgb(var(--vaa-fg-rgb));
 
                     svg [opacity="0.6"] {
                         opacity: 1;
@@ -587,7 +601,7 @@
         line-height: 26px;
         margin-top: 22px;
         margin-bottom: 38px;
-        color: rgba(34, 34, 34, 0.6);
+        color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
 
         @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
@@ -601,7 +615,7 @@
         margin-top: 70px;
         padding-bottom: 52px;
         margin-bottom: 70px;
-        border-bottom: 1px solid rgb(34 34 34 / 20%);
+        border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
         @media #{$sm,$xs} {
             margin-top: 40px;
@@ -632,7 +646,7 @@
                 margin-right: 12px;
                 border-radius: 30px;
                 position: absolute;
-                background-color: rgba(34, 34, 34, 0.4);
+                background-color: rgba(var(--vaa-fg-rgb), 0.4);
             }
         }
 
@@ -644,7 +658,7 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 26px;
-                color: rgba(34, 34, 34, 0.6);
+                color: rgba(var(--vaa-fg-rgb), 0.6);
                 font-family: var(--rr-ff-heading);
 
                 @media #{$sm,$xs} {
@@ -662,10 +676,10 @@
             align-items: start;
             padding: 54px 0px;
             justify-content: space-between;
-            border-bottom: 1px solid rgb(34 34 34 / 20%);
+            border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
             &:first-of-type {
-                border-top: 1px solid rgb(34 34 34 / 20%);
+                border-top: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
             }
 
             @media #{$md,$sm,$xs} {
@@ -696,7 +710,7 @@
                 margin-right: 12px;
                 border-radius: 30px;
                 position: absolute;
-                background-color: rgba(34, 34, 34, 0.4);
+                background-color: rgba(var(--vaa-fg-rgb), 0.4);
             }
         }
 
@@ -712,7 +726,7 @@
                     font-size: 16px;
                     line-height: 26px;
                     margin-bottom: 6px;
-                    color: rgba(34, 34, 34, 0.6);
+                    color: rgba(var(--vaa-fg-rgb), 0.6);
                     font-family: var(--rr-ff-heading);
 
                     &:last-of-type {
@@ -755,12 +769,12 @@
 
             .accordion-item {
                 color: var(--rr-heading-primary);
-                border: 1px solid rgb(34 34 34 / 14%);
+                border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
                 background-color: transparent;
                 margin-bottom: 16px;
 
                 &:not(:first-of-type) {
-                    border-top: 1px solid rgb(34 34 34 / 14%);
+                    border-top: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
                 }
 
                 &:first-of-type {
@@ -813,12 +827,12 @@
                     border-radius: 500px;
                     font-size: 14px;
                     font-weight: 600;
-                    color: rgba(34, 34, 34, 0.6);
+                    color: rgba(var(--vaa-fg-rgb), 0.6);
                     background-image: inherit;
                     background-repeat: no-repeat;
                     background-size: inherit;
                     font-family: var(--rr-ff-fontawesome);
-                    border: 1px solid rgba(34, 34, 34, 0.2);
+                    border: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
                     @media #{$sm,$xs} {
                         display: none;
@@ -854,7 +868,7 @@
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 26px;
-                    color: rgba(255, 255, 255, 0.6);
+                    color: rgba(var(--vaa-paper-rgb), 0.6);
                     font-family: var(--rr-ff-heading);
                 }
             }

@@ -79,13 +79,97 @@
             '</div>';
     }
 
+    // Off-canvas drawer + its overlays. main.js fills .mobile-menu from #mobile-menu
+    // and toggles .info-open / .overlay-open on these elements.
+    function buildDrawer() {
+        return '' +
+            '<div class="fix">' +
+                '<div class="offcanvas__area">' +
+                    '<div class="offcanvas__wrapper">' +
+                        '<div class="offcanvas__content">' +
+                            '<div class="offcanvas__top d-flex justify-content-between align-items-center">' +
+                                '<div class="offcanvas__logo">' +
+                                    '<a href="index.html">' +
+                                        '<img src="assets/imgs/logo/logo.svg" alt="Vasantha Ads & Arts logo">' +
+                                    '</a>' +
+                                '</div>' +
+                                '<div class="offcanvas__close">' +
+                                    '<button class="offcanvas-close-icon animation--flip" aria-label="Close menu">' +
+                                        '<span class="offcanvas-m-lines">' +
+                                            '<span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span>' +
+                                        '</span>' +
+                                    '</button>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="mobile-menu fix"></div>' +
+                            '<div class="offcanvas__social">' +
+                                '<h3 class="offcanvas__title mb-20">Subscribe & Follow</h3>' +
+                                '<ul>' +
+                                    '<li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>' +
+                                    '<li><a href="https://pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>' +
+                                    '<li><a href="https://youtube.com/"><i class="fab fa-youtube"></i></a></li>' +
+                                    '<li><a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a></li>' +
+                                '</ul>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+            '<div class="offcanvas__overlay"></div>' +
+            '<div class="offcanvas__overlay-white"></div>';
+    }
+
+    // Full-width search overlay opened by .search-open-btn.
+    function buildSearchPopup() {
+        return '' +
+            '<div class="search__popup">' +
+                '<div class="container">' +
+                    '<div class="row gx-30">' +
+                        '<div class="col-xxl-12">' +
+                            '<div class="search__wrapper">' +
+                                '<div class="search__top d-flex justify-content-between align-items-center">' +
+                                    '<div class="search__logo">' +
+                                        '<a href="index.html">' +
+                                            '<img src="assets/imgs/logo/logo.svg" alt="Vasantha Ads & Arts logo">' +
+                                        '</a>' +
+                                    '</div>' +
+                                    '<div class="search__close">' +
+                                        '<button type="button" class="search__close-btn search-close-btn" aria-label="Close search">' +
+                                            '<svg width="18" height="18" viewBox="0 0 18 18" fill="none">' +
+                                                '<path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />' +
+                                                '<path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />' +
+                                            '</svg>' +
+                                        '</button>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="search__form">' +
+                                    '<form action="#">' +
+                                        '<div class="search__input">' +
+                                            '<input class="search-input-field" type="text" placeholder="Type here to search...">' +
+                                            '<span class="search-focus-border"></span>' +
+                                            '<button type="submit" aria-label="Search">' +
+                                                '<svg width="20" height="20" viewBox="0 0 20 20" fill="none">' +
+                                                    '<path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />' +
+                                                    '<path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />' +
+                                                '</svg>' +
+                                            '</button>' +
+                                        '</div>' +
+                                    '</form>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
+    }
+
     class SiteHeader extends HTMLElement {
         connectedCallback() {
             var variantKey = this.getAttribute('variant') || 'dark';
             var variant = VARIANTS[variantKey] || VARIANTS.dark;
             var activeKey = this.getAttribute('active') || 'home';
 
-            this.innerHTML = '' +
+            this.innerHTML = buildDrawer() +
                 '<div id="header-stickys" class="' + variant.headerClass + '">' +
                     '<div class="container-fluid">' +
                         '<div class="mega__menu-wrapper p-relative">' +
@@ -94,7 +178,7 @@
                                     '<div class="header-1__logo">' +
                                         '<a href="index.html">' +
                                             '<div class="' + variant.logoWrapperClass + '">' +
-                                                '<img src="' + variant.logoSrc + '" style="width:100%"' +'" alt="logo not found"' + (variant.logoImgClass ? ' class="' + variant.logoImgClass + '"' : '') + '>' +
+                                                '<img src="' + variant.logoSrc + '" style="width:100%" alt="Vasantha Ads & Arts logo"' + (variant.logoImgClass ? ' class="' + variant.logoImgClass + '"' : '') + '>' +
                                             '</div>' +
                                         '</a>' +
                                     '</div>' +
@@ -116,7 +200,8 @@
                             '</div>' +
                         '</div>' +
                     '</div>' +
-                '</div>';
+                '</div>' +
+                buildSearchPopup();
         }
     }
 
