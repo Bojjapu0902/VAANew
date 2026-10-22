@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /backupfiles/
+Disallow: /data/
+Disallow: /404.html
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
