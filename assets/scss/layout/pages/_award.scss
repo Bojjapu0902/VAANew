@@ -13,24 +13,24 @@
 
     .award-section {
         &__shape {
-            margin-right: 75px;
+            margin-right: 72px;
         }
 
         &__wrap {
-            margin-right: 108px;
+            margin-right: 112px;
 
             @media #{$lg,$md,$sm,$xs} {
                 margin-right: 0;
             }
 
             @media #{$md,$sm,$xs} {
-                margin-bottom: 30px;
+                margin-bottom: 32px;
             }
         }
 
         &__item {
             position: relative;
-            padding: 39.5px 0;
+            padding: 40px 0;
             border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.6);
 
             &:first-of-type {
@@ -63,7 +63,7 @@
 
                 .award-section {
                     &__title {
-                        margin-left: 30px;
+                        margin-left: 32px;
                         color: var(--rr-common-white);
                     }
 
@@ -71,7 +71,7 @@
                         color: var(--rr-common-white);
 
                         @media #{$xs} {
-                            margin-left: 30px;
+                            margin-left: 32px;
                         }
                     }
 
@@ -79,17 +79,17 @@
                         color: var(--rr-common-white);
 
                         @media #{$xs} {
-                            margin-left: 30px;
+                            margin-left: 32px;
                         }
                     }
                 }
             }
 
             &.item-1 {
-                padding-right: 175px;
+                padding-right: 176px;
 
                 @media #{$sm} {
-                    padding-right: 49px;
+                    padding-right: 48px;
                 }
 
                 @media #{$xs} {
@@ -98,10 +98,10 @@
             }
 
             &.item-2 {
-                padding-right: 95px;
+                padding-right: 96px;
 
                 @media #{$sm} {
-                    padding-right: 30px;
+                    padding-right: 32px;
                 }
 
                 @media #{$xs} {
@@ -110,10 +110,10 @@
             }
 
             &.item-3 {
-                padding-right: 171px;
+                padding-right: 168px;
 
                 @media #{$sm} {
-                    padding-right: 45px;
+                    padding-right: 48px;
                 }
 
                 @media #{$xs} {
@@ -122,10 +122,10 @@
             }
 
             &.item-4 {
-                padding-right: 159px;
+                padding-right: 160px;
 
                 @media #{$sm} {
-                    padding-right: 33px;
+                    padding-right: 32px;
                 }
 
                 @media #{$xs} {
@@ -137,7 +137,7 @@
                 padding-right: 176px;
 
                 @media #{$sm} {
-                    padding-right: 50px;
+                    padding-right: 48px;
                 }
 
                 @media #{$xs} {
@@ -197,15 +197,15 @@
 
             @media #{$xs} {
                 font-size: 18px;
-                margin-bottom: 20px;
+                margin-bottom: 24px;
             }
         }
 
         &__received {
             max-width: 400px;
             text-align: center;
-            padding: 80px 30px;
-            padding-bottom: 30px;
+            padding: 80px 32px;
+            padding-bottom: 32px;
             margin: 0 0 0 auto;
             background-color: var(--rr-text-primary-2);
 
@@ -218,8 +218,8 @@
             font-weight: 500;
             font-size: 96px;
             line-height: 1;
-            margin-top: 52px;
-            margin-bottom: 11px;
+            margin-top: 56px;
+            margin-bottom: 8px;
             letter-spacing: -0.04em;
             color: var(--rr-common-white);
             font-family: var(--rr-ff-heading1);
@@ -240,7 +240,7 @@
                 font-size: 18px;
                 border-radius: 0;
                 margin-top: 56px;
-                padding: 23.5px 34.3px;
+                padding: 24px 32px;
                 text-transform: capitalize;
             }
         }

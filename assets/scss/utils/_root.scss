@@ -3,6 +3,13 @@
 
 :root {
     /**
+    @page frame: the header and every .container share this width and side gutter,
+    so their left/right edges line up at any viewport size
+    */
+    --vaa-frame-max: 1630px;
+    --vaa-frame-inset: calc((100% - min(100%, var(--vaa-frame-max))) / 2);
+
+    /**
     @font family declaration
     */
     @each $ff, $shades in $font-family {

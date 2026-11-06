@@ -26,21 +26,21 @@
     .section {
         &__main-title-wrapper {
             border-top: 1px solid var(--vaa-line);
-            padding-top: 44px;
+            padding-top: 48px;
         }
     }
 
     &__wrapper {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
 
         .item {
             display: flex;
             align-items: center;
-            gap: 14px;
-            width: 340px;
-            height: 150px;
+            gap: 16px;
+            width: 200px;
+            height: 96px;
             cursor: pointer;
             justify-content: center;
             border: 1px solid var(--vaa-paper-alt);
@@ -48,13 +48,13 @@
             transition: all 0.3s ease-in-out;
 
             @media #{$lg} {
-                width: 250px;
-                height: 100px;
+                width: 176px;
+                height: 88px;
             }
 
             @media #{$md,$sm,$xxs} {
-                width: 220px;
-                height: 97px;
+                width: 152px;
+                height: 80px;
             }
 
             &:hover {
@@ -67,10 +67,17 @@
             }
 
             & img {
-                width: fit-content;
+                width: auto;
                 height: auto;
-                object-fit: cover;
+                max-width: 120px;
+                max-height: 48px;
+                object-fit: contain;
                 transition: filter 0.3s ease;
+
+                @media #{$md,$sm,$xxs} {
+                    max-width: 96px;
+                    max-height: 40px;
+                }
             }
         }
     }
@@ -85,7 +92,7 @@
 
     .brand-slider-2 {
         &__active-1 {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
     }
 
@@ -98,7 +105,7 @@
 
         @media #{$md,$sm,$xs} {
             display: block;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
         a {
@@ -139,25 +146,25 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 32px;
 
         @media #{$xxl} {
-            gap: 20px;
+            gap: 24px;
         }
 
         @media #{$lg,$md} {
-            gap: 15px;
+            gap: 16px;
         }
 
         @media #{$sm,$xs} {
-            gap: 15px;
+            gap: 16px;
         }
 
         &-space {
-            margin-bottom: 29px;
+            margin-bottom: 32px;
 
             @media #{$xl,$lg,$sm,$xs} {
-                margin-bottom: 15px;
+                margin-bottom: 16px;
             }
 
             @media #{$md} {
@@ -260,7 +267,7 @@
 
             i {
                 font-size: 18px;
-                margin-left: 20px;
+                margin-left: 24px;
             }
 
             &::before {

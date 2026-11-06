@@ -28,10 +28,10 @@
     }
 
     &__area {
-        padding: 200px 71px 0px 71px;
+        padding: 200px 72px 0px 72px;
 
         @media #{$xxl} {
-            padding: 200px 60px 0px 60px;
+            padding: 200px 64px 0px 64px;
         }
 
         @media #{$xl} {
@@ -39,15 +39,15 @@
         }
 
         @media #{$lg} {
-            padding: 200px 30px 0px 30px;
+            padding: 200px 32px 0px 32px;
         }
 
         @media #{$md} {
-            padding: 160px 30px 0px 30px;
+            padding: 160px 32px 0px 32px;
         }
 
         @media #{$sm,$xs} {
-            padding: 130px 10px 0px 10px;
+            padding: 128px 8px 0px 8px;
         }
         background-size: cover;
         background-position: center;
@@ -78,14 +78,14 @@
         }
 
         .experiences-text {
-            padding-left: 65px;
+            padding-left: 64px;
 
             @media #{$sm,$xs} {
                 padding-left: 0;
             }
 
             @media #{$xs} {
-                margin-top: 20px;
+                margin-top: 24px;
             }
 
             p {
@@ -117,7 +117,7 @@
                 color: rgb(158, 158, 158);
 
                 @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
-                    margin-top: 20px;
+                    margin-top: 24px;
                 }
 
                 @media #{$md,$sm,$xs} {
@@ -150,30 +150,30 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 90px;
+        margin-top: 88px;
 
         @media #{$lg,$md,$sm,$xs} {
-            gap: 15px;
+            gap: 16px;
         }
 
         @media #{$md} {
-            margin-top: 70px;
+            margin-top: 72px;
         }
 
         @media #{$sm,$xs} {
             display: block;
             column-count: 2;
-            margin-top: 50px;
+            margin-top: 48px;
         }
 
         @media #{$xs} {
             column-count: 1;
-            margin-top: 30px;
+            margin-top: 32px;
         }
 
         &-item {
             @media #{$xs} {
-                margin-bottom: 25px;
+                margin-bottom: 24px;
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -199,7 +199,7 @@
                     width: 40px;
                     height: 40px;
                     object-fit: cover;
-                    margin-bottom: 13px;
+                    margin-bottom: 16px;
                 }
             }
 
@@ -257,7 +257,7 @@
                 padding-left: 200px;
 
                 @media #{$xxl} {
-                    padding-left: 100px;
+                    padding-left: 104px;
                 }
 
                 @media #{$xl,$lg,$md,$sm,$xs} {
@@ -265,7 +265,7 @@
                 }
 
                 @media #{$sm} {
-                    margin-top: 30px;
+                    margin-top: 32px;
                 }
             }
 
@@ -273,7 +273,7 @@
                 padding-left: 200px;
 
                 @media #{$xxl} {
-                    padding-left: 100px;
+                    padding-left: 104px;
                 }
 
                 @media #{$xl,$lg,$md,$sm,$xs} {
@@ -281,7 +281,7 @@
                 }
 
                 @media #{$sm} {
-                    margin-bottom: 30px;
+                    margin-bottom: 32px;
                 }
             }
         }
@@ -291,11 +291,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 20px;
+        margin-top: 24px;
         gap: 40px;
 
         @media #{$md,$sm} {
-            gap: 20px;
+            gap: 24px;
         }
 
         @media #{$xs} {
@@ -304,7 +304,7 @@
 
         &-item {
             @media #{$xs} {
-                margin-bottom: 20px;
+                margin-bottom: 24px;
 
                 &:last-of-type {
                     margin-bottom: 0;

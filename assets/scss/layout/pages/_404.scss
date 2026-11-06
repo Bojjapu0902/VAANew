@@ -10,17 +10,17 @@
 
 .error-page {
     &-space {
-        padding-top: 115px;
-        padding-bottom: 174px;
+        padding-top: 112px;
+        padding-bottom: 176px;
 
         @media #{$md} {
-            padding-top: 100px;
+            padding-top: 104px;
             padding-bottom: 80px;
         }
 
         @media #{$sm,$xs} {
-            padding-top: 90px;
-            padding-bottom: 70px;
+            padding-top: 88px;
+            padding-bottom: 72px;
         }
     }
 
@@ -28,7 +28,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 32px;
         color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
 
@@ -59,7 +59,7 @@
     &__not-found {
         font-size: 44px;
         line-height: 44px;
-        padding: 0px 0px 25px 0px;
+        padding: 0px 0px 24px 0px;
         color: var(--rr-heading-primary);
         font-family: var(--rr-ff-heading);
         font-weight: var(--rr-fw-medium);

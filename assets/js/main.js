@@ -19,7 +19,9 @@
         ========================================*/
 
     $(window).on('load', function (event) {
-        $('#preloader').delay(1000).fadeOut(500);
+        $('#preloader').delay(1000).fadeOut(500, function () {
+            document.dispatchEvent(new Event('vaa:preloader-done'));
+        });
 
         $('.odometer').waypoint(function (direction) {
             if (direction === 'down') {
@@ -733,27 +735,60 @@
         document.addEventListener("DOMContentLoaded", () => {
             let titles = document.querySelectorAll(".rr-title-anim");
 
+            // Titles already on screen while the preloader is up (the hero) would
+            // finish animating behind it, so they wait until it has faded out.
+            const preloader = document.getElementById("preloader");
+            const preloaderUp = preloader && getComputedStyle(preloader).display !== "none";
+
             titles.forEach(title => {
                 let split = new SplitText(title, { type: "chars, words" });
 
-                let tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: title,
-                        start: "top bottom",
-                        toggleActions: "play none none reverse",
-                        onEnter: () => tl.timeScale(2.3),
-                        onLeaveBack: () => tl.timeScale(2.3).reverse()
-                    }
-                });
+                const reveal = () => {
+                    let tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: title,
+                            start: "top bottom",
+                            toggleActions: "play none none reverse",
+                            onEnter: () => tl.timeScale(2.3),
+                            onLeaveBack: () => tl.timeScale(2.3).reverse()
+                        }
+                    });
 
-                tl.from(split.chars, {
-                    opacity: 0,
-                    y: 50,
-                    rotation: 1,
-                    duration: 2,
-                    ease: "back",
-                    stagger: 0.05
-                });
+                    tl.from(split.chars, {
+                        opacity: 0,
+                        y: 50,
+                        rotation: 1,
+                        duration: 2,
+                        ease: "back",
+                        stagger: 0.05
+                    });
+                };
+
+                if (preloaderUp && title.getBoundingClientRect().top < window.innerHeight) {
+                    // Same motion as the scroll reveal, played once; a title at the top
+                    // of the page has nothing to scroll back past, so no ScrollTrigger.
+                    gsap.set(split.chars, { opacity: 0, y: 50, rotation: 1 });
+                    let revealed = false;
+                    const revealOnce = () => {
+                        if (!revealed) {
+                            revealed = true;
+                            gsap.timeline()
+                                .timeScale(2.3)
+                                .to(split.chars, {
+                                    opacity: 1,
+                                    y: 0,
+                                    rotation: 0,
+                                    duration: 2,
+                                    ease: "back",
+                                    stagger: 0.05
+                                });
+                        }
+                    };
+                    document.addEventListener("vaa:preloader-done", revealOnce, { once: true });
+                    setTimeout(revealOnce, 4000); // never leave the title hidden if the preloader event is missed
+                } else {
+                    reveal();
+                }
             });
         });
     }

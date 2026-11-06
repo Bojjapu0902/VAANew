@@ -40,7 +40,7 @@
         width: 100%;
         margin: 0 auto;
         display: inline-block;
-        margin-left: 140px;
+        margin-left: 144px;
 
         @media #{$md} {
             height: 340px;
@@ -76,7 +76,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 50px auto;
+            margin: 0 auto 48px auto;
 
         }
 
@@ -84,14 +84,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 48px;
         }
 
         @media #{$xs} {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 48px;
             width: 200px;
             height: inherit;
         }
@@ -102,7 +102,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            margin-bottom: 50px;
+            margin-bottom: 48px;
         }
 
         @media #{$mxm} {
@@ -122,9 +122,9 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-left: 30px;
+        padding-left: 32px;
         padding-top: 40px;
-        padding-bottom: 39px;
+        padding-bottom: 40px;
         border-bottom: 1px solid var(--vaa-line);
         transition: all 0.4s ease-in-out;
 
@@ -182,13 +182,13 @@
                 transition: all 0.4s ease-in-out;
 
                 @media #{$mxm} {
-                    padding-left: 15px;
+                    padding-left: 16px;
                 }
             }
 
             & .awards {
                 font-size: 24px;
-                margin-left: 130px;
+                margin-left: 128px;
                 position: relative;
                 font-weight: var(--rr-fw-medium);
                 color: var(--rr-heading-primary);
@@ -197,13 +197,13 @@
 
 
                 @media #{$xxs} {
-                    padding-left: 60px;
+                    padding-left: 64px;
                 }
 
                 @media #{$xs} {
                     font-size: 18px;
-                    padding-left: 20px;
-                    margin-left: 50px;
+                    padding-left: 24px;
+                    margin-left: 48px;
                 }
 
                 @media #{$mxm} {

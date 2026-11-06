@@ -29,7 +29,9 @@ $(function() {
 			$(formMessages).html(response);
 
 			// Clear the form.
-			$('#contact-form input,#contact-form textarea').val('');
+			$('#contact-form input:not([type=checkbox]),#contact-form textarea').val('');
+			$('#contact-form input[type=checkbox]').prop('checked', false);
+			$('#contact-form select').prop('selectedIndex', 0);
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.

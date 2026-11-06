@@ -6,7 +6,7 @@
 
 
 .breadcrumb-space-5 {
-    padding-top: 175px;
+    padding-top: 176px;
     padding-bottom: 120px;
 
     @media #{$md} {
@@ -15,8 +15,8 @@
     }
 
     @media #{$sm,$xs} {
-        padding-top: 150px;
-        padding-bottom: 70px;
+        padding-top: 152px;
+        padding-bottom: 72px;
     }
 }
 
@@ -36,15 +36,15 @@
     }
 
     &__info {
-        margin-left: 75px;
+        margin-left: 72px;
 
         @media #{$lg} {
-            margin-left: 15px;
+            margin-left: 16px;
         }
 
         @media #{$md,$sm,$xs} {
             margin-left: 0px;
-            margin-top: 30px;
+            margin-top: 32px;
         }
     }
 
@@ -61,15 +61,15 @@
         font-weight: 500;
         font-size: 46px;
         line-height: 1;
-        margin-top: 25px;
-        margin-bottom: 33px;
+        margin-top: 24px;
+        margin-bottom: 32px;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading);
 
         @media #{$xs} {
             font-size: 35px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 24px;
+            margin-bottom: 24px;
         }
     }
 
@@ -88,9 +88,9 @@
     }
 
     &__btn {
-        margin-top: 62px;
-        padding-bottom: 50px;
-        margin-bottom: 60px;
+        margin-top: 64px;
+        padding-bottom: 48px;
+        margin-bottom: 64px;
         border-bottom: 1px solid rgba(var(--vaa-paper-rgb), 0.2);
 
         @media #{$lg} {
@@ -100,9 +100,9 @@
         }
 
         @media #{$md,$sm,$xs} {
-            margin-top: 30px;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
+            margin-top: 32px;
+            padding-bottom: 32px;
+            margin-bottom: 32px;
         }
 
         .ruhe-white-btn-circle {
@@ -132,15 +132,15 @@
     &__contact {
         display: flex;
         align-items: center;
-        column-gap: 100px;
+        column-gap: 104px;
         flex-wrap: wrap;
 
         @media #{$lg} {
-            column-gap: 50px;
+            column-gap: 48px;
         }
 
         @media #{$sm} {
-            column-gap: 30px;
+            column-gap: 32px;
         }
 
         &__list {
@@ -149,7 +149,7 @@
             column-gap: 16px;
 
             @media #{$xs} {
-                margin-bottom: 15px;
+                margin-bottom: 16px;
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -172,7 +172,7 @@
                 font-size: 24px;
                 line-height: 1;
                 display: block;
-                margin-bottom: 5px;
+                margin-bottom: 4px;
                 color: var(--rr-common-white);
                 font-family: var(--rr-ff-heading);
             }
@@ -195,7 +195,7 @@
 
     &__content {
         &__wrapper {
-            margin: 0 28px;
+            margin: 0 32px;
 
             @media #{$xl,$lg,$md,$sm,$xs} {
                 margin: 0;
@@ -208,7 +208,7 @@
             font-weight: 500;
             font-size: 54px;
             line-height: 1;
-            margin-bottom: 31px;
+            margin-bottom: 32px;
             color: var(--rr-heading-primary);
             font-family: var(--rr-ff-heading);
 
@@ -219,7 +219,7 @@
             @media #{$xs} {
                 font-size: 35px;
                 line-height: 1.2;
-                margin-bottom: 20px;
+                margin-bottom: 24px;
             }
         }
 
@@ -238,11 +238,11 @@
         }
 
         &__list {
-            margin-top: 42px;
+            margin-top: 40px;
             margin-bottom: 80px;
 
             @media #{$md} {
-                margin-bottom: 50px;
+                margin-bottom: 48px;
             }
 
             @media #{$sm,$xs} {
@@ -253,7 +253,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 35.5px 0;
+                padding: 32px 0;
                 border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
                 &:first-of-type {
@@ -262,7 +262,7 @@
 
                 @media #{$sm,$xs} {
                     display: block;
-                    padding: 25px 0;
+                    padding: 24px 0;
                 }
 
                 h3 {
@@ -273,14 +273,14 @@
                     font-family: var(--rr-ff-heading);
 
                     @media #{$sm,$xs} {
-                        margin-bottom: 15px;
+                        margin-bottom: 16px;
                     }
 
                     &::before {
                         content: "";
                         width: 6px;
                         height: 6px;
-                        margin-right: 12px;
+                        margin-right: 16px;
                         border-radius: 30px;
                         display: inline-block;
                         transform: translateY(-7px);
@@ -294,26 +294,26 @@
     &__code-post {
         display: flex;
         align-items: start;
-        column-gap: 36px;
-        padding: 37px 60px;
+        column-gap: 40px;
+        padding: 40px 64px;
         background: var(--rr-heading-primary);
 
         @media #{$xl} {
-            padding: 35px;
+            padding: 32px;
         }
 
         @media #{$sm,$xs} {
             display: block;
-            padding: 30px 25px;
+            padding: 32px 24px;
         }
 
         &__text {
             display: flex;
             align-items: center;
-            column-gap: 99px;
+            column-gap: 96px;
 
             @media #{$xl,$lg,$md} {
-                column-gap: 20px;
+                column-gap: 24px;
             }
 
             @media #{$sm,$xs} {
@@ -322,14 +322,14 @@
 
             div {
                 @media #{$sm,$xs} {
-                    margin: 15px 0;
+                    margin: 16px 0;
                 }
 
                 h3 {
                     font-weight: 600;
                     font-size: 20px;
                     line-height: 32px;
-                    margin-bottom: 20px;
+                    margin-bottom: 24px;
                     text-transform: uppercase;
                     color: var(--rr-common-white);
                     font-family: var(--rr-ff-heading);
@@ -341,7 +341,7 @@
                     }
 
                     @media #{$xl,$lg,$md} {
-                        margin-left: 20px;
+                        margin-left: 24px;
                     }
 
                     @media #{$xs} {
@@ -371,7 +371,7 @@
 
                         @media #{$xs} {
                             width: 40px;
-                            margin-right: 10px;
+                            margin-right: 8px;
                         }
                     }
                 }
@@ -395,11 +395,11 @@
     }
 
     &__wrap {
-        padding-bottom: 95px;
+        padding-bottom: 96px;
         border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
         @media #{$md} {
-            padding-bottom: 50px;
+            padding-bottom: 48px;
         }
 
         @media #{$sm,$xs} {
@@ -412,7 +412,7 @@
             font-weight: 500;
             font-size: 30px;
             line-height: 56px;
-            margin-top: 60px;
+            margin-top: 64px;
             margin-bottom: 80px;
             color: var(--rr-heading-primary);
             font-family: var(--rr-ff-heading);
@@ -424,8 +424,8 @@
             }
 
             @media #{$md} {
-                margin-top: 50px;
-                margin-bottom: 50px;
+                margin-top: 48px;
+                margin-bottom: 48px;
             }
 
             @media #{$sm,$xs} {
@@ -438,7 +438,7 @@
 
         &__list {
             @media #{$md,$sm,$xs} {
-                margin-left: 20px;
+                margin-left: 24px;
             }
 
             ul {
@@ -446,7 +446,7 @@
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 26px;
-                    margin-bottom: 6px;
+                    margin-bottom: 8px;
                     color: rgba(var(--vaa-fg-rgb), 0.6);
                     font-family: var(--rr-ff-heading);
 
@@ -460,12 +460,12 @@
         .team-details {
             &__about {
                 &__dec {
-                    padding-left: 18px;
+                    padding-left: 16px;
                     position: relative;
                     margin-bottom: 88px;
 
                     @media #{$md} {
-                        margin-bottom: 50px;
+                        margin-bottom: 48px;
                     }
 
                     @media #{$sm,$xs} {

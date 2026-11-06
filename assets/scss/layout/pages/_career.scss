@@ -3,7 +3,7 @@
 
 .breadcrumb-space-6 {
     padding-top: 208px;
-    padding-bottom: 95px;
+    padding-bottom: 96px;
 
     @media #{$md} {
         padding-top: 160px;
@@ -11,8 +11,8 @@
     }
 
     @media #{$sm,$xs} {
-        padding-top: 150px;
-        padding-bottom: 70px;
+        padding-top: 152px;
+        padding-bottom: 72px;
     }
 }
 
@@ -21,7 +21,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1;
-        padding: 9px 32.5px;
+        padding: 8px 32px;
         border-radius: 100px;
         display: inline-block;
         color: var(--rr-heading-primary);
@@ -33,8 +33,8 @@
         font-weight: 500;
         font-size: 100px;
         line-height: 110px;
-        margin-bottom: 26px;
-        margin-top: 20px;
+        margin-bottom: 24px;
+        margin-top: 24px;
         color: var(--rr-heading-primary);
         font-family: var(--rr-ff-heading);
 
@@ -67,7 +67,7 @@
         @media #{$xs} {
             font-size: 27px;
             line-height: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
     }
 
@@ -148,32 +148,32 @@
         font-size: 16px;
         line-height: 26px;
         text-align: end;
-        margin-top: 14px;
-        margin-bottom: 28px;
+        margin-top: 16px;
+        margin-bottom: 32px;
         color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
 
         @media #{$xs} {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
     }
 
     &__thumb {
         display: flex;
         align-items: start;
-        column-gap: 100px;
+        column-gap: 104px;
         justify-content: end;
 
         @media #{$lg} {
-            column-gap: 70px;
+            column-gap: 72px;
         }
 
         @media #{$md} {
-            column-gap: 50px;
+            column-gap: 48px;
         }
 
         @media #{$sm} {
-            column-gap: 30px;
+            column-gap: 32px;
         }
 
         @media #{$xs} {
@@ -188,7 +188,7 @@
             }
 
             @media #{$xs} {
-                margin-bottom: 30px;
+                margin-bottom: 32px;
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -214,7 +214,7 @@
 
         @media #{$xs} {
             display: block;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         .career-social {
@@ -244,8 +244,8 @@
 
     &__link {
         @media #{$sm,$xs} {
-            margin-left: 18px;
-            margin-top: 15px;
+            margin-left: 16px;
+            margin-top: 16px;
         }
 
         a {
@@ -258,7 +258,7 @@
             i {
                 font-size: 14px;
                 font-weight: 500;
-                margin-left: 5px;
+                margin-left: 4px;
             }
 
             &:hover {
@@ -271,7 +271,7 @@
         &__item {
             display: flex;
             align-items: center;
-            padding: 54.5px 0;
+            padding: 56px 0;
             justify-content: space-between;
             border-bottom: 1.5px solid rgba(var(--vaa-fg-rgb), 0.2);
 
@@ -280,16 +280,16 @@
             }
 
             @media #{$md} {
-                padding: 40.5px 0;
+                padding: 40px 0;
             }
 
             @media #{$sm,$xs} {
-                padding: 35px 0;
+                padding: 32px 0;
                 display: block;
             }
 
             @media #{$xs} {
-                padding: 30px 0;
+                padding: 32px 0;
             }
         }
     }
@@ -310,7 +310,7 @@
             content: "";
             width: 6px;
             height: 6px;
-            margin-right: 12px;
+            margin-right: 16px;
             border-radius: 30px;
             display: inline-block;
             transform: translateY(-8px);
@@ -322,7 +322,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1;
-        margin-left: 18px;
+        margin-left: 16px;
         color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
     }
@@ -333,11 +333,11 @@
 .career-team-action {
     &__wrapper {
         display: grid;
-        row-gap: 28px;
+        row-gap: 32px;
         grid-template-columns: repeat(2, 1fr);
 
         @media #{$lg,$md,$sm} {
-            column-gap: 20px;
+            column-gap: 24px;
         }
 
         @media #{$xs} {
@@ -382,7 +382,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1;
-        margin-top: 17px;
+        margin-top: 16px;
         color: var(--rr-heading-primary);
         font-family: var(--rr-ff-heading);
     }
@@ -391,7 +391,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1;
-        margin-top: 15px;
+        margin-top: 16px;
         color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
     }
@@ -401,12 +401,12 @@
 .career-monitoring {
     &__top {
         margin-bottom: 80px;
-        padding-bottom: 75px;
+        padding-bottom: 72px;
         border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
         @media #{$md} {
-            margin-bottom: 50px;
-            padding-bottom: 50px;
+            margin-bottom: 48px;
+            padding-bottom: 48px;
         }
 
         @media #{$sm,$xs} {
@@ -457,7 +457,7 @@
 
     &__thumb {
         @media #{$md,$sm,$xs} {
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         img {
@@ -468,10 +468,10 @@
     }
 
     &__btn {
-        margin-top: 85px;
+        margin-top: 88px;
 
         @media #{$md,$sm,$xs} {
-            margin-top: 30px;
+            margin-top: 32px;
         }
 
         a {
@@ -484,7 +484,7 @@
             i {
                 font-size: 14px;
                 font-weight: 500;
-                margin-left: 5px;
+                margin-left: 4px;
             }
         }
     }
@@ -494,14 +494,14 @@
 .career-bottom {
     &__card {
         width: 50%;
-        padding: 67px 60px;
-        padding-bottom: 70px;
-        padding-right: 75px;
+        padding: 64px 64px;
+        padding-bottom: 72px;
+        padding-right: 72px;
         margin-right: -15px;
         transition: all 0.3s ease-in-out;
 
         @media #{$xl} {
-            padding: 50px;
+            padding: 48px;
         }
 
         @media #{$lg,$sm} {
@@ -513,7 +513,7 @@
         }
 
         @media #{$xs} {
-            padding: 25px;
+            padding: 24px;
         }
 
         &.active,
@@ -550,7 +550,7 @@
         }
 
         &__btn {
-            margin-top: 75px;
+            margin-top: 72px;
             text-align: end;
         }
     }
@@ -563,8 +563,8 @@
     &__wrapper {
         display: flex;
         align-items: center;
-        column-gap: 10px;
-        margin: 0 10px;
+        column-gap: 8px;
+        margin: 0 8px;
 
         @media #{$lg,$md} {
             flex-wrap: wrap;
@@ -580,13 +580,13 @@
         font-size: 16px;
         line-height: 26px;
         margin-bottom: 72px;
-        margin-left: 315px;
+        margin-left: 312px;
         color: var(--rr-heading-primary);
         font-family: var(--rr-ff-heading);
 
         @media #{$sm,$xs} {
-            margin-left: 30px;
-            margin-bottom: 30px;
+            margin-left: 32px;
+            margin-bottom: 32px;
         }
     }
 
@@ -661,7 +661,7 @@
 
     &__card {
         max-width: 627px;
-        padding: 65px 60px 70px 60px;
+        padding: 64px 64px 72px 64px;
         background: var(--rr-theme-primary-2);
 
         @media #{$xxxl} {
@@ -670,57 +670,57 @@
 
         @media #{$xxl,$lg} {
             max-width: 500px;
-            padding: 30px 40px;
+            padding: 32px 40px;
         }
 
         @media #{$xl} {
             max-width: 400px;
-            padding: 20px;
+            padding: 24px;
         }
 
         @media #{$md} {
             max-width: 385px;
-            padding: 20px;
+            padding: 24px;
         }
 
         @media #{$sm} {
             margin: 0 auto;
-            margin-bottom: 30px;
-            padding: 30px;
+            margin-bottom: 32px;
+            padding: 32px;
         }
 
         @media #{$xs} {
-            padding: 20px;
+            padding: 24px;
         }
 
         &.card {
             &_1 {
                 .career-about {
                     &__dec {
-                        margin-bottom: 393px;
+                        margin-bottom: 392px;
 
                         @media #{$xxxl} {
                             margin-bottom: 280px;
                         }
 
                         @media #{$xxl} {
-                            margin-bottom: 278px;
+                            margin-bottom: 280px;
                         }
 
                         @media #{$xl} {
-                            margin-bottom: 214px;
+                            margin-bottom: 216px;
                         }
 
                         @media #{$lg} {
-                            margin-bottom: 218px;
+                            margin-bottom: 216px;
                         }
 
                         @media #{$md} {
-                            margin-bottom: 135px;
+                            margin-bottom: 136px;
                         }
 
                         @media #{$sm,$xs} {
-                            margin-bottom: 50px;
+                            margin-bottom: 48px;
                         }
 
                     }
@@ -732,26 +732,26 @@
 
                 .career-about {
                     &__dec {
-                        margin-bottom: 209px;
+                        margin-bottom: 208px;
 
                         @media #{$xxxl} {
-                            margin-bottom: 140px;
+                            margin-bottom: 144px;
                         }
 
                         @media #{$xxl} {
-                            margin-bottom: 92px;
+                            margin-bottom: 96px;
                         }
 
                         @media #{$xl} {
-                            margin-bottom: 110px;
+                            margin-bottom: 112px;
                         }
 
                         @media #{$md} {
-                            margin-bottom: 50px;
+                            margin-bottom: 48px;
                         }
 
                         @media #{$sm,$xs} {
-                            margin-bottom: 50px;
+                            margin-bottom: 48px;
                         }
                     }
                 }
@@ -786,7 +786,7 @@
         font-weight: 500;
         font-size: 22px;
         line-height: 1;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         color: var(--rr-heading-primary);
         font-family: var(--rr-ff-heading);
     }
@@ -806,7 +806,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 70px;
+        margin-bottom: 72px;
 
         @media #{$md,$sm} {
             margin-bottom: 40px;
@@ -814,7 +814,7 @@
 
         @media #{$xs} {
             display: block;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         &__title {
@@ -835,7 +835,7 @@
                 font-family: var(--rr-ff-heading);
 
                 @media #{$xs} {
-                    margin-top: 10px;
+                    margin-top: 8px;
                 }
 
                 &:hover {
@@ -845,7 +845,7 @@
                 i {
                     font-size: 14px;
                     font-weight: 500;
-                    margin-left: 5px;
+                    margin-left: 4px;
                 }
             }
         }
@@ -918,7 +918,7 @@
         @media #{$sm,$xs} {
             height: auto;
             display: block;
-            margin: 15px 0;
+            margin: 16px 0;
         }
 
         &::before {
@@ -964,7 +964,7 @@
 
         @media #{$sm,$xs} {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         @media #{$xs} {
@@ -981,16 +981,16 @@
             line-height: 26px;
             display: flex;
             align-items: start;
-            column-gap: 430px;
+            column-gap: 432px;
             color: var(--rr-heading-primary);
             font-family: var(--rr-ff-heading);
 
             @media #{$lg} {
-                column-gap: 300px;
+                column-gap: 304px;
             }
 
             @media #{$md} {
-                column-gap: 180px;
+                column-gap: 184px;
             }
 
             @media #{$sm,$xs} {
@@ -999,7 +999,7 @@
             }
 
             @media #{$xs} {
-                column-gap: 60px;
+                column-gap: 64px;
             }
 
             &:hover {

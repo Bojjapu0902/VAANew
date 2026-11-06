@@ -20,7 +20,7 @@
         }
 
         @media #{$md,$sm,$xs} {
-            margin-top: 20px;
+            margin-top: 24px;
         }
 
         @media #{$xs} {
@@ -46,7 +46,7 @@
             display: flex;
             list-style: none;
             line-height: 1.2;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             align-items: center;
             justify-content: center;
 
@@ -79,7 +79,7 @@
         max-width: 1530px;
 
         @media #{$xxl, $xl, $lg} {
-            margin: 0 30px;
+            margin: 0 32px;
         }
 
         .swiper-wrapper {
@@ -158,7 +158,7 @@
     }
 
     &__content {
-        padding: 100px 0 119px 100px;
+        padding: 104px 0 120px 104px;
 
         @media #{$xl} {
             padding: 80px;
@@ -166,22 +166,22 @@
         }
 
         @media #{$lg} {
-            padding: 50px;
+            padding: 48px;
             padding-right: 0;
         }
 
         @media #{$md} {
-            padding: 50px;
+            padding: 48px;
             padding-bottom: 0;
         }
 
         @media #{$sm} {
-            padding: 50px 30px;
+            padding: 48px 32px;
             padding-bottom: 0;
         }
 
         @media #{$xs} {
-            padding: 30px;
+            padding: 32px;
             padding-bottom: 0;
         }
     }
@@ -189,7 +189,7 @@
     &__media {
         min-width: 470px;
         height: auto;
-        padding: 30px;
+        padding: 32px;
 
         @media #{$lg} {
             min-width: 400px;
@@ -210,8 +210,8 @@
     &__star-icon {
         ul {
             display: inline-flex;
-            gap: 5px;
-            padding: 4px 12px;
+            gap: 4px;
+            padding: 4px 16px;
             align-items: center;
             background-color: var(--rr-theme-primary);
 
@@ -232,8 +232,8 @@
         line-height: 54px;
         letter-spacing: -2%;
         color: rgb(var(--vaa-fg-rgb));
-        margin-bottom: 50px;
-        margin-top: 30px;
+        margin-bottom: 48px;
+        margin-top: 32px;
         text-transform: capitalize;
         font-family: var(--rr-ff-heading);
 
@@ -251,24 +251,24 @@
         @media #{$lg,$sm} {
             font-size: 20px;
             line-height: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         @media #{$xs} {
             font-size: 16px;
             line-height: 30px;
-            margin-bottom: 20px;
-            margin-top: 20px;
+            margin-bottom: 24px;
+            margin-top: 24px;
         }
     }
 
     &__author {
         display: flex;
         align-items: center;
-        column-gap: 18px;
+        column-gap: 16px;
 
         @media #{$xs} {
-            column-gap: 10px;
+            column-gap: 8px;
         }
 
         &__thumb {
@@ -352,8 +352,8 @@
         font-size: 24px;
         line-height: 40px;
         opacity: 0.5;
-        margin-top: 70px;
-        margin-bottom: 65px;
+        margin-top: 72px;
+        margin-bottom: 64px;
         color: var(--rr-common-black);
         font-family: var(--rr-ff-body);
 
@@ -365,8 +365,8 @@
 
         @media #{$md} {
             font-size: 22px;
-            margin-top: 45px;
-            margin-bottom: 45px;
+            margin-top: 48px;
+            margin-bottom: 48px;
         }
 
         @media #{$sm,$xs} {
@@ -385,7 +385,7 @@
         font-weight: 600;
         font-size: 22px;
         line-height: 1;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         text-transform: uppercase;
         color: var(--rr-common-black);
         font-family: var(--rr-ff-body);
@@ -451,14 +451,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 95px;
+        margin-top: 96px;
 
         @media #{$md} {
-            margin-top: 70px;
+            margin-top: 72px;
         }
 
         @media #{$sm,$xs} {
-            margin-top: 50px;
+            margin-top: 48px;
         }
 
         .swiper-pagination-bullet {
@@ -492,25 +492,25 @@
     &__content {
         max-width: 540px;
         background: rgb(var(--vaa-fg-rgb));
-        padding: 60px 60px 10px 50px;
+        padding: 64px 64px 8px 48px;
 
         @media #{$xxl} {
-            padding: 60px 35px 10px 35px;
+            padding: 64px 32px 8px 32px;
         }
 
         @media #{$xl} {
-            padding: 60px 30px 10px 30px;
+            padding: 64px 32px 8px 32px;
             margin-right: -50px;
             position: relative;
             z-index: 9;
         }
 
         @media #{$sm} {
-            padding: 30px 30px 10px 30px;
+            padding: 32px 32px 8px 32px;
         }
 
         @media #{$xs} {
-            padding: 20px;
+            padding: 24px;
         }
 
         @media #{$lg,$md,$sm,$xs} {
@@ -523,7 +523,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1;
-        padding: 10px 8.7px;
+        padding: 8px 8px;
         text-align: center;
         display: inline-block;
         text-transform: uppercase;
@@ -536,15 +536,15 @@
         font-weight: 500;
         font-size: 60px;
         line-height: 64px;
-        margin-top: 30px;
-        margin-bottom: 58px;
+        margin-top: 32px;
+        margin-bottom: 56px;
         letter-spacing: -0.02em;
         color: var(--rr-common-white);
         font-family: var(--rr-ff-heading1);
 
         @media #{$lg,$md,$sm,$xs} {
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 24px;
+            margin-bottom: 24px;
         }
 
         @media #{$xs} {
@@ -571,7 +571,7 @@
             }
 
             @media #{$xs} {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -685,15 +685,15 @@
         font-size: 26px;
         line-height: 44px;
         text-align: center;
-        margin-top: 35px;
-        margin-bottom: 22px;
+        margin-top: 32px;
+        margin-bottom: 24px;
         color: rgba(var(--vaa-paper-rgb), 0.7);
         font-family: var(--rr-ff-heading1);
 
         @media #{$xs} {
             font-size: 18px;
             line-height: 35px;
-            margin: 20px 0;
+            margin: 24px 0;
         }
     }
 
@@ -705,8 +705,8 @@
         }
 
         &__info {
-            margin-top: 28px;
-            margin-bottom: 15px;
+            margin-top: 32px;
+            margin-bottom: 16px;
         }
 
         &__name {
@@ -757,7 +757,7 @@
     &__item {
         max-width: 610px;
         text-align: center;
-        padding: 105px 73px;
+        padding: 104px 72px;
         padding-bottom: 72px;
         position: relative;
         overflow: hidden;
@@ -768,23 +768,23 @@
         }
 
         @media #{$xxl,$md} {
-            padding: 70px 40px;
-            padding-bottom: 60px;
+            padding: 72px 40px;
+            padding-bottom: 64px;
         }
 
         @media #{$xl} {
-            padding-bottom: 90px;
+            padding-bottom: 88px;
         }
 
         @media #{$lg} {
-            padding: 80px 50px;
-            padding-bottom: 70px;
+            padding: 80px 48px;
+            padding-bottom: 72px;
         }
 
         @media #{$xs} {
-            padding: 50px 20px;
+            padding: 48px 24px;
             padding-bottom: 40px;
-            margin: 0 20px;
+            margin: 0 24px;
         }
 
         @media #{$sm,$xs} {

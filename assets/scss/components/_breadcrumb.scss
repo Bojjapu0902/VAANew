@@ -5,14 +5,14 @@
 /*----------------------------------------*/
 // Breadcrumb style
 .breadcrumb-space-top {
-  padding-top: 210px;
+  padding-top: 208px;
 
   @media #{$md} {
     padding-top: 160px;
   }
 
   @media #{$sm,$xs} {
-    padding-top: 150px;
+    padding-top: 152px;
   }
 }
 
@@ -44,7 +44,7 @@
     margin-bottom: 72px;
 
     @media #{$xl} {
-      margin-left: 100px;
+      margin-left: 104px;
     }
 
     @media #{$lg} {
@@ -56,16 +56,16 @@
     }
 
     @media #{$sm,$xs} {
-      margin: 0 30px;
-      margin-bottom: 70px;
+      margin: 0 32px;
+      margin-bottom: 72px;
     }
   }
 
   &__guideline-title {
     display: flex;
     align-items: start;
-    column-gap: 30px;
-    margin-bottom: 84px;
+    column-gap: 32px;
+    margin-bottom: 88px;
 
     @media #{$sm,$xs} {
       display: block;
@@ -77,7 +77,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
-    padding: 9px 33px;
+    padding: 8px 32px;
     border-radius: 50px;
     display: inline-block;
     color: rgba(var(--vaa-paper-rgb), 0.7);
@@ -105,7 +105,7 @@
     }
 
     @media #{$sm,$xs} {
-      margin-top: 10px;
+      margin-top: 8px;
       transform: translateY(-0px);
 
       br {
@@ -121,18 +121,18 @@
   &__future {
     display: flex;
     align-items: end;
-    column-gap: 90px;
+    column-gap: 88px;
 
     @media #{$xxxl,$xxl} {
-      column-gap: 60px;
+      column-gap: 64px;
     }
 
     @media #{$xl,$lg} {
-      column-gap: 50px;
+      column-gap: 48px;
     }
 
     @media #{$md} {
-      column-gap: 30px;
+      column-gap: 32px;
     }
 
     @media #{$sm,$xs} {
@@ -142,7 +142,7 @@
 
   &__future-item {
     @media #{$sm,$xs} {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     h3 {
@@ -164,14 +164,14 @@
       font-size: 16px;
       line-height: 26px;
       color: #999999;
-      margin-top: 10px;
+      margin-top: 8px;
       font-family: var(--rr-ff-heading);
     }
   }
 
   &__thumb {
     margin-bottom: -350px;
-    margin-right: 50px;
+    margin-right: 48px;
 
     @media #{$xxxl} {
       margin-bottom: -250px;
@@ -217,17 +217,17 @@
 
 // services-details---
 .breadcrumb-space-3 {
-  padding-top: 185px;
-  padding-bottom: 175px;
+  padding-top: 184px;
+  padding-bottom: 176px;
 
   @media #{$md} {
-    padding-top: 150px;
+    padding-top: 152px;
     padding-bottom: 80px;
   }
 
   @media #{$sm,$xs} {
-    padding-top: 140px;
-    padding-bottom: 70px;
+    padding-top: 144px;
+    padding-bottom: 72px;
   }
 }
 
@@ -270,18 +270,18 @@
   }
 
   &__arrow {
-    margin-top: 41px;
+    margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
 
     @media #{$md} {
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 32px;
+      margin-bottom: 32px;
     }
 
     @media #{$sm,$xs} {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 24px;
+      margin-bottom: 24px;
 
       img {
         width: 100%;
@@ -293,7 +293,7 @@
     .rr-btn-2 {
       font-weight: 500;
       border-radius: 0;
-      padding: 9px 23.3px;
+      padding: 8px 24px;
       text-transform: capitalize;
       transform: translateY(-10px);
       background-color: transparent;

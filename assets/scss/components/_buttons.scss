@@ -9,12 +9,12 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  column-gap: 20px;
-  padding: 5px;
+  column-gap: 24px;
+  padding: 4px;
   font-size: 16px;
   line-height: 1;
   overflow: hidden;
-  padding-right: 20px;
+  padding-right: 24px;
   font-weight: var(--rr-fw-medium);
   color: var(--rr-common-white);
   font-family: var(--rr-ff-heading);
@@ -58,7 +58,7 @@
   line-height: 1;
   overflow: hidden;
   position: relative;
-  padding: 17px 34.3px;
+  padding: 16px 32px;
   border-radius: 500px;
   display: inline-flex;
   align-items: center;
@@ -131,7 +131,7 @@
   transition: all 0.3s ease-in-out;
 
   &-primary {
-    padding: 14px 28px;
+    padding: 16px 32px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
@@ -146,11 +146,11 @@
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    gap: 30px;
+    gap: 32px;
     white-space: nowrap;
 
     @media #{$md} {
-      padding: 16px 25px;
+      padding: 16px 24px;
     }
 
     &:hover {
@@ -186,7 +186,7 @@
     color: var(--rr-common-white);
     border-radius: 100%;
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     justify-content: center;
     background-color: transparent;
@@ -255,7 +255,7 @@
   transition: all 0.3s ease-in-out;
 
   &-primary {
-    padding: 14px 28px;
+    padding: 16px 32px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
@@ -270,11 +270,11 @@
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    gap: 30px;
+    gap: 32px;
     white-space: nowrap;
 
     @media #{$md} {
-      padding: 16px 25px;
+      padding: 16px 24px;
     }
 
     &:hover {
@@ -310,7 +310,7 @@
     color: var(--rr-heading-primary);
     border-radius: 100%;
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     justify-content: center;
     background-color: transparent;
@@ -390,7 +390,7 @@
   transition: all 0.3s ease-in-out;
 
   &-primary {
-    padding: 14px 28px;
+    padding: 16px 32px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1;
@@ -405,11 +405,11 @@
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    gap: 30px;
+    gap: 32px;
     white-space: nowrap;
 
     @media #{$md} {
-      padding: 16px 25px;
+      padding: 16px 24px;
     }
 
     &:hover {
@@ -445,7 +445,7 @@
     color: var(--rr-heading-primary);
     border-radius: 100%;
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     justify-content: center;
     background-color: transparent;
@@ -522,7 +522,7 @@
   display: inline-block;
 
   @media #{$md,$sm,$xs} {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 
   .tp-btn-circle-2 {

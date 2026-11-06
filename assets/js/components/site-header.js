@@ -12,7 +12,7 @@
     var VARIANTS = {
         home: {
             headerClass: 'header header-2',
-            logoWrapperClass: 'logo p-3',
+            logoWrapperClass: 'logo py-3',
             logoImgClass: 'w-100',
             logoSrc: 'assets/imgs/logo/logo-2.svg',
             rightAction: 'search'

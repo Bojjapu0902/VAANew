@@ -7,7 +7,7 @@
 
 .header-3 {
     @media #{$lg,$md,$sm,$xs} {
-        padding: 15px 0;
+        padding: 16px 0;
     }
 
     .header {
@@ -16,8 +16,8 @@
                 ul {
                     li {
                         position: relative;
-                        margin-right: 20px;
-                        padding-right: 30px;
+                        margin-right: 24px;
+                        padding-right: 32px;
 
                         &:last-of-type {
                             margin-right: 0;
@@ -39,7 +39,7 @@
 
                         >a {
                             font-size: 14px;
-                            padding: 36px 0;
+                            padding: 40px 0;
                             text-transform: uppercase;
                             font-weight: var(--rr-fw-sbold);
                             color: rgb(var(--vaa-paper-rgb));
@@ -59,7 +59,7 @@
                                 }
 
                                 a {
-                                    padding: 0 25px;
+                                    padding: 0 24px;
                                     text-transform: capitalize;
                                     font-weight: var(--rr-fw-medium);
                                     color: var(--rr-heading-primary);

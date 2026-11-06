@@ -11,7 +11,7 @@
             margin: 0 80px;
 
             @media #{$xxl} {
-                margin: 0 30px;
+                margin: 0 32px;
             }
 
             @media #{$xl,$lg,$md,$sm,$xs} {
@@ -21,11 +21,11 @@
 
         &__content {
             @media #{$xxl} {
-                padding: 28px;
+                padding: 32px;
             }
 
             @media #{$lg} {
-                padding: 27px;
+                padding: 24px;
             }
         }
 
@@ -67,10 +67,10 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 1;
-                padding: 16px 20px;
+                padding: 16px 24px;
                 position: relative;
                 z-index: 9;
-                margin-bottom: 19px;
+                margin-bottom: 16px;
                 color: rgba(var(--vaa-fg-rgb), 0.6);
                 font-family: var(--rr-ff-heading);
                 border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
@@ -95,8 +95,8 @@
 .blog-details {
     &-breadcrumb {
         &__space {
-            padding-top: 185px;
-            padding-bottom: 114px;
+            padding-top: 184px;
+            padding-bottom: 112px;
 
             @media #{$md} {
                 padding-top: 160px;
@@ -104,8 +104,8 @@
             }
 
             @media #{$sm,$xs} {
-                padding-top: 150px;
-                padding-bottom: 70px;
+                padding-top: 152px;
+                padding-bottom: 72px;
             }
         }
 
@@ -113,10 +113,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 196px;
+            gap: 200px;
 
             @media #{$md} {
-                gap: 126px;
+                gap: 128px;
             }
 
             @media #{$sm,$xs} {
@@ -156,7 +156,7 @@
             font-size: 100px;
             line-height: 110px;
             color: var(--rr-heading-primary);
-            padding-top: 26px;
+            padding-top: 24px;
 
             @media #{$lg} {
                 font-size: 70px;
@@ -183,17 +183,17 @@
                 @media #{$sm,$xs} {
                     display: flex;
                     align-items: center;
-                    gap: 15px;
-                    margin-top: 30px;
+                    gap: 16px;
+                    margin-top: 32px;
                 }
 
                 @media #{$xs} {
-                    margin-top: 17px;
+                    margin-top: 16px;
                 }
 
                 li {
                     list-style: none;
-                    margin-bottom: 6px;
+                    margin-bottom: 8px;
 
                     &:last-child {
                         margin-bottom: 0;
@@ -221,14 +221,14 @@
     }
 
     &__postbox {
-        margin-right: 20px;
+        margin-right: 24px;
 
         @media #{$xl,$lg,$md,$sm,$xs} {
             margin-right: 0;
         }
 
         &__meta {
-            padding-top: 27px;
+            padding-top: 24px;
 
             span {
                 padding-right: 16px;
@@ -250,12 +250,12 @@
 
                 &:nth-child(2) {
                     border-left: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
-                    padding-left: 20px;
+                    padding-left: 24px;
                 }
 
                 &:nth-child(3) {
                     border-left: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
-                    padding-left: 20px;
+                    padding-left: 24px;
                 }
             }
         }
@@ -267,7 +267,7 @@
             font-size: 44px;
             line-height: 50px;
             color: var(--rr-heading-primary);
-            padding: 25px 0px 13px 0px;
+            padding: 24px 0px 16px 0px;
 
             @media #{$lg,$sm} {
                 font-size: 35px
@@ -303,15 +303,15 @@
             align-items: end;
             justify-content: space-between;
             background: var(--vaa-paper-alt);
-            margin: 41px 0px 15px 0px;
-            padding: 25px 27px 25px 40px;
+            margin: 40px 0px 16px 0px;
+            padding: 24px 24px 24px 40px;
 
             @media #{$lg} {
-                padding: 25px 17px 25px 24px;
+                padding: 24px 16px 24px 24px;
             }
 
             @media #{$md,$sm,$xs} {
-                padding: 25px 20px 25px 20px;
+                padding: 24px 24px 24px 24px;
             }
 
             & br {
@@ -322,13 +322,13 @@
 
             @media #{$xs} {
                 flex-wrap: wrap;
-                gap: 20px;
+                gap: 24px;
             }
         }
 
         &__wrapper {
-            padding-top: 21px;
-            padding-bottom: 30px;
+            padding-top: 24px;
+            padding-bottom: 32px;
 
             &-thumb {
                 & img {
@@ -362,20 +362,20 @@
             align-items: center;
             justify-content: space-between;
             background: var(--vaa-paper-alt);
-            padding: 19px 25px;
-            margin: 50px 0px 50px 0px;
+            padding: 16px 24px;
+            margin: 48px 0px 48px 0px;
 
             @media #{$sm,$xs} {
                 flex-wrap: wrap;
             }
 
             @media #{$xs} {
-                padding: 19px 17px;
+                padding: 16px 16px;
             }
 
             &__tag {
                 @media #{$sm,$xs} {
-                    padding-bottom: 20px;
+                    padding-bottom: 24px;
                 }
 
                 span {
@@ -398,7 +398,7 @@
                     color: var(--rr-text-body);
                     box-shadow: 0px 1px 1px rgba(var(--vaa-fg-rgb), 0.1);
                     border-radius: 100px;
-                    padding: 2px 20px;
+                    padding: 2px 24px;
                     background: var(--rr-common-white);
                     transition: all 0.3s ease-in-out;
 
@@ -408,7 +408,7 @@
                     }
 
                     @media #{$xs} {
-                        margin-bottom: 13px;
+                        margin-bottom: 16px;
                         display: inline-block;
                     }
                 }
@@ -426,7 +426,7 @@
                     font-size: 20px;
                     line-height: 28px;
                     color: var(--rr-heading-primary);
-                    margin-right: 13px;
+                    margin-right: 16px;
                 }
 
                 a {
@@ -466,7 +466,7 @@
             }
 
             &__wrapper {
-                margin-right: 20px;
+                margin-right: 24px;
 
                 @media #{$xs,$md} {
                     margin-right: 0;
@@ -483,21 +483,21 @@
             &-text {
                 display: flex;
                 justify-content: space-between;
-                padding: 34px 0px 31px 0px;
+                padding: 32px 0px 32px 0px;
 
                 @media #{$xs} {
                     flex-wrap: wrap;
                 }
 
                 .author-content {
-                    margin-left: 20px;
+                    margin-left: 24px;
 
                     @media #{$xs} {
                         margin-left: 0;
                     }
 
                     @media #{$xs} {
-                        padding-top: 20px;
+                        padding-top: 24px;
                     }
 
                     &-wrap {
@@ -515,7 +515,7 @@
                     line-height: 20px;
                     text-transform: uppercase;
                     color: var(--rr-text-body);
-                    padding-bottom: 15px;
+                    padding-bottom: 16px;
                     display: block;
 
                     @media #{$xs} {
@@ -530,7 +530,7 @@
                 }
 
                 .content {
-                    margin-left: 20px;
+                    margin-left: 24px;
                 }
 
                 .replay {
@@ -544,14 +544,14 @@
                         color: var(--rr-heading-primary);
                         border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
                         transition: all 0.3s ease-in-out;
-                        padding: 6px 18px;
+                        padding: 8px 16px;
 
                         @media #{$xs} {
-                            padding: 6px 10px;
+                            padding: 8px 8px;
                         }
 
                         i {
-                            margin-right: 6px;
+                            margin-right: 8px;
                         }
 
                         &:hover {
@@ -569,7 +569,7 @@
                 font-size: 22px;
                 line-height: 1;
                 color: var(--rr-heading-primary);
-                padding-bottom: 5px;
+                padding-bottom: 4px;
 
                 @media #{$xs} {
                     font-size: 19px;
@@ -577,14 +577,14 @@
             }
 
             &-thumb {
-                margin-right: 20px;
+                margin-right: 24px;
             }
 
             li.item {
-                margin-left: 94px;
+                margin-left: 96px;
 
                 @media #{$sm} {
-                    margin-left: 30px;
+                    margin-left: 32px;
                 }
 
                 @media #{$xs} {
@@ -596,7 +596,7 @@
 
     &__contact-form {
         margin-top: 24px;
-        margin-right: 20px;
+        margin-right: 24px;
 
         @media #{$md,$sm} {
             margin-bottom: 40px;
@@ -607,7 +607,7 @@
         }
 
         &__form-content {
-            padding-bottom: 30px;
+            padding-bottom: 32px;
         }
 
         form {
@@ -626,9 +626,9 @@
                 }
 
                 input {
-                    padding: 12px 18px;
+                    padding: 16px 16px;
                     padding-right: 40px;
-                    margin-bottom: 19px;
+                    margin-bottom: 16px;
                     border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
                     &::placeholder {
@@ -657,7 +657,7 @@
                 textarea {
                     width: 100%;
                     height: 140px;
-                    padding: 12px 20px;
+                    padding: 16px 24px;
 
                     &::placeholder {
                         font-family: var(--rr-ff-heading);
@@ -671,7 +671,7 @@
             }
 
             .form-btn {
-                margin-top: 11px;
+                margin-top: 8px;
             }
         }
     }

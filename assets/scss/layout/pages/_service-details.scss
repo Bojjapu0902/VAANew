@@ -60,7 +60,7 @@
 }
 
 .services-breadcrumb-space {
-    padding-top: 150px;
+    padding-top: 152px;
     padding-bottom: 120px;
 
     @media #{$md} {
@@ -68,8 +68,8 @@
     }
 
     @media #{$sm,$xs} {
-        padding-top: 140px;
-        padding-bottom: 70px;
+        padding-top: 144px;
+        padding-bottom: 72px;
     }
 }
 
@@ -116,7 +116,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        column-gap: 100px;
+        column-gap: 104px;
         margin-top: 40px;
 
         @media #{$sm,$xs} {
@@ -124,11 +124,11 @@
         }
 
         @media #{$xxl} {
-            column-gap: 70px;
+            column-gap: 72px;
         }
 
         @media #{$xl,$lg,$md} {
-            column-gap: 20px;
+            column-gap: 24px;
         }
 
         img {
@@ -151,7 +151,7 @@
 
             @media #{$sm,$xs} {
                 text-align: center;
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
 
             &:last-of-type {
@@ -159,7 +159,7 @@
 
                 @media #{$sm,$xs} {
                     text-align: center;
-                    margin-top: 10px;
+                    margin-top: 8px;
                 }
             }
 
@@ -209,7 +209,7 @@
 
 .services-inner {
     &__thumb {
-        margin-left: 50px;
+        margin-left: 48px;
         overflow: hidden;
         position: relative;
 
@@ -218,14 +218,14 @@
         }
 
         @media #{$md} {
-            margin: 30px;
+            margin: 32px;
             margin-top: 0;
         }
 
         @media #{$sm,$xs} {
-            margin: 15px;
+            margin: 16px;
             margin-top: 0;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
         img {
@@ -240,14 +240,14 @@
     &__wrapper {
         display: flex;
         align-items: center;
-        column-gap: 137px;
+        column-gap: 136px;
 
         @media #{$xxl} {
-            column-gap: 70px;
+            column-gap: 72px;
         }
 
         @media #{$xl,$lg} {
-            column-gap: 50px;
+            column-gap: 48px;
         }
 
         @media #{$md,$sm,$xs} {
@@ -258,11 +258,11 @@
 
     &__info {
         @media #{$md} {
-            margin: 0 30px;
+            margin: 0 32px;
         }
 
         @media #{$sm,$xs} {
-            margin: 0 15px;
+            margin: 0 16px;
         }
 
         &__item {
@@ -299,7 +299,7 @@
             font-size: 50px;
             line-height: 60px;
             position: relative;
-            margin-bottom: 95px;
+            margin-bottom: 96px;
             transition: all 0.3s ease-in-out;
             color: var(--rr-heading-primary);
             font-family: var(--rr-ff-heading);
@@ -307,11 +307,11 @@
             @media #{$lg,$sm} {
                 font-size: 38px;
                 line-height: 50px;
-                margin-bottom: 50px;
+                margin-bottom: 48px;
             }
 
             @media #{$md} {
-                margin-bottom: 50px;
+                margin-bottom: 48px;
             }
 
             @media #{$xs} {
@@ -399,12 +399,12 @@
         }
 
         @media #{$md,$sm,$xs} {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
     }
 
     &__wrap {
-        margin-left: 90px;
+        margin-left: 88px;
 
         @media #{$lg,$md,$sm,$xs} {
             margin-left: 0;
@@ -414,7 +414,7 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
-            margin-top: 10px;
+            margin-top: 8px;
             color: rgba(var(--vaa-fg-rgb), 0.5);
             font-family: var(--rr-ff-heading);
 
@@ -470,7 +470,7 @@
             }
 
             @media #{$xs} {
-                margin-top: 15px;
+                margin-top: 16px;
                 transform: translateY(0);
             }
         }
@@ -485,9 +485,9 @@
     &__sidebar {
         &__list {
             list-style: none;
-            padding: 42px 40px;
-            padding-bottom: 47px;
-            margin-right: 43px;
+            padding: 40px 40px;
+            padding-bottom: 48px;
+            margin-right: 40px;
             background: var(--vaa-paper-alt);
 
             @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
@@ -495,15 +495,15 @@
             }
 
             @media #{$md,$sm,$xs} {
-                margin-bottom: 20px;
+                margin-bottom: 24px;
             }
 
             li {
                 display: flex;
-                column-gap: 10px;
+                column-gap: 8px;
                 font-weight: 500;
                 font-size: 16px;
-                padding: 11.5px 0;
+                padding: 8px 0;
                 line-height: 30px;
                 cursor: pointer;
                 position: relative;
@@ -599,8 +599,8 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 26px;
-        margin-top: 22px;
-        margin-bottom: 38px;
+        margin-top: 24px;
+        margin-bottom: 40px;
         color: rgba(var(--vaa-fg-rgb), 0.6);
         font-family: var(--rr-ff-heading);
 
@@ -612,9 +612,9 @@
     }
 
     &__features {
-        margin-top: 70px;
-        padding-bottom: 52px;
-        margin-bottom: 70px;
+        margin-top: 72px;
+        padding-bottom: 56px;
+        margin-bottom: 72px;
         border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
         @media #{$sm,$xs} {
@@ -628,7 +628,7 @@
             font-size: 26px;
             line-height: 1;
             position: relative;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             color: var(--rr-heading-primary);
             font-family: var(--rr-ff-heading);
 
@@ -643,7 +643,7 @@
                 height: 6px;
                 left: -16px;
                 top: 10px;
-                margin-right: 12px;
+                margin-right: 16px;
                 border-radius: 30px;
                 position: absolute;
                 background-color: rgba(var(--vaa-fg-rgb), 0.4);
@@ -652,7 +652,7 @@
 
         &__item {
             margin-bottom: 40px;
-            margin-left: 25px;
+            margin-left: 24px;
 
             p {
                 font-weight: 500;
@@ -674,7 +674,7 @@
         &__wrap {
             display: flex;
             align-items: start;
-            padding: 54px 0px;
+            padding: 56px 0px;
             justify-content: space-between;
             border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
@@ -684,7 +684,7 @@
 
             @media #{$md,$sm,$xs} {
                 flex-wrap: wrap;
-                padding: 35px 0;
+                padding: 32px 0;
             }
         }
 
@@ -693,7 +693,7 @@
             font-size: 26px;
             line-height: 1;
             position: relative;
-            margin-left: 25px;
+            margin-left: 24px;
             color: var(--rr-heading-primary);
             font-family: var(--rr-ff-heading);
 
@@ -707,7 +707,7 @@
                 height: 6px;
                 left: -16px;
                 top: 10px;
-                margin-right: 12px;
+                margin-right: 16px;
                 border-radius: 30px;
                 position: absolute;
                 background-color: rgba(var(--vaa-fg-rgb), 0.4);
@@ -716,8 +716,8 @@
 
         &__list {
             @media #{$md,$sm,$xs} {
-                margin-left: 28px;
-                margin-top: 20px;
+                margin-left: 32px;
+                margin-top: 24px;
             }
 
             ul {
@@ -725,7 +725,7 @@
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 26px;
-                    margin-bottom: 6px;
+                    margin-bottom: 8px;
                     color: rgba(var(--vaa-fg-rgb), 0.6);
                     font-family: var(--rr-ff-heading);
 
@@ -753,7 +753,7 @@
             }
         }
 
-        margin-top: 70px;
+        margin-top: 72px;
 
         &__wrap {
             margin-left: -44px;
@@ -764,7 +764,7 @@
 
             @media #{$xl,$lg,$md,$sm,$xs} {
                 margin-left: 0;
-                margin-top: 30px;
+                margin-top: 32px;
             }
 
             .accordion-item {
@@ -800,14 +800,14 @@
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 1;
-                padding: 15.5px 30px;
-                padding-left: 25px;
+                padding: 16px 32px;
+                padding-left: 24px;
                 background-color: transparent;
                 color: var(--rr-heading-primary);
                 font-family: var(--rr-ff-heading);
 
                 @media #{$sm,$xs} {
-                    padding: 15px 20px;
+                    padding: 16px 24px;
                 }
 
                 &:focus {
@@ -856,11 +856,11 @@
             }
 
             .accordion-body {
-                padding: 4px 65px 32px 25px;
+                padding: 4px 64px 32px 24px;
                 background: var(--rr-heading-primary);
 
                 @media #{$sm,$xs} {
-                    padding: 20px;
+                    padding: 24px;
                     padding-top: 4px;
                 }
 

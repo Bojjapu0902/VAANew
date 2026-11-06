@@ -103,13 +103,13 @@
             }
 
             span {
-                margin-left: 570px;
+                margin-left: 568px;
 
                 @media #{$xl} {
                     margin-left: 520px;
                 }
                 @media #{$lg} {
-                    margin-left: 270px;
+                    margin-left: 272px;
                 }
 
                 @media #{$md} {
@@ -117,7 +117,7 @@
                 }
 
                 @media #{$sm} {
-                    margin-left: 100px;
+                    margin-left: 104px;
                 }
 
                 @media #{$xs} {
@@ -136,7 +136,7 @@
                 font-size: 16px;
                 line-height: 14px;
                 display: inline-block;
-                padding: 10px 14.8px;
+                padding: 8px 16px;
                 border-radius: 200px;
                 color: var(--rr-text-primary-2);
                 font-family: var(--rr-ff-heading1);

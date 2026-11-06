@@ -159,11 +159,11 @@
 }
 
 .mb-5 {
-	margin-bottom: 5px;
+	margin-bottom: 4px;
 }
 
 .mb-10 {
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 
 .mb-minus-30 {
@@ -188,7 +188,7 @@
 
 .sidebar-responsive {
 	@media #{$lg} {
-		margin-top: 30px;
+		margin-top: 32px;
 	}
 }
 
@@ -217,11 +217,11 @@ section {
 }
 
 .my-100 {
-	padding-top: 50px;
+	padding-top: 48px;
 }
 
 .mb-100 {
-	padding-bottom: 150px;
+	padding-bottom: 152px;
 }
 
 .border-tp {
@@ -263,7 +263,7 @@ section {
 
 	@media #{$md,$sm,$xs} {
 		display: block !important;
-		margin-top: 20px;
+		margin-top: 24px;
 	}
 }
 

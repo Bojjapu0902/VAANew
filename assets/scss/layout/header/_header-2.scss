@@ -6,13 +6,10 @@
 
 
 .header-2 {
-    padding: 0 35px;
+    padding-inline: var(--vaa-frame-inset);
 
-    @media #{$lg,$md,$sm} {
-        padding: 15px 35px;
-    }
-    @media #{$xs} {
-        padding: 15px;
+    @media #{$lg,$md,$sm,$xs} {
+        padding-block: 16px;
     }
 
     .header {
@@ -24,8 +21,8 @@
 
                         &>a {
                             font-size: 15px;
-                            margin: 20px 0;
-                            padding: 11px 14.2px;
+                            margin: 24px 0;
+                            padding: 8px 16px;
                             border-radius: 30px;
                             text-transform: capitalize;
                             font-family: var(--rr-ff-body);
@@ -35,7 +32,7 @@
                         }
 
                         &.has-dropdown>a {
-                            padding-right: 22px !important;
+                            padding-right: 24px !important;
 
                             &::after {
                                 top: 39%;
@@ -47,9 +44,9 @@
                         .submenu {
                             li {
                                 a {
-                                    padding: 0 25px;
-                                    padding-inline-start: 30px;
-                                    padding-bottom: 9px;
+                                    padding: 0 24px;
+                                    padding-inline-start: 32px;
+                                    padding-bottom: 8px;
                                     border: none;
                                     margin: 0;
                                 }
@@ -61,7 +58,7 @@
         }
 
         &__action {
-            gap: 6px;
+            gap: 8px;
         }
 
         &__language {
@@ -74,7 +71,7 @@
                     font-weight: 500;
                     font-size: 15px;
                     line-height: 1;
-                    padding: 6.5px 25px;
+                    padding: 8px 24px;
                     border-radius: 200px;
                     font-family: var(--rr-ff-body);
                     color: var(--rr-heading-primary);
@@ -86,7 +83,7 @@
         &__search {
             #popup-search-box {
                 border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
-                padding: 6.7px 20px;
+                padding: 8px 24px;
                 line-height: 1;
                 border-radius: 200px;
             }
@@ -101,14 +98,14 @@
                     .bar-icon {
                         width: inherit;
                         height: inherit;
-                        padding: 12px 16px;
+                        padding: 16px 16px;
                         border-radius: 200px;
                         border: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
                         span {
                             width: 26px;
                             height: 1px;
-                            margin-bottom: 6px;
+                            margin-bottom: 8px;
                             background: rgba(var(--vaa-fg-rgb), 0.7);
 
                             &:last-of-type {

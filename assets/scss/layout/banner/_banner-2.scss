@@ -7,15 +7,15 @@
 // banner-section-2
 .banner-section-2 {
     &__space {
-        padding-top: 125px;
-        padding-bottom: 105px;
+        padding-top: 128px;
+        padding-bottom: 104px;
 
         @media #{$md} {
             padding-bottom: 80px;
         }
 
         @media #{$sm,$xs} {
-            padding-bottom: 70px;
+            padding-bottom: 72px;
         }
     }
 
@@ -32,12 +32,12 @@
             display: flex;
             align-items: start;
             justify-content: end;
-            margin-right: 250px;
+            margin-right: 248px;
             z-index: 99;
             position: relative;
 
             @media #{$xl,$lg,$md,$sm,$xs} {
-                margin-right: 100px;
+                margin-right: 104px;
                 position: inherit;
             }
 
@@ -57,8 +57,8 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 1;
-                margin-top: 15px;
-                margin-right: 45px;
+                margin-top: 16px;
+                margin-right: 48px;
                 display: inline-block;
                 color: rgba(var(--vaa-fg-rgb), 0.7);
                 font-family: var(--rr-ff-heading);
@@ -71,7 +71,7 @@
                     content: "";
                     width: 5px;
                     height: 5px;
-                    margin-right: 6px;
+                    margin-right: 8px;
                     display: inline-block;
                     transform: translateY(-3px);
                     background-color: rgb(var(--vaa-fg-rgb));
@@ -85,7 +85,8 @@
         align-items: end;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 0 35px;
+        // hero stays full-bleed; its text lines up with the header / .container edge
+        padding-inline: calc((100% - min(100%, var(--vaa-frame-max) - 32px)) / 2);
         margin-top: 72px;
 
         @media #{$xl,$lg,$md,$sm,$xs} {
@@ -93,7 +94,7 @@
         }
 
         @media #{$md} {
-            margin-top: 50px;
+            margin-top: 48px;
         }
 
         @media #{$sm,$xs} {
@@ -103,7 +104,7 @@
 
     &__list {
         list-style: none;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
 
         li {
             font-weight: 500;
@@ -111,14 +112,14 @@
             line-height: 1;
             display: inline-block;
             border-radius: 200px;
-            padding: 6px 15.1px;
-            margin-right: 6px;
+            padding: 8px 16px;
+            margin-right: 8px;
             color: rgba(var(--vaa-fg-rgb), 0.7);
             font-family: var(--rr-ff-heading);
             border: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
 
             @media #{$xs} {
-                margin-bottom: 5px;
+                margin-bottom: 4px;
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -168,7 +169,7 @@
 
         span {
             line-height: 1;
-            padding: 0 35px;
+            padding: 0 32px;
             border-radius: 200px;
             display: inline-block;
             border: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
@@ -178,11 +179,11 @@
             }
 
             @media #{$sm} {
-                padding: 0 20px;
+                padding: 0 24px;
             }
 
             @media #{$xs} {
-                padding: 0 10px;
+                padding: 0 8px;
 
                 img {
                     display: none;
@@ -207,7 +208,7 @@
         font-family: var(--rr-ff-body);
 
         @media #{$md,$sm,$xs} {
-            margin-top: 10px;
+            margin-top: 8px;
             text-align: start;
             transform: translateY(0);
         }
@@ -225,17 +226,17 @@
     text-align: center;
 
     &__space {
-        padding-top: 180px;
-        padding-bottom: 95px;
+        padding-top: 184px;
+        padding-bottom: 96px;
 
         @media #{$md} {
-            padding-top: 150px;
+            padding-top: 152px;
             padding-bottom: 80px;
         }
 
         @media #{$sm,$xs} {
-            padding-top: 140px;
-            padding-bottom: 70px;
+            padding-top: 144px;
+            padding-bottom: 72px;
         }
     }
 
@@ -329,7 +330,7 @@
 
         @media #{$xs} {
             margin: 0 auto;
-            margin-top: 20px;
+            margin-top: 24px;
             display: block;
         }
 
@@ -352,17 +353,17 @@
     &__bottom {
         &__text {
             display: flex;
-            margin-top: 130px;
+            margin-top: 128px;
             align-items: center;
             flex-wrap: wrap;
             justify-content: space-between;
 
             @media #{$md} {
-                margin-top: 70px;
+                margin-top: 72px;
             }
 
             @media #{$sm,$xs} {
-                margin-top: 50px;
+                margin-top: 48px;
             }
 
             @media #{$xs} {
@@ -379,7 +380,7 @@
                 font-family: var(--rr-ff-body);
 
                 @media #{$xs} {
-                    margin-bottom: 20px;
+                    margin-bottom: 24px;
 
                     &:last-of-type {
                         margin-bottom: 0;

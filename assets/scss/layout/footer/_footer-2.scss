@@ -6,14 +6,14 @@
 
 .footer-2 {
     &__wrapper {
-        margin: 0 43px;
+        margin: 0 40px;
 
         @media #{$lg,$md} {
-            margin: 0 30px;
+            margin: 0 32px;
         }
 
         @media #{$sm,$xs} {
-            margin: 0 25px;
+            margin: 0 24px;
         }
 
         .cite {
@@ -30,7 +30,7 @@
             }
 
             @media #{$sm,$xs} {
-                margin-top: 20px;
+                margin-top: 24px;
             }
         }
     }
@@ -40,14 +40,14 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-top: 100px;
+        margin-top: 104px;
 
         @media #{$md} {
             margin-top: 80px;
         }
 
         @media #{$sm,$xs} {
-            margin-top: 70px;
+            margin-top: 72px;
         }
     }
 
@@ -72,33 +72,33 @@
         @media #{$sm} {
             font-size: 40px;
             line-height: 50px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         @media #{$xs} {
             font-size: 26px;
             line-height: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
     }
 
     &__social {
-        margin-top: 110px;
+        margin-top: 112px;
         text-align: center;
         margin-bottom: -20px;
         display: flex;
         align-items: center;
-        gap: 30px;
-        margin-bottom: 30px;
+        gap: 32px;
+        margin-bottom: 32px;
         flex-wrap: wrap;
         justify-content: center;
 
         @media #{$md} {
-            margin-top: 70px;
+            margin-top: 72px;
         }
 
         @media #{$sm,$xs} {
-            margin-top: 50px;
+            margin-top: 48px;
         }
 
         a {
@@ -154,7 +154,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 25px 0;
+        padding: 24px 0;
 
         p {
             font-weight: 400;
@@ -176,8 +176,8 @@
 
             li {
                 position: relative;
-                margin-right: 12px;
-                padding-right: 13px;
+                margin-right: 16px;
+                padding-right: 16px;
 
                 &::before {
                     content: "";
@@ -246,7 +246,7 @@
     }
 
     @media #{$sm,$xs} {
-        padding-top: 70px;
+        padding-top: 72px;
     }
 }
 
@@ -255,23 +255,23 @@
         &.wedget {
             &-1 {
                 @media #{$md,$sm,$xs} {
-                    margin-bottom: 50px;
+                    margin-bottom: 48px;
                 }
             }
 
             &-2 {
-                margin-left: 50px;
+                margin-left: 48px;
 
                 @media #{$xl} {
                     margin-left: 40px;
                 }
 
                 @media #{$lg} {
-                    margin-left: 60px;
+                    margin-left: 64px;
                 }
 
                 @media #{$md,$sm,$xs} {
-                    margin-bottom: 50px;
+                    margin-bottom: 48px;
                 }
 
                 @media #{$sm,$xs} {
@@ -284,7 +284,7 @@
                 margin-right: -30px;
 
                 @media #{$xl} {
-                    margin-left: 15px;
+                    margin-left: 16px;
                 }
 
                 @media #{$lg,$md} {
@@ -293,7 +293,7 @@
                 }
 
                 @media #{$md,$sm,$xs} {
-                    margin-bottom: 50px;
+                    margin-bottom: 48px;
                 }
 
                 @media #{$sm,$xs} {
@@ -311,12 +311,12 @@
 
                 @media #{$lg} {
                     margin-left: 0px;
-                    margin-top: 50px;
+                    margin-top: 48px;
                 }
 
                 @media #{$md,$sm,$xs} {
                     margin-left: 0px;
-                    margin-bottom: 50px;
+                    margin-bottom: 48px;
                 }
             }
         }
@@ -344,13 +344,13 @@
             font-size: 50px;
             line-height: 60px;
             margin-top: 24px;
-            margin-bottom: 45px;
+            margin-bottom: 48px;
             color: var(--rr-common-white);
             font-family: var(--rr-ff-heading1);
 
             @media #{$xs} {
                 font-size: 45px;
-                margin-bottom: 30px;
+                margin-bottom: 32px;
             }
         }
     }
@@ -378,7 +378,7 @@
         font-family: var(--rr-ff-heading1);
 
         @media #{$sm,$xs} {
-            margin-bottom: 35px;
+            margin-bottom: 32px;
         }
     }
 
@@ -386,7 +386,7 @@
         list-style: none;
 
         li {
-            margin-bottom: 23px;
+            margin-bottom: 24px;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -411,7 +411,7 @@
                     height: 4px;
                     border-radius: 30px;
                     display: inline-block;
-                    margin-right: 11px;
+                    margin-right: 8px;
                     transform: translateY(-4px);
                     background-color: var(--rr-common-white);
                 }
@@ -423,8 +423,8 @@
         &__list {
             display: flex;
             align-items: center;
-            column-gap: 15px;
-            margin-bottom: 30px;
+            column-gap: 16px;
+            margin-bottom: 32px;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -470,18 +470,18 @@
         &__input {
             position: relative;
             margin-top: 40px;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
 
             input {
                 height: 70px;
-                padding-left: 20px;
-                padding-right: 125px;
+                padding-left: 24px;
+                padding-right: 128px;
                 background: transparent;
                 color: rgba(var(--vaa-paper-rgb), 0.3);
                 border: 1.5px solid rgba(var(--vaa-paper-rgb), 0.2);
 
                 @media #{$xs} {
-                    padding-right: 20px;
+                    padding-right: 24px;
                 }
             }
 
@@ -493,7 +493,7 @@
                 border-radius: 0;
                 position: absolute;
                 display: inline-flex;
-                padding: 17.5px 13.2px;
+                padding: 16px 16px;
                 letter-spacing: -0.04em;
                 text-transform: uppercase;
                 color: var(--rr-text-primary-2);
@@ -502,8 +502,8 @@
 
                 @media #{$xs} {
                     position: inherit;
-                    margin: 20px 0;
-                    margin-left: 10px;
+                    margin: 24px 0;
+                    margin-left: 8px;
                 }
             }
         }
@@ -525,8 +525,8 @@
             .form-check-input {
                 width: 15px;
                 height: 15px;
-                margin-top: 5px;
-                margin-right: 3px;
+                margin-top: 4px;
+                margin-right: 4px;
                 border-radius: 1.5px;
                 background-color: transparent;
                 border: 1.5px solid rgba(var(--vaa-paper-rgb), 0.2);
@@ -550,27 +550,27 @@
 
     &__bottom {
         &__wrapper {
-            margin-top: 275px;
+            margin-top: 272px;
             border-top: 1px solid rgba(var(--vaa-paper-rgb), 0.1);
             border-bottom: 1px solid rgba(var(--vaa-paper-rgb), 0.1);
 
             @media #{$lg,$md} {
-                margin-top: 150px;
+                margin-top: 152px;
             }
 
             @media #{$sm,$xs} {
-                margin-top: 70px;
+                margin-top: 72px;
             }
         }
 
         &__content {
             display: flex;
-            padding: 23px 0;
+            padding: 24px 0;
             align-items: center;
             justify-content: space-between;
 
             @media #{$lg} {
-                padding: 15px 0;
+                padding: 16px 0;
             }
 
             @media #{$md,$sm,$xs} {
@@ -581,7 +581,7 @@
                 font-weight: 500;
                 font-size: 40px;
                 line-height: 30px;
-                margin-right: 42px;
+                margin-right: 40px;
                 color: var(--rr-common-white);
                 font-family: var(--rr-ff-heading1);
 
@@ -594,7 +594,7 @@
                 }
 
                 @media #{$sm,$xs} {
-                    margin: 20px 0;
+                    margin: 24px 0;
                     display: inline-block;
                 }
             }
@@ -667,7 +667,7 @@
             column-gap: 16px;
 
             @media #{$md,$sm,$xs} {
-                margin: 15px 0;
+                margin: 16px 0;
                 justify-content: center;
             }
 
@@ -696,7 +696,7 @@
             li {
                 display: inline-block;
                 margin-right: 8px;
-                padding-right: 13px;
+                padding-right: 16px;
                 position: relative;
 
                 &::after {

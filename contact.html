@@ -173,7 +173,7 @@
                     <div class="breadcrumb__border-line-shape"></div>
                     <div class="breadcrumb__border-line-shape"></div>
                 </div>
-                <div class="container custom-container">
+                <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="contact-breadcrumb__wrap z-1 p-relative">
@@ -195,7 +195,7 @@
 
 
             <section class="contact-form__area section-space-top-140 section-space-bottom-140 fade-wrapper">
-                <div class="container custom-container">
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="contact-form__wrapper">
@@ -204,22 +204,53 @@
                                 <div class="contact-form__form">
                                     <form id="contact-form" action="mail.php" method="post">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="contact-form__input fade-top">
-                                                    <label for="name">Your Name *</label>
-                                                    <input id="name" name="name" type="text" placeholder="Enter your Name">
+                                            <div class="col-12">
+                                                <div class="contact-form__input contact-form__input--line fade-top">
+                                                    <input id="name" name="name" type="text" placeholder="Full Name" aria-label="Full Name" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="contact-form__input fade-top">
-                                                    <label for="email">Your Email *</label>
-                                                    <input id="email" name="email" type="email" placeholder="Enter your Email">
+                                                <div class="contact-form__input contact-form__input--line fade-top">
+                                                    <input id="email" name="email" type="email" placeholder="Email" aria-label="Email" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="contact-form__input contact-form__input--line fade-top">
+                                                    <input id="phone" name="phone" type="tel" placeholder="Phone Number" aria-label="Phone Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="contact-form__input contact-form__input--line fade-top">
+                                                    <input id="company" name="company" type="text" placeholder="Company Name" aria-label="Company Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="contact-form__input contact-form__input--line fade-top">
+                                                    <input id="website" name="website" type="url" placeholder="Website" aria-label="Website">
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="contact-form__input fade-top">
-                                                    <label for="message">Your Message</label>
-                                                    <textarea name="message" id="message"></textarea>
+                                                <div class="contact-form__input contact-form__input--line contact-form__input--select fade-top">
+                                                    <select id="service" name="service" aria-label="Service Required">
+                                                        <option value="" selected>Service Required</option>
+                                                        <option value="Branding &amp; Identity">Branding &amp; Identity</option>
+                                                        <option value="UI/UX &amp; Website Design">UI/UX &amp; Website Design</option>
+                                                        <option value="Digital Marketing">Digital Marketing</option>
+                                                        <option value="Social Media">Social Media</option>
+                                                        <option value="Creative Design">Creative Design</option>
+                                                        <option value="Advertising Campaigns">Advertising Campaigns</option>
+                                                        <option value="Video &amp; Photography">Video &amp; Photography</option>
+                                                        <option value="Content Creation">Content Creation</option>
+                                                        <option value="Print &amp; Outdoor Advertising">Print &amp; Outdoor Advertising</option>
+                                                        <option value="Marketing Strategy">Marketing Strategy</option>
+                                                        <option value="Events &amp; Promotions">Events &amp; Promotions</option>
+                                                        <option value="Performance Marketing">Performance Marketing</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="contact-form__input contact-form__input--line fade-top">
+                                                    <textarea name="message" id="message" placeholder="Project Description" aria-label="Project Description"></textarea>
                                                 </div>
                                             </div>
                                         </div>

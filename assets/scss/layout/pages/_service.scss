@@ -7,7 +7,7 @@
 .services {
     .section {
         &__title-wrapper-title {
-            margin-left: 50px;
+            margin-left: 48px;
 
             @media #{$xl,$lg,$md,$sm,$xs} {
                 margin-left: 0;
@@ -22,12 +22,12 @@
         justify-content: space-between;
 
         @media #{$lg} {
-            gap: 27px;
+            gap: 24px;
             flex-wrap: nowrap;
         }
 
         @media #{$md} {
-            gap: 20px;
+            gap: 24px;
             flex-wrap: nowrap;
         }
 
@@ -43,7 +43,7 @@
             }
 
             @media #{$xl,$lg} {
-                padding-bottom: 60px;
+                padding-bottom: 64px;
             }
 
             @media #{$md,$mxs} {
@@ -51,7 +51,7 @@
             }
 
             @media #{$sm,$xs} {
-                padding-bottom: 30px;
+                padding-bottom: 32px;
             }
 
             // &:last-of-type {
@@ -59,14 +59,14 @@
             // }
 
             .content {
-                gap: 34px;
+                gap: 32px;
                 display: flex;
-                padding: 13.5px 0px;
+                padding: 16px 0px;
                 align-items: center;
                 border-bottom: 1px solid var(--vaa-line);
 
                 @media #{$md} {
-                    gap: 17px;
+                    gap: 16px;
                 }
 
                 img {
@@ -100,7 +100,7 @@
         }
 
         &-top {
-            padding-top: 115px;
+            padding-top: 112px;
 
             @media #{$xl,$lg,$md,$sm,$xs} {
                 padding-top: 0;
@@ -113,7 +113,7 @@
         font-size: 20px;
         line-height: 1;
         border-radius: 0px;
-        padding-bottom: 15px;
+        padding-bottom: 16px;
         font-weight: var(--rr-fw-medium);
         color: var(--rr-heading-primary);
         font-family: var(--rr-ff-heading);
@@ -147,14 +147,14 @@
 
         @media #{$lg} {
             column-gap: 24px;
-            padding: 44px 0;
+            padding: 48px 0;
         }
 
         @media #{$md,$sm,$xs} {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            row-gap: 18px;
-            padding: 34px 0;
+            row-gap: 16px;
+            padding: 32px 0;
         }
     }
 
@@ -179,7 +179,7 @@
         grid-column: 2;
         grid-row: 1;
         align-self: start;
-        margin: 0 0 20px;
+        margin: 0 0 24px;
         font-size: 32px;
         line-height: 1.15;
         font-weight: 500;
@@ -204,7 +204,7 @@
             grid-column: auto;
             grid-row: auto;
             font-size: 22px;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
         }
     }
 
@@ -240,16 +240,16 @@
         align-self: center;
         width: 390px;
         height: 265px;
-        border-radius: 12px;
+        border-radius: var(--vaa-radius-media);
         overflow: hidden;
-        box-shadow: var(--rr-shadow-primary);
+        box-shadow: var(--vaa-shadow-float);
 
         a {
             display: block;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: var(--vaa-radius-media);
         }
 
         img {
@@ -276,9 +276,9 @@
         position: relative;
         width: 100%;
         height: 560px;
-        border-radius: 12px;
+        border-radius: var(--vaa-radius-media);
         overflow: hidden;
-        box-shadow: var(--rr-shadow-primary);
+        box-shadow: var(--vaa-shadow-float);
 
         @media #{$md} {
             height: 420px;
@@ -295,23 +295,23 @@
 // h-2 service-area start
 .h2-service {
     &__item {
-        padding: 60px 30px 70px 60px;
+        padding: 64px 32px 72px 64px;
         transition: all 0.3s ease-in-out;
 
         @media #{$xxl} {
-            padding: 60px 30px 70px 30px;
+            padding: 64px 32px 72px 32px;
         }
 
         @media #{$xl} {
-            padding: 20px 20px 20px 30px;
+            padding: 24px 24px 24px 32px;
         }
 
         @media #{$md} {
-            padding: 50px 30px 50px 50px;
+            padding: 48px 32px 48px 48px;
         }
 
         @media #{$sm,$xs} {
-            padding: 30px;
+            padding: 32px;
         }
 
         &-fist-item {
@@ -380,34 +380,34 @@
             font-weight: 600;
             font-size: 24px;
             line-height: 34px;
-            margin-top: 57px;
-            margin-bottom: 18px;
+            margin-top: 56px;
+            margin-bottom: 16px;
             color: var(--rr-heading-secondary);
             font-family: var(--rr-ff-body);
 
             @media #{$xl} {
-                margin-top: 33px;
+                margin-top: 32px;
             }
 
             @media #{$sm,$xs} {
-                margin-top: 35px;
+                margin-top: 32px;
             }
         }
     }
 
     &__btn {
-        margin-top: 85px;
+        margin-top: 88px;
 
         @media #{$xl} {
-            margin-top: 30px;
+            margin-top: 32px;
         }
 
         @media #{$md} {
-            margin-top: 50px;
+            margin-top: 48px;
         }
 
         @media #{$sm,$xs} {
-            margin-top: 35px;
+            margin-top: 32px;
         }
     }
 
@@ -462,7 +462,7 @@
     }
 
     &__list {
-        margin-left: 100px;
+        margin-left: 104px;
 
         @media #{$lg} {
             margin-left: 40px;
@@ -478,16 +478,16 @@
         align-items: center;
         justify-content: space-between;
         padding: 16px 0;
-        padding-right: 14px;
+        padding-right: 16px;
         transition: all 0.5s ease-in-out;
         border-bottom: 1px solid rgba(var(--vaa-fg-rgb), 0.14);
 
         &.active {
-            padding-left: 30px;
+            padding-left: 32px;
             background-color: var(--rr-text-primary-2);
 
             @media #{$xs} {
-                padding-left: 18px;
+                padding-left: 16px;
             }
 
             .service-3 {
@@ -557,7 +557,7 @@
 
         @media #{$xs} {
             font-size: 19px;
-            margin-top: 15px;
+            margin-top: 16px;
         }
     }
 

@@ -15,7 +15,7 @@
         }
 
         &__main-title-wrapper {
-            padding-top: 45px;
+            padding-top: 48px;
             border-top: 1px solid var(--vaa-line);
         }
     }
@@ -31,12 +31,12 @@
     .h1-project {
         &__wrapper-details-btn {
             @media #{$sm,$xs} {
-                margin-top: 20px;
+                margin-top: 24px;
                 justify-content: start !important;
             }
 
             .ruhe-white-btn-primary {
-                padding: 14px 40px;
+                padding: 16px 40px;
             }
         }
     }
@@ -47,8 +47,8 @@
 
             .swiper-slide {
                 width: auto !important;
-                margin-top: 10px;
-                padding: 10px 10px;
+                margin-top: 8px;
+                padding: 8px 8px;
                 background: var(--vaa-paper-alt);
             }
 
@@ -92,7 +92,7 @@
             border-bottom: 1px solid var(--vaa-line);
 
             @media #{$xs} {
-                padding: 20px 0px;
+                padding: 24px 0px;
             }
 
             .title {
@@ -122,7 +122,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                gap: 50px;
+                gap: 48px;
                 white-space: nowrap;
 
                 .slider-wrap {
@@ -161,19 +161,11 @@
 .project-section-2 {
     .section {
         &__title-wrapper {
-            &-title {
-                margin-left: -30px;
-
-                @media #{$md,$sm,$xs} {
-                    margin-left: 0;
-                }
-            }
-
             &-sub-title {
                 span {
                     width: 138px;
                     height: 1px;
-                    margin-left: 10px;
+                    margin-left: 8px;
                     display: inline-block;
                     transform: translateY(-5px);
                     background-color: var(--vaa-line);
@@ -208,12 +200,7 @@
     }
 
     &__wrapper {
-        margin-left: -30px;
         margin-bottom: -80px;
-
-        @media #{$lg,$md,$sm,$xs} {
-            margin-left: 0;
-        }
 
         @media #{$md} {
             margin-bottom: -60px;
@@ -232,11 +219,11 @@
         margin-bottom: 80px;
 
         @media #{$md} {
-            margin-bottom: 60px;
+            margin-bottom: 64px;
         }
 
         @media #{$sm} {
-            margin-bottom: 50px;
+            margin-bottom: 48px;
         }
 
         @media #{$xs} {
@@ -253,12 +240,12 @@
                 font-size: 20px;
                 line-height: 1;
                 opacity: 0.7;
-                margin-bottom: 35px;
+                margin-bottom: 32px;
                 font-family: var(--rr-ff-body);
                 color: var(--rr-heading-secondary);
 
                 @media #{$md,$sm,$xs} {
-                    margin-right: 30px;
+                    margin-right: 32px;
                     display: inline-block;
 
                     &:last-of-type {
@@ -270,7 +257,7 @@
                     margin-bottom: 0;
 
                     @media #{$md,$sm,$xs} {
-                        margin-bottom: 35px;
+                        margin-bottom: 32px;
                     }
                 }
             }
@@ -294,8 +281,8 @@
         font-weight: 600;
         font-size: 26px;
         line-height: 1;
-        margin-top: 25px;
-        margin-bottom: 15px;
+        margin-top: 24px;
+        margin-bottom: 16px;
         font-family: var(--rr-ff-body);
         color: var(--rr-heading-secondary);
 
@@ -313,7 +300,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 1;
-            padding: 5px 11.3px;
+            padding: 4px 8px;
             display: inline-block;
             color: rgba(var(--vaa-fg-rgb), 0.6);
             font-family: var(--rr-ff-heading);
@@ -349,10 +336,10 @@
                 color: var(--rr-common-white);
 
                 span {
-                    margin-left: 380px;
+                    margin-left: 384px;
 
                     @media #{$lg} {
-                        margin-left: 270px;
+                        margin-left: 272px;
                     }
 
                     @media #{$md} {
@@ -360,7 +347,7 @@
                     }
 
                     @media #{$sm} {
-                        margin-left: 100px;
+                        margin-left: 104px;
                     }
 
                     @media #{$xs} {
@@ -388,7 +375,7 @@
 
     &__wrapper {
         display: grid;
-        gap: 30px 30px;
+        gap: 32px 32px;
         grid-template-columns: repeat(4, 1fr);
 
         @media #{$xs} {
@@ -513,7 +500,7 @@
         display: flex;
         flex-wrap: wrap;
         list-style: none;
-        column-gap: 10px;
+        column-gap: 8px;
         position: absolute;
         visibility: hidden;
         align-items: center;
@@ -528,8 +515,8 @@
         li {
             font-size: 13px;
             line-height: 14px;
-            margin-bottom: 5px;
-            padding: 11px 16.8px;
+            margin-bottom: 4px;
+            padding: 8px 16px;
             display: inline-block;
             text-transform: uppercase;
             color: var(--rr-common-white);
@@ -538,7 +525,7 @@
             background: var(--rr-text-primary-2);
 
             @media #{$xl,$lg} {
-                padding: 8px 11px;
+                padding: 8px 8px;
             }
         }
     }
@@ -547,7 +534,7 @@
         &__title {
             font-size: 15px;
             line-height: 22px;
-            margin-top: 13px;
+            margin-top: 16px;
             text-transform: uppercase;
             color: var(--rr-common-white);
             font-weight: var(--rr-fw-medium);
@@ -556,18 +543,18 @@
     }
 
     &__btn {
-        margin-top: 105px;
+        margin-top: 104px;
 
         @media #{$lg} {
             margin-top: 0;
         }
 
         @media #{$md} {
-            margin-top: 50px;
+            margin-top: 48px;
         }
 
         @media #{$sm,$xs} {
-            margin-top: 35px;
+            margin-top: 32px;
         }
 
         a {
@@ -586,7 +573,7 @@
                 font-size: 30px;
 
                 span {
-                    margin-left: 10px;
+                    margin-left: 8px;
                 }
             }
 

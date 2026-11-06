@@ -9,7 +9,7 @@
     }
 
     @media #{$sm,$xs} {
-        padding-top: 150px;
+        padding-top: 152px;
     }
 }
 
@@ -71,11 +71,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 87px;
+        padding-top: 88px;
 
         @media #{$lg} {
             flex-wrap: wrap;
-            padding-top: 30px;
+            padding-top: 32px;
         }
 
         @media #{$md,$sm,$xs} {
@@ -89,7 +89,7 @@
             gap: 8px;
 
             @media #{$lg,$md,$sm,$xs} {
-                padding-top: 30px;
+                padding-top: 32px;
             }
 
             @media #{$xs} {
@@ -99,7 +99,7 @@
             span {
                 font-size: 16px;
                 line-height: 1;
-                padding: 6px 15.5px;
+                padding: 8px 16px;
                 color: rgba(var(--vaa-fg-rgb), 0.7);
                 font-weight: var(--rr-fw-medium);
                 font-family: var(--rr-ff-heading);
@@ -110,7 +110,7 @@
                 }
 
                 @media #{$xs} {
-                    margin-bottom: 10px;
+                    margin-bottom: 8px;
                 }
             }
         }
@@ -132,7 +132,7 @@
             padding-top: 40px;
 
             @media #{$md} {
-                padding-top: 20px;
+                padding-top: 24px;
             }
         }
 
@@ -145,20 +145,20 @@
 
     &__cite {
         border: 1px solid rgba(var(--vaa-fg-rgb), 0.2);
-        margin: 109px 0;
+        margin: 112px 0;
 
         @media #{$lg} {
-            margin: 60px 0;
+            margin: 64px 0;
         }
 
         @media #{$md,$sm,$xs} {
-            margin: 50px 0;
+            margin: 48px 0;
         }
     }
 
     &__application {
         &-item {
-            padding-bottom: 84px;
+            padding-bottom: 88px;
 
             &:last-of-type {
                 padding-bottom: 0;
@@ -196,15 +196,15 @@
                 justify-content: space-between;
                 background: var(--vaa-paper-alt);
                 max-width: 770px;
-                padding: 34px 41px 34px 41px;
-                margin: 14px 0px 27px 0px;
+                padding: 32px 40px 32px 40px;
+                margin: 16px 0px 24px 0px;
 
                 @media #{$sm} {
-                    padding: 34px 25px 34px 25px;
+                    padding: 32px 24px 32px 24px;
                 }
 
                 @media #{$xs} {
-                    padding: 34px 30px 34px 30px;
+                    padding: 32px 32px 32px 32px;
                     flex-wrap: wrap;
                 }
 
@@ -212,7 +212,7 @@
                     position: relative;
 
                     @media #{$xs} {
-                        margin-bottom: 15px;
+                        margin-bottom: 16px;
                     }
 
                     &:last-child {
@@ -276,14 +276,14 @@
                 font-size: 26px;
                 line-height: 36px;
                 color: var(--rr-heading-primary);
-                padding-bottom: 14px;
+                padding-bottom: 16px;
             }
 
             .job-spec-list {
-                padding-top: 33px;
+                padding-top: 32px;
 
                 @media #{$md,$sm} {
-                    padding-top: 20px;
+                    padding-top: 24px;
                 }
 
                 li {
@@ -293,7 +293,7 @@
                     font-size: 16px;
                     line-height: 28px;
                     color: rgba(var(--vaa-fg-rgb), 0.6);
-                    padding-top: 28px;
+                    padding-top: 32px;
                     list-style: none;
 
                     @media #{$lg} {
@@ -301,17 +301,17 @@
                     }
 
                     @media #{$md,$sm,$xs} {
-                        padding-top: 10px;
+                        padding-top: 8px;
                         font-size: 15px;
                     }
 
                     &:first-of-type {
-                        padding-top: 20px;
+                        padding-top: 24px;
                     }
                 }
 
                 &-one {
-                    padding: 0px 0px 0px 15px;
+                    padding: 0px 0px 0px 16px;
 
                     li {
                         position: relative;
@@ -356,14 +356,14 @@
 
             .job-posting {
                 max-width: 410px;
-                padding: 70px 112px 50px 60px;
+                padding: 72px 112px 48px 64px;
 
                 @media #{$lg} {
-                    padding: 45px 28px 44px 34px;
+                    padding: 48px 32px 48px 32px;
                 }
 
                 @media #{$xs} {
-                    padding: 40px 20px 20px 20px;
+                    padding: 40px 24px 24px 24px;
                 }
 
                 &-wrap {
@@ -375,7 +375,7 @@
                         font-size: 16px;
                         line-height: 22px;
                         text-align: center;
-                        padding: 17px 0px;
+                        padding: 16px 0px;
                         text-align: center;
                         color: var(--rr-common-white);
                         font-weight: var(--rr-fw-medium);
@@ -399,7 +399,7 @@
 
                     font-size: 18px;
                     line-height: 26px;
-                    padding-bottom: 19px;
+                    padding-bottom: 16px;
                     font-weight: var(--rr-fw-medium);
                     color: var(--rr-heading-primary);
                     font-family: var(--rr-ff-heading);

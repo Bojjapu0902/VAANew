@@ -417,13 +417,18 @@ input[type="number"]::-webkit-inner-spin-button {
    Bootstrap customize
 -----------------------------------------*/
 .container {
-	--bs-gutter-x: 30px;
-	max-width: 1630px;
+	--bs-gutter-x: 32px;
+	max-width: var(--vaa-frame-max);
 }
 
 .custom-container {
-	--bs-gutter-x: 30px;
+	--bs-gutter-x: 32px;
 	max-width: 1320px;
+}
+
+// .gx-0 (flush, full-bleed rows) keeps its zero gutter
+.container-fluid:not(.gx-0) {
+	--bs-gutter-x: 32px;
 }
 
 .row {

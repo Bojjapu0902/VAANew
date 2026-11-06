@@ -10,15 +10,15 @@
             position: relative;
             list-style: none;
             display: inline-block;
-            margin-inline-end: 26px;
+            margin-inline-end: 24px;
             &:last-child{
                 margin-inline-end: 0;
             }
             @media #{$lg} {
-                margin-inline-end: 20px;
+                margin-inline-end: 24px;
             }
             @media #{$xl} {
-                margin-inline-end: 30px;
+                margin-inline-end: 32px;
             }
             
             &.active {
@@ -32,16 +32,16 @@
                     color: var(--rr-heading-primary);
                     font-family: var(--rr-ff-body);
                     font-weight: var(--rr-fw-medium);
-                    padding: 35px 0;
+                    padding: 32px 0;
                     text-transform: uppercase;
                     font-size: 14px;
                     line-height: 10px;
                     text-transform: capitalize;
                     @media #{$xxl} {
-                        padding: 32.8px 0;
+                        padding: 32px 0;
                     }
                     @media #{$lg, $xl} {
-                        padding: 30px 0;
+                        padding: 32px 0;
                         font-size: 14px;
                         
                     }
@@ -50,7 +50,7 @@
             &.has-dropdown {
                 &>a {
                     position: relative;
-                    padding-right: 13px !important;
+                    padding-right: 16px !important;
                     &::after {
                         background-image: none;
                         font-family: "Font Awesome 6 Pro";
@@ -67,7 +67,7 @@
                 }
             }
             &.has-dropdown-2{
-                margin-inline-end: 20px;
+                margin-inline-end: 24px;
                 &>a {
                     &::after{
                         top: 35% !important;
@@ -92,7 +92,7 @@
                 visibility: hidden;
                 opacity: 0;
                 transform-origin: top center;
-                padding: 35px 0 6px;
+                padding: 32px 0 8px;
                 color: var(--rr-common-white);
                 border: 1px solid var(--rr-border-primary);
                 @extend %rs-transition-3;
@@ -118,9 +118,9 @@
                         position: relative;
                         z-index: 11;
                         font-size: 16px;
-                        padding: 0 25px;
-                        padding-inline-start: 30px;
-                        padding-bottom: 15px;
+                        padding: 0 24px;
+                        padding-inline-start: 32px;
+                        padding-bottom: 16px;
                         width: 100%;
                         color: var(--rr-heading-primary);
                         text-transform: capitalize;
@@ -145,7 +145,7 @@
                     &:hover {
                         &>a {
                             color: var(--rr-theme-primary);
-                            padding-inline-start: 43px !important;
+                            padding-inline-start: 40px !important;
                             &::before {
                                 width: 12px;
                             }
@@ -167,7 +167,7 @@
                 position: absolute;
                 top: 100%;
                 left: 50%;
-                padding: 30px 35px 30px;
+                padding: 32px 32px 32px;
                 background: var(--rr-heading-primary);
                 visibility: hidden;
                 opacity: 0;
@@ -179,21 +179,21 @@
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
                 @media #{$lg} {
-                    padding: 25px 25px;
+                    padding: 24px 24px;
                 }
                 &.mega-menu { 
                     &.mega-menu-grid-4 {
-                        padding: 30px 35px 30px;
+                        padding: 32px 32px 32px;
                         display: grid;
                         grid-template-columns: repeat(4, 1fr);
-                        row-gap: 30px;
-                        column-gap: 30px;
+                        row-gap: 32px;
+                        column-gap: 32px;
                     }
                     &.mega-menu-grid-3 {
-                        padding: 30px 35px 30px;
+                        padding: 32px 32px 32px;
                         display: grid;
-                        row-gap: 30px;
-                        column-gap: 30px;
+                        row-gap: 32px;
+                        column-gap: 32px;
                         grid-template-columns: repeat(3, 1fr);
                         width: 950px;
                         margin: 0 auto;
@@ -207,9 +207,9 @@
                         cursor: text;
                         padding: 0;
                         display: block;
-                        margin-bottom: 15px;
+                        margin-bottom: 16px;
                         border-bottom: 1px solid var(--rr-border-primary);
-                        padding-bottom: 5px;
+                        padding-bottom: 4px;
                         &::before{
                             display: none;
                         }
@@ -218,7 +218,7 @@
                         & li{
                             width: 100%;
                             float: none;
-                            margin-bottom: 9px;
+                            margin-bottom: 8px;
                             &:last-child{
                                 margin-bottom: 0;
                             }
@@ -262,7 +262,7 @@
                     }
                     a {
                         &:hover {
-                            padding-inline-start: 18px;
+                            padding-inline-start: 16px;
                             &::before{
                                 width: 12px;
                             }
@@ -342,7 +342,7 @@
         &.main-menu-2{
             & ul{
                 & li{
-                    margin-inline-end: 33px;
+                    margin-inline-end: 32px;
                     &:last-child{
                         margin-inline-end: 0;
                     }
@@ -351,7 +351,7 @@
                         color: rgba(var(--vaa-paper-rgb), 0.7);
                         font-weight: var(--rr-fw-medium);
                         font-size: 16px;
-                        padding: 36px 0;
+                        padding: 40px 0;
                         text-transform: capitalize;
                         &::before {
                             background: var(--rr-theme-primary);
